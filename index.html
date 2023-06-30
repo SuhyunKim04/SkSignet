@@ -7,8 +7,45 @@
     <script src="./js/jquery-1.11.2.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/slick.min.js"></script>
+    <style>
+        :root {
+            --placeholder : #808080;
+            --text : #222;
+            --text-opacity : 0.5;
+            --bg : tomato;
+        }
+
+        h1 {
+            color:var(--text);
+        }
+
+        h1:hover {
+            color:var(--placeholder)
+        }
+
+        h2 {
+            background-color:var(--bg);
+            color:rgba(255,255,255, var(--text-opacity))
+        }
+
+        h3 {
+            --text-opacity: 0.2;
+            color:rgba(255,255,0, var(--text-opacity))
+        }
+
+        h4 {
+            background-color:var(--bg);
+            color:rgba(255,255,255, var(--text-opacity))
+        }
+
+
+
+    </style>
 </head>
 <body>
-    
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
 </body>
 </html>
