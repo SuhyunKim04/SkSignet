@@ -1,0 +1,22 @@
+.inner{
+    @extend %hbInner;
+}
+
+.pageHeader{
+    .headerContainer{
+        @include flex;
+    }
+
+    .pageHeaderItems{
+        ul{
+            @include flex;
+            li{
+                font-weight: 500;
+                font-size: 15px;
+                a{
+                    padding: 0 12.8px;
+                }
+            }
+        }
+    }
+}

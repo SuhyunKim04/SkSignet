@@ -11,7 +11,6 @@ html, body {
 
 body {
   overflow-x: hidden;
-  
 }
 
 em, i, address {
@@ -77,9 +76,33 @@ fieldset {
   box-sizing: border-box;
 }
 
+.inner {
+  width: 100%;
+  max-width: 1560px;
+  padding: 0 60px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 15.5px;
+}
+
+.pageHeader .headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageHeader .pageHeaderItems ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageHeader .pageHeaderItems ul li {
+  font-weight: 500;
   font-size: 15px;
+}
+.pageHeader .pageHeaderItems ul li a {
+  padding: 0 12.8px;
 }
 
 /*# sourceMappingURL=common.css.map */
