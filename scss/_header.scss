@@ -6,6 +6,9 @@
     .headerContainer{
         @include flex;
     }
+    .red{
+        @include flex($j: center);
+    }
 
     .pageHeaderItems{
         ul{
