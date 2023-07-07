@@ -1,0 +1,14 @@
+.modal{
+    @include fixed;
+    background-color: bisque;
+    height: 100vh;
+
+    .header{
+        height: 68px;
+        background-image: linear-gradient(90deg, #0072C6, #68127A);
+    }
+
+    .modalVideo{
+        @include flex($j: center);
+    }
+}

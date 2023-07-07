@@ -4,3 +4,11 @@
     align-items: $a;
     flex-direction: $d;
 }
+
+@mixin fixed ($l:0, $t:0, $r:0, $b:0){
+    display: fixed;
+    left:$l;
+    top: $t;
+    right: $r;
+    bottom: $b
+}
