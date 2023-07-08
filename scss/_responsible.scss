@@ -1,0 +1,40 @@
+ $pc : 1644px;
+ $laptop: 899px;
+ $tablet: 720px;
+ $mobile: 600px;
+ 
+ @mixin media($width) {
+     @media all and (max-width:$width) {
+          @content;
+     }
+ }
+
+
+ @include media($pc) { 
+    .modalWrap { 
+        .contents { 
+            max-width:944px;
+        }
+    }
+}
+
+
+@include media(1440px) { 
+    .modalWrap { 
+        .contents { 
+            max-width:804px;
+        }
+    }
+ }
+
+ 
+ @include media($tablet) { 
+     
+ }
+
+ 
+ @include media($mobile) { 
+ }
+
+ 
+ 

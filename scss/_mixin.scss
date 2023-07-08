@@ -3,12 +3,22 @@
     justify-content: $j;
     align-items: $a;
     flex-direction: $d;
+     
 }
 
 @mixin fixed ($l:0, $t:0, $r:0, $b:0){
-    display: fixed;
+    position: fixed;
     left:$l;
     top: $t;
     right: $r;
     bottom: $b
 }
+
+
+ 
+
+@mixin border($p:bottom,$alpha:0.15) { 
+    border:0px solid rgba(0,0,0, $alpha); 
+    border-#{$p}-width:1px;
+}
+

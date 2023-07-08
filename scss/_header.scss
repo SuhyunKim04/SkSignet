@@ -2,7 +2,15 @@
     @extend %hbInner;
 }
 
+
 .pageHeader{
+    
+    @include border;
+    
+    //     h1 {
+    //         @include border(right,1)
+    // }
+    
     .headerContainer{
         @include flex;
     }

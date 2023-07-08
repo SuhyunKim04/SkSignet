@@ -1,14 +1,43 @@
-.modal{
+.modalWrap{
     @include fixed;
     background-color: bisque;
     height: 100vh;
+    $header : 68px;
 
-    .header{
-        height: 68px;
+    // @at-root .modalWrap {
+    //     height:$header;
+    //     color:red;
+    // }
+
+    header{
+        height: $header;
         background-image: linear-gradient(90deg, #0072C6, #68127A);
     }
+    display:none;
+    &.open {
+        display:block;
+    }
 
-    .modalVideo{
+    .contents{
+        height:calc(100vh - #{$header});
+        @extend %mainInner;
+
+     
         @include flex($j: center);
+
+        .frame {
+            padding-top:56.25%;   
+            max-width:756px; 
+            width:100%; 
+            position: relative; 
+        }
+        iframe{ 
+            width: 100%; 
+            height:100%;
+            position: absolute;
+            left:0;top:0;
+        }
     }
 }
+
+ 
