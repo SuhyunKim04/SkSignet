@@ -29,7 +29,11 @@
 
  
  @include media($tablet) { 
-     
+     modalWrap {
+        .contents{
+            max-width: 640px;
+        }
+     }
  }
 
  

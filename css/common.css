@@ -177,5 +177,10 @@ body {
     max-width: 804px;
   }
 }
+@media all and (max-width: 720px) {
+  modalWrap .contents {
+    max-width: 640px;
+  }
+}
 
 /*# sourceMappingURL=common.css.map */
