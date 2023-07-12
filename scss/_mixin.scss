@@ -15,6 +15,15 @@
 }
 
 
+@mixin line{
+    content:'';
+    position: absolute;
+    right: 44px;
+    width: 1px;
+    background-color: rgba(#fff, 0.5) ;
+    height: calc(100% - 8px);
+}
+
  
 
 @mixin border($p:bottom,$alpha:0.15) { 
@@ -22,3 +31,10 @@
     border-#{$p}-width:1px;
 }
 
+@mixin gd($c1:#f47725, $c2: #EA002C, $deg:83){
+    background-image: linear-gradient($deg + deg ,$c1 7.21%, $c2 92.82%);
+}
+
+// @include gd(orange, red, 45);
+
+// linear-gradient(83deg, #f47725 7.21%, #ea002c 92.82%);

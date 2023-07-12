@@ -19,7 +19,7 @@
 }
 
 
-@include media(1440px) { 
+@include media($laptop) { 
     .modalWrap { 
         .contents { 
             max-width:804px;
@@ -29,7 +29,7 @@
 
  
  @include media($tablet) { 
-     modalWrap {
+     .modalWrap {
         .contents{
             max-width: 640px;
         }
@@ -37,8 +37,13 @@
  }
 
  
- @include media($mobile) { 
- }
+//  @include media($mobile) { 
+//     .modalWrap{
+//         .contents{
+//             max-width: 
+//         }
+//     }
+//  }
 
  
  

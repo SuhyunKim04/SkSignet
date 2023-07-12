@@ -98,10 +98,50 @@ body {
 }
 
 .btn {
-  width: 171px;
-  height: 44px;
-  background-image: linear-gradient(90deg, #f47725, #EA002C);
+  padding: 13.5px 0;
   color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.3px;
+  border-radius: 4px;
+  position: relative;
+  filter: drop-shadow(0px 8px 20px rgba(238, 118, 35, 0.4));
+}
+.btn:hover .icon {
+  background-position: left center;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  right: 44px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: calc(100% - 8px);
+}
+.btn span {
+  padding: 0 24px;
+}
+.btn .icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  background-image: url("../images/arrow_double_right.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 18px;
+  margin: 0 13px;
+  transition: 0.2s;
+}
+.btn.red {
+  background-image: linear-gradient(83deg, #f47725 7.21%, #EA002C 92.82%);
+}
+.btn.blue {
+  background-image: linear-gradient(83deg, #0072c6 7.21%, #68127a 92.82%);
+}
+.btn.green {
+  background-image: linear-gradient(83deg, #97c54d 7.21%, #3b79b4 92.82%);
 }
 
 .modalWrap {
@@ -118,7 +158,7 @@ body {
   height: 68px;
   background-image: linear-gradient(90deg, #0072C6, #68127A);
 }
-.modalWrap header .goHome {
+.modalWrap header h2 {
   background-image: url(../images/logoMark.svg);
   background-repeat: no-repeat;
   background-size: auto;
@@ -179,13 +219,13 @@ body {
     max-width: 944px;
   }
 }
-@media all and (max-width: 1440px) {
+@media all and (max-width: 899px) {
   .modalWrap .contents {
     max-width: 804px;
   }
 }
 @media all and (max-width: 720px) {
-  modalWrap .contents {
+  .modalWrap .contents {
     max-width: 640px;
   }
 }
