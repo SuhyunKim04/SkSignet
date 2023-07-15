@@ -1,51 +1,87 @@
 .visualSlide{
-    display: flex;
-    position: relative;
-    height: calc(100vh - 199px);
-
-    .list{
-        .item{
-            .moduleHeader{
-                h2{
-                    font-size: 12.5px;
-                    font-weight: 600;
-                    line-height: 150%;
-                }
-                h3{
-                    font-size: 37px;
-                    font-weight: 700;
-                    margin-bottom: 20px;
-                }
-
-                p{
-                    font-size: 15.5px;
-                    font-weight: 400;
-                    line-height: 175%;
-                }
+    @include position($p:relative);
+    height: calc(100vh - 80px);
+    display:flex;
+    flex-direction:column;
+    justify-content:stretch; 
+    .slideWrap { 
+        position:relative;
+        flex:1;   
+        .list {
+            display:flex;
+            li { 
+                width:100%;
+                height:calc(100vh - 200px);
+                filter:blur(10px);
             }
+            li:not(:first-child) { display:none;}
+        }
+    }
+    .visualContent {
+        position:absolute;
+        left:0;top:300px;
+    }
+    .slideBottom { flex:0 0 120px;}
+
+    .a{
+        background-color: yellowgreen;
+    }   
+
+    .b{
+        background-color: wheat;
+    }
+
+    .c{
+        background-color: blueviolet;
+    }
+    .contents{
+        h2{
+            font-size: 12.5px;
+            font-weight: 600;
+            line-height: 150%;
+        }
+        h3{
+            font-size: 37px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        p{
+            font-size: 15.5px;
+            font-weight: 400;
+            line-height: 175%;
+        }
+    }
+   
+    .visualContent{
+        h3{
+            font-size: 15px;
+            font-weight: 600;
         }
     }
 }
 
 .slideBottom{
-    display: flex;
-    position: absolute;
-    bottom: 0;
+    @include flex;
+    // @include position($p:absolute);
+    // bottom: 0;
 
     .pageWrap{
-        display: flex;
+        @include flex;
         order:2;
 
         .pager{
-            display: flex;
+            @include flex;
         }
     }
 
     .logoSlide{
         .logoList{
-            display: flex;
+            @include flex;
             overflow: hidden;
         }
     }
+
+    
     
 }

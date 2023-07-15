@@ -79,7 +79,7 @@ fieldset {
   box-sizing: border-box;
 }
 
-.inner {
+.inner, .modalWrap header .modalAct {
   width: 100%;
   max-width: 1560px;
   padding: 0 60px;
@@ -155,14 +155,30 @@ body {
   display: none;
 }
 .modalWrap header {
-  height: 68px;
   background-image: linear-gradient(90deg, #0072C6, #68127A);
 }
-.modalWrap header h2 {
-  background-image: url(../images/logoMark.svg);
+.modalWrap header .modalAct {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+}
+.modalWrap header .modalAct h2 {
+  width: 45px;
+  height: 36px;
+  background-image: url("../images/logoMark.svg");
   background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center center;
+  background-size: contain;
+  background-position: center left;
+}
+.modalWrap header .modalAct button {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .modalWrap.open {
   display: block;
@@ -185,6 +201,12 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.openVideo {
+  width: 524px;
+  height: 524px;
+  background: url("../images/videoimg.jpeg") center center/cover;
 }
 
 .pageHeader {
@@ -216,40 +238,84 @@ body {
 }
 
 .visualSlide {
-  display: flex;
   position: relative;
-  height: calc(100vh - 199px);
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 }
-.visualSlide .list .item .moduleHeader h2 {
+.visualSlide .slideWrap {
+  position: relative;
+  flex: 1;
+}
+.visualSlide .slideWrap .list {
+  display: flex;
+}
+.visualSlide .slideWrap .list li {
+  width: 100%;
+  height: calc(100vh - 200px);
+  filter: blur(10px);
+}
+.visualSlide .slideWrap .list li:not(:first-child) {
+  display: none;
+}
+.visualSlide .visualContent {
+  position: absolute;
+  left: 0;
+  top: 300px;
+}
+.visualSlide .slideBottom {
+  flex: 0 0 120px;
+}
+.visualSlide .a {
+  background-color: yellowgreen;
+}
+.visualSlide .b {
+  background-color: wheat;
+}
+.visualSlide .c {
+  background-color: blueviolet;
+}
+.visualSlide .contents h2 {
   font-size: 12.5px;
   font-weight: 600;
   line-height: 150%;
 }
-.visualSlide .list .item .moduleHeader h3 {
+.visualSlide .contents h3 {
   font-size: 37px;
   font-weight: 700;
   margin-bottom: 20px;
 }
-.visualSlide .list .item .moduleHeader p {
+.visualSlide .contents p {
   font-size: 15.5px;
   font-weight: 400;
   line-height: 175%;
 }
+.visualSlide .visualContent h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
 
 .slideBottom {
   display: flex;
-  position: absolute;
-  bottom: 0;
+  justify-content: space-between;
+  align-items: center;
 }
 .slideBottom .pageWrap {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   order: 2;
 }
 .slideBottom .pageWrap .pager {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .slideBottom .logoSlide .logoList {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   overflow: hidden;
 }
 

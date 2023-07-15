@@ -24,7 +24,10 @@
     height: calc(100% - 8px);
 }
 
- 
+ @mixin position($p:null){
+    position: $p;
+}
+
 
 @mixin border($p:bottom,$alpha:0.15) { 
     border:0px solid rgba(0,0,0, $alpha); 

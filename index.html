@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sk Signet</title>
+    
     <script src="./js/jquery-1.11.2.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -38,31 +39,31 @@
    </header>
 
    <div class="visualSlide">
-        <div>
+        <div class="slideWrap">
             <ul class="list">
-                <li class="item">
-                    <div class="moduleHeader">
+                <li class="item a">
+                    <div class="contents">
                         <h2><span>01</span><span>SK SIGNET</span></h2>
                         <h3>Charging America's EV <br> Revolution</h3>
                         <p>Harnessing advanced innovation, we're driving the future of clean transportation with unrivaled EV charging solutions.</p> 
                     </div>
                 </li>
-                <li class="item">
-                    <div class="moduleHeader">
+                <li class="item b">
+                    <div class="contents">
                         <h2><span>02</span><span>MISSION</span></h2>
                         <h3>Fostering EV Mobility and <br> Sustainability</h3>
                         <p>SK Signet is reshaping the landscapte of green transportation for a future that is not only sustainable, but vibrant and efficient.</p> 
                     </div>
                 </li>
-                <li class="item">
-                    <div class="moduleHeader">
+                <li class="item c">
+                    <div class="contents">
                         <h2><span>03</span><span>SK GROUP</span></h2>
                         <h3>Cutting-edge DC Fast <br> Chargers Backed by SK</h3>
                         <p>As part of SK Group, the second -largest multi-industry corporation in South Korea, we leverage their scale, technology, and expertise to excel in our industry.</p> 
                     </div>
                 </li>
             </ul>
-            <article>
+            <article class="visualContent">
                 <h3>Browse our multiple products</h3>
                 
                 <button class="choose">
@@ -80,7 +81,7 @@
 
         <section class="slideBottom">
 
-            <div class="pageWrap">
+            <!-- <div class="pageWrap">
                 <button type="button">Prev</button>
                 <span class="pager">
                     <span>1</span>
@@ -88,7 +89,7 @@
                     <span>3</span>
                 </span>
                 <button type="button">Next</button>
-            </div>
+            </div> -->
             <div class="logoSlide">
                     <ul class="logoList">
                         <li>
@@ -175,7 +176,7 @@
  
         <a href="#" class="btn redLong">LEARN MORE ABOUT SK SIGNET</a>
 
-        <div>
+        <div class="openVideo">
             <p>WHATCH YOUR COMPANY INTRO VIDEO</p>
             <img src="./images/orangePlay.webp" alt="video">
         </div>
@@ -410,13 +411,12 @@
 
     <section class="modalWrap">
         <header>
-            <div>
+            <div class="modalAct">
                 <h2> 
-                    <img src="" alt="">
                     <span class="blind">SK Signet Corporate Video</span>
                 </h2>
-                <button type="button"> 
-
+                <button type="button" class="close"> 
+                    <img src="./images/close.svg" alt="close">
                     <span class="blind">CLOSE</span>
                 </button>
             </div>
@@ -424,7 +424,7 @@
         
         <div class="contents">
             <div class="frame">
-                <iframe src="https://www.youtube.com/embed/sa5LUK_dQ0s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/sa5LUK_dQ0s" title="YouTube video player"></iframe>
             </div>
         </div>
     </section>

@@ -10,14 +10,29 @@
     // }
 
     header{
-        height: $header;
         background-image: linear-gradient(90deg, #0072C6, #68127A);
 
-        h2{
-            background-image: url(../images/logoMark.svg);
-            background-repeat: no-repeat;
-            background-size: auto;
-            background-position: center center;
+        .modalAct{
+            @include flex;
+            height: $header;
+            @extend %hbInner;
+            h2{
+                width: 45px;
+                height: 36px;
+                background-image: url($imgUrl + 'logoMark.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center left;
+            }
+
+            button{
+                border: 1px solid rgba(#fff, 0.4);
+                border-radius: 4px;
+                height: 44px;
+                width: 44px;
+                @include flex($j:center);
+            }
+
         }
     }
     display:none;
@@ -47,4 +62,9 @@
     }
 }
 
+.openVideo{
+    width: 524px;
+    height: 524px;
+    background: url($imgUrl + 'videoimg.jpeg') center center/cover;
+}
  
