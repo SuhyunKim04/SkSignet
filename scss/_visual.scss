@@ -14,14 +14,18 @@
                 height:calc(100vh - 200px);
                 filter:blur(10px);
             }
-            li:not(:first-child) { display:none;}
+            li:not(:first-child) { 
+                display:none;
+            }
         }
     }
     .visualContent {
         position:absolute;
         left:0;top:300px;
     }
-    .slideBottom { flex:0 0 120px;}
+    .slideBottom { 
+        flex:0 0 120px;
+    }
 
     .a{
         background-color: yellowgreen;
@@ -63,8 +67,7 @@
 
 .slideBottom{
     @include flex;
-    // @include position($p:absolute);
-    // bottom: 0;
+    
 
     .pageWrap{
         @include flex;
