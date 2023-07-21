@@ -252,7 +252,7 @@ body {
   display: flex;
 }
 .visualSlide .slideWrap .list li {
-  width: 100%;
+  width: 50%;
   height: calc(100vh - 200px);
   filter: blur(10px);
 }
