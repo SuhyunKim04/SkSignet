@@ -97,6 +97,12 @@ body {
   font-size: 15.5px;
 }
 
+.openVideo {
+  width: 524px;
+  height: 524px;
+  background: url("../images/videoimg.jpeg") center center/cover;
+}
+
 .btn {
   padding: 13.5px 0;
   color: rgb(255, 255, 255);
@@ -201,12 +207,6 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-}
-
-.openVideo {
-  width: 524px;
-  height: 524px;
-  background: url("../images/videoimg.jpeg") center center/cover;
 }
 
 .pageHeader {

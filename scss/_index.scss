@@ -1,3 +1,9 @@
 .videoSection{
     @extend %mainInner;
 }
+
+.openVideo{
+    width: 524px;
+    height: 524px;
+    background: url($imgUrl + 'videoimg.jpeg') center center/cover;
+}
