@@ -269,6 +269,7 @@ body {
 }
 .visualSlide .a {
   background-color: yellowgreen;
+  background-image: url("../images/slidePics_0.webp");
 }
 .visualSlide .b {
   background-color: wheat;
