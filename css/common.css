@@ -85,7 +85,7 @@ fieldset {
   padding: 0 60px;
 }
 
-.modalWrap .contents {
+.modalWrap .contents, .videoSection {
   width: 100%;
   max-width: 1416px;
   padding: 0 60px;
