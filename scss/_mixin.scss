@@ -24,8 +24,8 @@
     height: calc(100% - 8px);
 }
 
- @mixin position($p:null){
-    position: $p;
+ @mixin position ($p:null) {
+    position: $p
 }
 
 
