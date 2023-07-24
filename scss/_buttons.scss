@@ -1,4 +1,7 @@
 .btn{ 
+    // @include flex($j: flex-end);
+    display:inline-flex;
+    align-items:center;
     padding: 13.5px 0;
     color: $whText;
     font-weight:600;
@@ -10,6 +13,7 @@
     position: relative;
     filter: drop-shadow(0px 8px 20px rgba(238,118,35,.4));
     // box-shadow:0px 8px 30px rgba(238,118,35,.5);
+
     &:hover{
         .icon{
             background-position:left center;

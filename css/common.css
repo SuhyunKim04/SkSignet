@@ -75,17 +75,13 @@ fieldset {
   overflow: hidden;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .inner, .modalWrap header .modalAct {
   width: 100%;
   max-width: 1560px;
   padding: 0 60px;
 }
 
-.modalWrap .contents, .videoSection {
+.modalWrap .contents, .product, .videoSection {
   width: 100%;
   max-width: 1416px;
   padding: 0 60px;
@@ -110,6 +106,10 @@ body {
   margin-left: 62px;
 }
 .videoSection .moduleHeader h2 {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #f47725, #EA002C);
   font-size: 12.5px;
   font-weight: 600;
   line-height: 15px;
@@ -123,38 +123,133 @@ body {
 .videoSection .moduleHeader p {
   font-size: 15.5px;
   line-height: 175%;
+  margin-bottom: 30px;
 }
 .videoSection .moduleHeader ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 21px;
+}
+.videoSection .moduleHeader ul li b {
+  margin-right: 5px;
+}
+.videoSection .moduleHeader ul li::before {
+  content: "";
+  display: block;
   background: url("../images/greencheck.svg") center center/cover;
   width: 20px;
   height: 20px;
+  margin-right: 14px;
 }
 
 .openVideo {
   width: 100%;
   max-width: 524px;
-  height: 524px;
+  padding-top: 40%;
   background: url("../images/videoimg.jpeg") center center/cover;
   position: relative;
   border-radius: 4px;
 }
-.openVideo p {
+.openVideo:hover .whiteBack {
+  height: 80px;
+}
+.openVideo:hover p {
+  opacity: 1;
+  transition: height 0.4s;
+}
+.openVideo .videoTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
+  padding: 16px 24px;
+}
+.openVideo .whiteBack {
   position: absolute;
+  background-color: rgba(225, 225, 225, 0.6);
+  width: 100%;
   bottom: 0;
+  left: 0;
+  height: 40px;
+  transition: height 0.4s;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.openVideo p {
+  opacity: 0;
   font-weight: 600;
   font-size: 11.5px;
   line-height: 150%;
   color: rgb(255, 255, 255);
+  position: relative;
 }
 .openVideo img {
-  position: absolute;
-  bottom: 16px;
-  left: 24px;
   width: 48px;
   height: 48px;
+  position: relative;
+}
+
+.product {
+  padding: 100px 0;
+  background-color: rgba(225, 225, 225, 0.2);
+}
+.product .moduleHeader {
+  text-align: center;
+}
+.product .moduleHeader h2 {
+  font-size: 12.5px;
+  line-height: 15px;
+  font-weight: 600;
+  margin-bottom: 7.5px;
+}
+.product .moduleHeader h3 {
+  margin-bottom: 12px;
+  font-size: 27px;
+  font-weight: 600;
+}
+.product .moduleHeader p {
+  font-size: 15.5px;
+  line-height: 175%;
+}
+.product .btnWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 42px;
+}
+.product .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 12px;
+}
+.product .list li {
+  background: url("../images/productTilesPics_0.webp") center center/cover;
+  flex-basis: 25%;
+  border-radius: 4px;
+}
+.product .list li a {
+  height: 400px;
+  display: block;
+  position: relative;
+}
+.product .list li a::before {
+  content: "";
+  background-color: red;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
   padding: 13.5px 0;
   color: rgb(255, 255, 255);
   font-weight: 600;
@@ -268,11 +363,6 @@ body {
 .pageHeader .headerContainer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-.pageHeader .red {
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 .pageHeader .pageHeaderItems ul {

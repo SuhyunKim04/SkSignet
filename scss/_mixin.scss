@@ -1,8 +1,10 @@
-@mixin flex($j:space-between, $a: center, $d: null){
+@mixin flex($j:space-between, $a: center, $d: null, $c:null, $r: null){
     display: flex;
     justify-content: $j;
     align-items: $a;
     flex-direction: $d;
+    column-gap: $c;
+    row-gap: $r;
      
 }
 
@@ -28,6 +30,12 @@
     position: $p
 }
 
+@mixin clip{
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: $gradientRed;
+}
 
 @mixin border($p:bottom,$alpha:0.15) { 
     border:0px solid rgba(0,0,0, $alpha); 
