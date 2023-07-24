@@ -124,6 +124,9 @@ body {
   font-size: 15.5px;
   line-height: 175%;
 }
+.videoSection .moduleHeader ul li {
+  background-image: url("../images/greencheck.svg");
+}
 
 .openVideo {
   width: 100%;

@@ -25,6 +25,12 @@
             font-size: 15.5px;
             line-height: 175%;
         }
+
+        ul{
+            li{
+                background-image: url($imgUrl + 'greencheck.svg');
+            }
+        }
     }
 }
 
