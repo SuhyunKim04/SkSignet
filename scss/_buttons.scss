@@ -11,7 +11,6 @@
     letter-spacing: 0.3px;
     border-radius: 4px;
     position: relative;
-    filter: drop-shadow(0px 8px 20px rgba(238,118,35,.4));
     // box-shadow:0px 8px 30px rgba(238,118,35,.5);
 
     &:hover{
@@ -19,12 +18,13 @@
             background-position:left center;
         }
     }
-        &::after{
-            @include line;
-        }
-        span{
-            padding: 0 24px;
-        }
+    &::after{
+        @include line;
+    }
+    span{
+        padding: 0 24px;
+        flex:1;
+    }
     .icon{
         width: 18px;
         height: 18px;
@@ -38,6 +38,7 @@
     }
     &.red {
         @include gd;
+        filter: drop-shadow(0px 8px 20px rgba(238,118,35,.4));
     }
 
     &.blue {

@@ -1,5 +1,6 @@
 .visualSlide{
-    @include position($p:relative);
+    
+    position:relative;
     height: calc(100vh - 80px);
     display:flex;
     flex-direction:column;

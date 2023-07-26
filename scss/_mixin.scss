@@ -26,8 +26,12 @@
     height: calc(100% - 8px);
 }
 
- @mixin position ($p:null) {
-    position: $p
+ @mixin pos($l:0, $t:0, $r:null, $b:null, $p:absolute) {
+    position: $p;
+    top:$t;
+    right:$r;
+    bottom: $b;
+    left: $l;
 }
 
 @mixin clip{
