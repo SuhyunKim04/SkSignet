@@ -36,6 +36,10 @@
         margin: 0 13px;
         transition: 0.2s
     }
+
+    // .play{
+    //     background-image: url($imgUrl + 'arrow-multi.svg');
+    // }
     &.red {
         @include gd;
         filter: drop-shadow(0px 8px 20px rgba(238,118,35,.4));

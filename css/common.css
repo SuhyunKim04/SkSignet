@@ -81,7 +81,7 @@ fieldset {
   padding: 0 60px;
 }
 
-.modalWrap .contents, .highCustom, .product, .videoSection {
+.modalWrap .contents, .tech, .highCustom, .product, .videoSection {
   width: 100%;
   max-width: 1416px;
   padding: 0 60px;
@@ -102,6 +102,17 @@ body {
   font-weight: 600;
   line-height: 15px;
   margin-bottom: 12.5px;
+}
+
+.subtitle2 {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #0072c6, #68127a);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 170%;
+  margin: 40px 0 14px 0;
 }
 
 .videoSection {
@@ -367,6 +378,45 @@ body {
 .highCustom .map img {
   position: absolute;
   width: 24px;
+}
+
+.tech {
+  padding: 100px 0;
+}
+.tech .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.tech .content h3 {
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 150%;
+  margin-bottom: 12.5px;
+}
+.tech .content p {
+  font-size: 15.5px;
+  font-weight: 400;
+  line-height: 175%;
+}
+.tech .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+.tech .cards .items {
+  padding: 24px;
+}
+.tech .cards .a {
+  background: url("../images/colorTilesPics_0.webp") center center/cover;
+}
+.tech .cards .b {
+  background: url("../images/colorTilesPics_1.webp") center center/cover;
+}
+.tech .cards .c {
+  background: url("../images/colorTilesPics_2.webp") center center/cover;
 }
 
 .btn {
