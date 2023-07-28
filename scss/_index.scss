@@ -298,7 +298,8 @@
     }
 
     .cards{
-        @include flex($c:20px);
+        @include flex($c:40px);
+        margin-top: 62px;
 
         .items{
             padding: 24px;
