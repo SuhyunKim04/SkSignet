@@ -404,19 +404,62 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 20px;
+  column-gap: 40px;
+  margin-top: 62px;
 }
 .tech .cards .items {
-  padding: 24px;
+  flex-basis: 30%;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  height: auto;
+}
+.tech .cards .items h4 {
+  font-weight: 600;
+  line-height: 170%;
+  font-size: 19px;
+  color: rgb(255, 255, 255);
+  margin: 80px 0 12px 0;
+}
+.tech .cards .items p {
+  font-weight: 400;
+  line-height: 170%;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+}
+.tech .cards .items::before {
+  content: "";
+  background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.7) 7.21%, rgba(0, 0, 0, 0) 92.82%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  opacity: 1;
+}
+.tech .cards .bar {
+  width: auto;
+  height: 12px;
+  display: block;
 }
 .tech .cards .a {
   background: url("../images/colorTilesPics_0.webp") center center/cover;
 }
+.tech .cards .a .bar {
+  background-image: linear-gradient(90deg, #fbbc05, #f47725 99.96%);
+}
 .tech .cards .b {
   background: url("../images/colorTilesPics_1.webp") center center/cover;
 }
+.tech .cards .b .bar {
+  background-image: linear-gradient(90deg, #97c54d, #3b79b4);
+}
 .tech .cards .c {
   background: url("../images/colorTilesPics_2.webp") center center/cover;
+}
+.tech .cards .c .bar {
+  background-image: linear-gradient(90deg, #0072c6, #68127a);
 }
 
 .btn {

@@ -302,18 +302,65 @@
         margin-top: 62px;
 
         .items{
-            padding: 24px;
+            flex-basis: 30%;
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            height: auto;
+
+            h4{
+                font-weight: 600;
+                line-height: 170%;
+                font-size: 19px;
+                color:$whText;
+                margin: 80px 0 12px 0;
+                
+            }
+
+            p{
+                font-weight: 400;
+                line-height: 170%;
+                font-size: 14px;
+                color: $whText;
+                
+            }
+
+            &::before{
+                content:'';
+                @include gd( rgba(black,0.7), rgba(black, 0), -180);
+                position: absolute;
+                top:0;bottom:0;right:0;left:0;
+                display: block;
+                opacity:1;
+            }
+        }
+        .bar{
+            width: auto;
+            height: 12px;
+            display: block;
         }
 
         .a{
             background: url($imgUrl + 'colorTilesPics_0.webp') center center/cover;
+
+            .bar{
+                background-image: $gradientYellow;
+            }
         }
 
         .b{
             background: url($imgUrl + 'colorTilesPics_1.webp') center center/cover;
+
+            .bar{
+                background-image: $gradientGreen;
+            }
         }
         .c{
             background: url($imgUrl + 'colorTilesPics_2.webp') center center/cover;
+
+            .bar{
+                background-image: $gradientBlue;
+            }
         }
     }
 }
