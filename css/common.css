@@ -283,6 +283,11 @@ body {
   font-weight: 600;
   margin-bottom: 10px;
 }
+.product .list .items a dd {
+  font-weight: 600;
+  line-height: 1.7;
+  font-size: 19px;
+}
 .product .list .items a::before {
   content: "";
   background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.7) 7.21%, rgba(0, 0, 0, 0) 92.82%);
