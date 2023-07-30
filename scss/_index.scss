@@ -109,7 +109,9 @@
 }
 
 .product {
-    @extend %mainInner;
+    .bgInner{
+        @extend %mainInner;
+    }
     padding: 100px 0;
     background-color: rgba(225, 225, 225, 0.2);
     .moduleHeader{
@@ -285,7 +287,9 @@
 }
 
 .tech{
-    @extend %mainInner;
+    .bgInner{
+        @extend %mainInner;
+    }
     padding: 100px 0;
     background-color: rgba(225, 225, 225, 0.2);
     .content{

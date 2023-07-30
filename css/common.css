@@ -81,7 +81,7 @@ fieldset {
   padding: 0 60px;
 }
 
-.modalWrap .contents, .homeNews, .tech, .highCustom, .product, .videoSection {
+.modalWrap .contents, .homeNews, .tech .bgInner, .highCustom, .product .bgInner, .videoSection {
   width: 100%;
   max-width: 1416px;
   padding: 0 60px;
