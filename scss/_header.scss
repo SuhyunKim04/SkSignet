@@ -1,9 +1,9 @@
-.inner{
-    @extend %hbInner;
-}
 
 
 .pageHeader{
+    .inner{
+        @extend %hbInner;
+    }
     padding: 12px 0;
     @include border;
     

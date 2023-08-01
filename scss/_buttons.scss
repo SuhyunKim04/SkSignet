@@ -45,6 +45,10 @@
         filter: drop-shadow(0px 8px 20px rgba(238,118,35,.4));
     }
 
+    &.sub{
+        background-image: url($imgUrl + 'arrow_double_gr.svg');
+    }
+
     &.blue {
         @include gd(#0072c6,#68127a)
     }
@@ -54,7 +58,20 @@
     }
 }
 
- 
+
+.act_icon  {
+        width: 18px;
+        height: 18px;
+        display: block;
+        background-image: url($imgUrl + 'arrow_double_gr.svg');
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: auto 18px;
+        margin: 0 13px;
+        transition: 0.2s
+
+}
+
 
 // .testbox {
 //     background:#333;
