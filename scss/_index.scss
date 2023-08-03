@@ -481,8 +481,8 @@
 }
 
 .ad{
+    @extend %mainInner;
     .inner{
-        @extend %hbInner;
         background: #fff url($imgUrl + 'texture.webp') center center/cover;
 
         // @include bg('texture.webp');
