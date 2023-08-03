@@ -61,6 +61,13 @@
     filter: drop-shadow(0px 8px #{$b}px rgba(0,0,0,$a));
 }
 
+@mixin bg($i:$imgUrl + 'greencheck.svg', $r:no-repeat, $p:left top, $s: contain){
+    background-image: $i;
+    background-repeat: $r;
+    background-position: $p;
+    background-size: $s;
+}
+
 // @include gd(orange, red, 45);
 
 // linear-gradient(83deg, #f47725 7.21%, #ea002c 92.82%);

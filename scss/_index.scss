@@ -14,7 +14,11 @@
     margin: 40px 0 14px 0;
 }
 .videoSection{
-    @extend %mainInner;
+
+    .inner{
+        @extend %mainInner;
+
+    }
     padding: 100px 0;
    
     .videoFlex{
@@ -63,7 +67,7 @@
     max-width: 524px;
     padding-top: 40%;
     background: url($imgUrl + 'videoimg.jpeg') center center/cover;
-    position:relative;
+    @include pos($p: relative);
     border-radius: 4px;
 
     &:hover{
@@ -102,7 +106,7 @@
     img{
         width: 48px;
         height: 48px;
-        position: relative;
+        @include pos($p: relative);
     }
     
 
@@ -228,7 +232,10 @@
 }
 
 .highCustom{
-    @extend %mainInner;
+    .inner{
+        @extend %mainInner;
+
+    }
     padding: 100px 0;
     .content{
         @include flex($a:flex-start);
@@ -376,7 +383,10 @@
 }
 
 .homeNews{
-    @extend %mainInner;
+    .inner{
+        @extend %mainInner;
+
+    }
     padding: 100px 0;
 
     .content{
@@ -482,6 +492,7 @@
 
 .ad{
     @extend %mainInner;
+    height: 240px;
     .inner{
         background: #fff url($imgUrl + 'texture.webp') center center/cover;
 
@@ -493,14 +504,15 @@
         padding: 24px 68px 24px 280px;
         border-radius: 4px;
         position: relative;
+        overflow: hidden;
+        height: 100%;
         &::before{
             content:'';
             background: url($imgUrl + 'logoMark.svg') no-repeat center center/contain;
-
             // @include bg('logoMark.svg', contain);
-            width: 200px;
+            width: 250px;
             position: absolute;
-            left:0;top:0;
+            left:-25px;top:-15px;
             height: 190px;
         };
     }
@@ -514,6 +526,11 @@
             line-height: 1.5;
             font-weight: 600;
         }
-
+        p{
+            margin-top: 12px;
+        }
+    }
+    a{
+        flex-shrink: 0;
     }
 }
