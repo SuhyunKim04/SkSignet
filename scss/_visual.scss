@@ -9,38 +9,58 @@
         position:relative;
         flex:1;   
         .list {
-            display:flex;
-            li { 
-                width:50%;
+            .item { 
+                width:100%;
                 height:calc(100vh - 200px);
-                filter:blur(10px);
+                &:before {
+                    content:'';
+                    -webkit-backdrop-filter: blur(10px);
+                    backdrop-filter:blur(20px);
+                    @include pos;
+                    width: 50%;
+                    height: 100%;
+                    background-color: rgba(255,255,255,0.5);
+
+                }
+                background: no-repeat center center/cover;
+
+                &.a{
+                    background-image:url($imgUrl + 'slidePics_0.webp') ;
+                }
+
+                &.b{
+                    background-image:url($imgUrl + 'slidePics_1.webp') ;
+                }
+                &.c{
+                    background-image:url($imgUrl + 'slidePics_2.webp') ;
+                }
             }
-            li:not(:first-child) { 
-                display:none;
-            }
+            // li:not(:first-child) { 
+            //     display:none;
+            // }
+
         }
     }
-    .visualContent {
-        position:absolute;
-        left:0;top:300px;
-    }
+    // .visualContent {
+    //     position:absolute;
+    //     left:0;top:300px;
+    //     z-index: 2000;
+    // }
     .slideBottom { 
         flex:0 0 120px;
     }
-
-    .a{
-        background-color: yellowgreen;
-        background-image: url($imgUrl + 'slidePics_0.webp');
-    }   
-
-    .b{
-        background-color: wheat;
-    }
-
-    .c{
-        background-color: blueviolet;
-    }
+   
     .contents{
+        @include pos($p:relative);
+        @extend %mainInner;
+        background-color:rgba(yellow,0.5);
+
+        .inbox {
+            outline:1px solid red;
+            max-width: 588px;
+            padding-right: 60px;
+        }
+        
         h2{
             font-size: 12.5px;
             font-weight: 600;
@@ -60,9 +80,56 @@
     }
    
     .visualContent{
+        @include pos(50%, 50%);
+        @extend %mainInner;
+        margin:0;
+        transform:translateX(-50%);
+        background-color:rgba(yellow,0.5);
+        
+        .inbox {
+            outline:1px solid red;
+            max-width: 588px;
+            padding-right: 60px;
+        }
         h3{
             font-size: 15px;
-            font-weight: 600;
+            font-weight: 600; 
+        }
+        
+        .choose{ 
+            .btn {
+                background:#fff;
+                border:1px solid $active;
+                position:relative;
+                .icon {
+                    position:relative;
+                    background-image: url($imgUrl + 'arrow-multi.svg');
+                    background-position: right bottom;
+                    background-size: 54px auto;
+                }
+                &:before {
+                    content:''; 
+                    width:46px;
+                    height:100%;
+                    @include gd;
+                    @include pos(auto,0,0,0);
+                }
+                &:after {
+                    display:none;
+                }
+
+               
+            }
+             .chooseDrop{
+                display: none;
+                color: $placeholder;
+                li:not(&:first-child){
+                    border-top: 1px solid $line;
+                    padding: 10px 0; 
+
+                    
+                }
+            }
         }
     }
 }

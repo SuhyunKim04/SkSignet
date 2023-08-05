@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 
-@import 'reset', 'variables';
+@import 'reset', 'variables','./lib/slick-theme','./lib/slick';
 %hbInner{
     width: 100%;
     max-width: 1560px;
@@ -29,6 +29,16 @@ $line : #e5e7eb;
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 15.5px;
+}
+
+
+.slick-prev{
+    left: auto;
+    right: 200px;
+}
+
+.slick-next{
+    right: 25px;
 }
 @import 'mixin','index', 'buttons','modal';
 @import 'header', 'visual';
