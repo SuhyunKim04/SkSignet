@@ -35,17 +35,10 @@
                     background-image:url($imgUrl + 'slidePics_2.webp') ;
                 }
             }
-            // li:not(:first-child) { 
-            //     display:none;
-            // }
-
+            
         }
     }
-    // .visualContent {
-    //     position:absolute;
-    //     left:0;top:300px;
-    //     z-index: 2000;
-    // }
+
     .slideBottom { 
         flex:0 0 120px;
     }
