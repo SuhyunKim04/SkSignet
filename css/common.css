@@ -101,7 +101,7 @@ fieldset {
   cursor: pointer;
   background: transparent;
   color: transparent;
-  top: 50%;
+  bottom: 0;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
@@ -1062,10 +1062,8 @@ body {
   position: relative;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 0, 0.5);
 }
 .visualSlide .contents .inbox {
-  outline: 1px solid red;
   max-width: 588px;
   padding-right: 60px;
 }
@@ -1073,6 +1071,7 @@ body {
   font-size: 12.5px;
   font-weight: 600;
   line-height: 150%;
+  margin-bottom: 20px;
 }
 .visualSlide .contents h3 {
   font-size: 37px;
@@ -1090,27 +1089,37 @@ body {
   left: 50%;
   margin: 0;
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 0, 0.5);
 }
 .visualSlide .visualContent .inbox {
-  outline: 1px solid red;
   max-width: 588px;
   padding-right: 60px;
 }
 .visualSlide .visualContent h3 {
   font-size: 15px;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 .visualSlide .visualContent .choose .btn {
   background: #fff;
   border: 1px solid #f23322;
   position: relative;
+  width: 320px;
+}
+.visualSlide .visualContent .choose .btn span {
+  display: inline-flex;
+  color: #808080;
+  justify-content: flex-start;
+  text-transform: lowercase;
+  font-size: 14px;
 }
 .visualSlide .visualContent .choose .btn .icon {
   position: relative;
   background-image: url("../images/arrow-multi.svg");
   background-position: right bottom;
   background-size: 54px auto;
+}
+.visualSlide .visualContent .choose .btn .icon.open {
+  background-position: right top;
 }
 .visualSlide .visualContent .choose .btn:before {
   content: "";
@@ -1130,15 +1139,28 @@ body {
   display: none;
   color: #808080;
 }
-li:not(.visualSlide .visualContent .choose .chooseDrop:first-child) {
+.visualSlide .visualContent .choose .chooseDrop.open {
+  display: block;
+  width: 320px;
+  background-color: #fff;
+  border: 1px solid #f23322;
+  padding-left: 10px;
+}
+.chooseItem:not(.visualSlide .visualContent .choose .chooseDrop:first-child) {
   border-top: 1px solid #e5e7eb;
-  padding: 10px 0;
+  padding: 15px 0;
+}
+.visualSlide .visualContent em {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 11.5px;
+  line-height: 1.7;
 }
 
 .slideBottom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 .slideBottom .pageWrap {
   display: flex;

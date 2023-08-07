@@ -1,5 +1,5 @@
 .visualSlide{
-    
+
     position:relative;
     height: calc(100vh - 80px);
     display:flex;
@@ -37,6 +37,7 @@
             }
             
         }
+        
     }
 
     .slideBottom { 
@@ -46,10 +47,8 @@
     .contents{
         @include pos($p:relative);
         @extend %mainInner;
-        background-color:rgba(yellow,0.5);
 
         .inbox {
-            outline:1px solid red;
             max-width: 588px;
             padding-right: 60px;
         }
@@ -58,6 +57,15 @@
             font-size: 12.5px;
             font-weight: 600;
             line-height: 150%;
+            margin-bottom: 20px;
+
+            // span{
+            //     &:before{
+            //         content:'';
+            //         width: 10px;
+            //         background-color: red;
+            //     }
+            // }
         }
         h3{
             font-size: 37px;
@@ -77,16 +85,15 @@
         @extend %mainInner;
         margin:0;
         transform:translateX(-50%);
-        background-color:rgba(yellow,0.5);
         
         .inbox {
-            outline:1px solid red;
             max-width: 588px;
             padding-right: 60px;
         }
         h3{
             font-size: 15px;
             font-weight: 600; 
+            margin-bottom: 20px;
         }
         
         .choose{ 
@@ -94,11 +101,22 @@
                 background:#fff;
                 border:1px solid $active;
                 position:relative;
+                width: 320px;
+                span{
+                    display: inline-flex;
+                    color: $placeholder;
+                    justify-content: flex-start;
+                    text-transform: lowercase;
+                    font-size: 14px;
+               }
                 .icon {
                     position:relative;
                     background-image: url($imgUrl + 'arrow-multi.svg');
                     background-position: right bottom;
                     background-size: 54px auto;
+                    &.open{
+                        background-position: right top;
+                    }
                 }
                 &:before {
                     content:''; 
@@ -115,22 +133,36 @@
             }
              .chooseDrop{
                 display: none;
-                color: $placeholder;
-                li:not(&:first-child){
-                    border-top: 1px solid $line;
-                    padding: 10px 0; 
-
-                    
+                &.open{
+                    display: block;
+                    width: 320px;
+                    background-color: #fff;
+                    border:1px solid $active;
+                    padding-left:10px;
                 }
+                color: $placeholder;
+                .chooseItem:not(&:first-child){
+                    border-top: 1px solid $line;
+                    padding: 15px 0;
+                }
+                // li:not(&:first-child){
+                //     border-top: 1px solid $line;
+                //     padding: 10px 0; 
+                // }
             }
         }
+        em{
+            color: $whText;
+            font-weight: 500;
+            font-size: 11.5px;
+            line-height: 1.7;
+        }
+       
     }
 }
 
 .slideBottom{
-    @include flex;
-    
-
+    @include flex($a:stretch);
     .pageWrap{
         @include flex;
         order:2;

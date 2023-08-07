@@ -22,25 +22,20 @@ const drop = () => {
     const wrap = document.querySelector('.visualContents');
     const arrowBtn = document.querySelector('.choose .btn');
     const dropDown = document.querySelector('.chooseDrop');
+    const icon = document.querySelector('.choose .icon');
     let active = 0;
 
     arrowBtn.addEventListener('click',(e) => {
-        // active = !active;
-        // console.log(active)
-        // if( active ) {
-        //     dropDown.style.display='block';
-        // }else{
-        //     dropDown.style.display='none';
-        // }
 
-        wrap.classList.toggle('open')
+        dropDown.classList.toggle('open')
+        icon.classList.toggle('open')
     })
 }
 
 function slideBanners() {
     const $list = $('.slideWrap .list')
     $list.slick({
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
