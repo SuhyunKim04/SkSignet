@@ -102,6 +102,9 @@
                 border:1px solid $active;
                 position:relative;
                 width: 320px;
+                &.red{
+                    filter: none;
+                }
                 span{
                     display: inline-flex;
                     color: $placeholder;

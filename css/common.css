@@ -328,7 +328,7 @@ fieldset {
   margin: 0 auto;
 }
 
-.inner, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom .inner, .product .bgInner, .videoSection .inner {
+.inner, .companyPart .inner, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom .inner, .product .bgInner, .videoSection .inner {
   width: 100%;
   max-width: 1416px;
   padding: 0 60px;
@@ -1105,6 +1105,9 @@ body {
   position: relative;
   width: 320px;
 }
+.visualSlide .visualContent .choose .btn.red {
+  filter: none;
+}
 .visualSlide .visualContent .choose .btn span {
   display: inline-flex;
   color: #808080;
@@ -1178,6 +1181,32 @@ body {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+}
+
+.companyPart .inner .slide {
+  background: url("../images/texture.webp") no-repeat center center/cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 115px;
+  padding: 40px 0;
+}
+.companyPart .inner .slide h1 {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 33px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #f47725, #EA002C);
+}
+.companyPart .inner .slide p {
+  font-weight: 400;
+  line-height: 1.75;
+  margin-top: 12px;
+}
+.companyPart .inner .slide img {
+  width: 148px;
 }
 
 .pageFooter {
