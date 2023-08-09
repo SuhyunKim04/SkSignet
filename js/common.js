@@ -43,6 +43,27 @@ function slideBanners() {
         cssEase: 'linear'
       });
 }
+
+
+
+const test = () =>{
+    const btns = document.querySelectorAll('.chooseDrop-data li');
+    const msg = document.querySelector('.select span');
+    const link = document.querySelector('.link-go');
+    btns.forEach((e,i) => {
+        console.log(e)
+        e.addEventListener('click',(event) => {
+            const target = event.target
+            msg.innerHTML = target.innerHTML 
+            link.setAttribute('href',target.dataset.url);
+            link.setAttribute('title',target.dataset.title);
+            console.log(target.dataset.url)
+        })
+    });
+
+}
+
 slideBanners();
 modal();
 drop();
+test();

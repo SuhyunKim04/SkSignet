@@ -328,7 +328,7 @@ fieldset {
   margin: 0 auto;
 }
 
-.inner, .companyPart .inner, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom .inner, .product .bgInner, .videoSection .inner {
+.inner, .companyPart .inner, .visualSlide .common, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom .inner, .product .bgInner, .videoSection .inner {
   width: 100%;
   max-width: 1416px;
   padding: 0 60px;
@@ -1062,16 +1062,32 @@ body {
   position: relative;
   top: 0;
   left: 0;
+  padding-top: 60px;
 }
 .visualSlide .contents .inbox {
   max-width: 588px;
   padding-right: 60px;
 }
 .visualSlide .contents h2 {
+  display: inline-block;
   font-size: 12.5px;
   font-weight: 600;
   line-height: 150%;
   margin-bottom: 20px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #f47725, #EA002C);
+  background-image: linear-gradient(90deg, #f47725 90%, #EA002C);
+}
+.visualSlide .contents h2 span:after {
+  display: inline-block;
+  content: "";
+  width: 20px;
+  height: 1px;
+  vertical-align: middle;
+  margin: 0 5px;
+  background-color: #F47725;
 }
 .visualSlide .contents h3 {
   font-size: 37px;
@@ -1089,6 +1105,7 @@ body {
   left: 50%;
   margin: 0;
   transform: translateX(-50%);
+  z-index: 10;
 }
 .visualSlide .visualContent .inbox {
   max-width: 588px;
@@ -1140,24 +1157,38 @@ body {
 }
 .visualSlide .visualContent .choose .chooseDrop {
   display: none;
+  width: 320px;
+  background-color: #fff;
+  border: 1px solid #f23322;
   color: #808080;
 }
 .visualSlide .visualContent .choose .chooseDrop.open {
   display: block;
-  width: 320px;
-  background-color: #fff;
-  border: 1px solid #f23322;
-  padding-left: 10px;
 }
-.chooseItem:not(.visualSlide .visualContent .choose .chooseDrop:first-child) {
+.visualSlide .visualContent .choose .chooseDrop .chooseItem {
+  padding: 0 10px;
+}
+.visualSlide .visualContent .choose .chooseDrop .chooseItem:hover {
+  background-image: linear-gradient(83deg, #f47725 7.21%, #EA002C 92.82%);
+  color: rgb(255, 255, 255);
+}
+.chooseItem:not(.visualSlide .visualContent .choose .chooseDrop:first-child) a {
   border-top: 1px solid #e5e7eb;
+}
+.visualSlide .visualContent .choose .chooseDrop a {
+  display: block;
   padding: 15px 0;
 }
-.visualSlide .visualContent em {
+.visualSlide .common {
   color: rgb(255, 255, 255);
   font-weight: 500;
   font-size: 11.5px;
   line-height: 1.7;
+  position: absolute;
+  top: auto;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .slideBottom {
@@ -1181,6 +1212,52 @@ body {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+}
+
+.testChoose {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.testChoose > * {
+  display: block;
+}
+.testChoose .select {
+  background: #fff;
+  border: 1px solid #f23322;
+  height: 40px;
+  width: 300px;
+}
+.testChoose .btn-go, .testChoose .link-go {
+  background: #f23322;
+  color: #fff;
+  margin: 10px 0;
+  height: 40px;
+  display: inline-block;
+  width: 100px;
+  border: 1px solid #fff;
+  line-height: 40px;
+  text-align: center;
+}
+.testChoose .btn-go {
+  display: none;
+}
+
+.testChooseDrop {
+  display: flex;
+  column-gap: 20px;
+  width: 300px;
+}
+.testChooseDrop ul {
+  background-color: #fff;
+  padding: 10px;
+  flex: 1;
+}
+.testChooseDrop li {
+  cursor: pointer;
+}
+.testChooseDrop li:hover {
+  color: #f23322;
 }
 
 .companyPart .inner .slide {
