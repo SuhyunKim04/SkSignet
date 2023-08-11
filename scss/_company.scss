@@ -1,25 +1,81 @@
 .companyPart{
-    .inner{
-        @extend %mainInner;
+    .slide{
+        background: url($imgUrl + 'texture.webp') no-repeat center center/cover;
+        @include flex($c: 115px);
+        padding: 45px 0;
+        .inner{
+            @extend %mainInner;
+        }
+        h1{
+            font-weight: 600;
+            line-height: 1.5;
+            font-size: 33px;
+            @include clip;
+        }
+        p{
+            font-weight: 400;
+            line-height: 1.75;
+            margin-top: 12px;
+        }
+        img{
+            width: 148px;
+        }
+    }
+    
+}
 
-        .slide{
-            background: url($imgUrl + 'texture.webp') no-repeat center center/cover;
-            @include flex($c: 115px);
-            padding: 40px 0;
-            h1{
-                font-weight: 600;
-                line-height: 1.5;
-                font-size: 33px;
-                @include clip;
-            }
-            p{
-                font-weight: 400;
-                line-height: 1.75;
-                margin-top: 12px;
-            }
-            img{
-                width: 148px;
+.table{
+    @extend %mainInner;
+    ul{
+        li{
+            dl{
+                @include flex;
+
+                dt,dd {
+                    &:before {
+                        display:block;
+                        text-transform:uppercase;
+                        color:#999;
+                        font-size:0.8em;
+                        @extend %pcBlind;
+                    }
+                }
+                dt{
+                    flex-grow:1;
+                    &:before{
+                        content:'Patent Name';
+                        display: block;
+                    }
+                }
+
+                dd{
+                    flex-basis: 15%;
+                    flex-shrink: 0;
+                    &:nth-child(2){
+                        &:before{
+                            content:'Patent Type';
+                            display: block;
+                        }
+                    }
+                }
+                dd{
+                    &:nth-child(3){
+                        &:before{
+                            content:'Resigration Number';
+                            display: block;
+                        }
+                    }
+                }
+                dd{
+                    &:nth-child(4){
+                        &:before{
+                            content:'Resigration Date';
+                            display: block;
+                        }
+                    }
+                }
             }
         }
     }
 }
+

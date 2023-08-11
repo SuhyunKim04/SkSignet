@@ -210,6 +210,7 @@
 
 
 .testChoose {
+    
     & > * {
         display:block;
     }
@@ -236,14 +237,17 @@
     }
 
     .btn-go {
-        display:none;
+        display:block;
     }
+
+    display:none;
 }
 
 .testChooseDrop {
     display:flex;
     column-gap:20px;
     width:300px;
+    display:none;
 
     ul {
     background-color:#fff;
@@ -260,3 +264,42 @@
     }
 }
 
+// main visual slick 
+.visualSlide .slick-slider {
+
+    .slick-prev, .slick-next {
+
+        background-color:#F47725;
+        
+        position:static;
+        color:#000;
+    }
+    .slick-prev {
+    }
+
+    .slick-next {
+
+    }
+}
+
+.logoSlide {
+    @include flex;
+}
+
+.slideBtns {
+   width:200px;height:100px;
+   flex-shrink:0;
+   background-color:tomato;
+    outline:1px solid red;
+    @include flex($a:center);
+     position:fixed;
+     z-index:1000000;
+
+     left:50%;top:50%;
+
+     button {
+        &:hover {
+            opacity:0.5;
+        }
+     }
+}

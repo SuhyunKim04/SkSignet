@@ -40,7 +40,9 @@ function slideBanners() {
         speed: 500,
         slidesToShow: 1,
         fade: true,
-        cssEase: 'linear'
+        cssEase: 'linear',
+        // prevArrow: $('.view-prev'),
+        // nextArrow: $('.view-next')
       });
 }
 
@@ -63,21 +65,35 @@ const test = () =>{
 
 }
 const test1 = () =>{
-    const Btns = document.querySelectorAll('.chooseDrop-a li');
+    const Btns = document.querySelectorAll('.chooseDrop-a a');
     const msg = document.querySelector('.select span');
     const link = document.querySelector('.link-go');
-
+    const go = document.querySelector('.btn-go');
+    let url ='';
+    console.log(url);
     Btns.forEach((e,i) => {
         console.log(e)
         e.addEventListener('click',(event)=>{
             event.preventDefault();
             const target = event.target
             msg.innerHTML = target.innerHTML
-            link.getAttribute('href')
-            console.log(link)
+            url = target.getAttribute('href')
+            link.setAttribute('href',url)
+            console.log(target.getAttribute('href'))
         })
+
+    })
+    go.addEventListener('click',(e)=>{
+        console.log('hello')
+        console.log(url);
+        if(url === ''){
+            alert('아래에서 항목 선택하세요')
+            return false;
+        }
+        window.location.href = url;
     })
 }
+
 
 
 slideBanners();

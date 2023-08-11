@@ -328,11 +328,20 @@ fieldset {
   margin: 0 auto;
 }
 
-.inner, .companyPart .inner, .visualSlide .common, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom .inner, .product .bgInner, .videoSection .inner {
+.inner, .table, .companyPart .slide .inner, .visualSlide .common, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom .inner, .product .bgInner, .videoSection .inner {
   width: 100%;
   max-width: 1416px;
   padding: 0 60px;
   margin: 0 auto;
+}
+
+.table ul li dl dt:before, .table ul li dl dd:before {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
 }
 
 body {
@@ -1218,6 +1227,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  display: none;
 }
 .testChoose > * {
   display: block;
@@ -1240,13 +1250,14 @@ body {
   text-align: center;
 }
 .testChoose .btn-go {
-  display: none;
+  display: block;
 }
 
 .testChooseDrop {
   display: flex;
   column-gap: 20px;
   width: 300px;
+  display: none;
 }
 .testChooseDrop ul {
   background-color: #fff;
@@ -1260,15 +1271,44 @@ body {
   color: #f23322;
 }
 
-.companyPart .inner .slide {
+.visualSlide .slick-slider .slick-prev, .visualSlide .slick-slider .slick-next {
+  background-color: #F47725;
+  position: static;
+  color: #000;
+}
+.logoSlide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slideBtns {
+  width: 200px;
+  height: 100px;
+  flex-shrink: 0;
+  background-color: tomato;
+  outline: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1000000;
+  left: 50%;
+  top: 50%;
+}
+.slideBtns button:hover {
+  opacity: 0.5;
+}
+
+.companyPart .slide {
   background: url("../images/texture.webp") no-repeat center center/cover;
   display: flex;
   justify-content: space-between;
   align-items: center;
   column-gap: 115px;
-  padding: 40px 0;
+  padding: 45px 0;
 }
-.companyPart .inner .slide h1 {
+.companyPart .slide h1 {
   font-weight: 600;
   line-height: 1.5;
   font-size: 33px;
@@ -1277,13 +1317,48 @@ body {
   color: transparent;
   background-image: linear-gradient(90deg, #f47725, #EA002C);
 }
-.companyPart .inner .slide p {
+.companyPart .slide p {
   font-weight: 400;
   line-height: 1.75;
   margin-top: 12px;
 }
-.companyPart .inner .slide img {
+.companyPart .slide img {
   width: 148px;
+}
+
+.table ul li dl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.table ul li dl dt:before, .table ul li dl dd:before {
+  display: block;
+  text-transform: uppercase;
+  color: #999;
+  font-size: 0.8em;
+}
+.table ul li dl dt {
+  flex-grow: 1;
+}
+.table ul li dl dt:before {
+  content: "Patent Name";
+  display: block;
+}
+.table ul li dl dd {
+  flex-basis: 15%;
+  flex-shrink: 0;
+}
+.table ul li dl dd:nth-child(2):before {
+  content: "Patent Type";
+  display: block;
+}
+.table ul li dl dd:nth-child(3):before {
+  content: "Resigration Number";
+  display: block;
+}
+.table ul li dl dd:nth-child(4):before {
+  content: "Resigration Date";
+  display: block;
 }
 
 .pageFooter {
