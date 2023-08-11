@@ -62,8 +62,26 @@ const test = () =>{
     });
 
 }
+const test1 = () =>{
+    const Btns = document.querySelectorAll('.chooseDrop-a li');
+    const msg = document.querySelector('.select span');
+    const link = document.querySelector('.link-go');
+
+    Btns.forEach((e,i) => {
+        console.log(e)
+        e.addEventListener('click',(event)=>{
+            event.preventDefault();
+            const target = event.target
+            msg.innerHTML = target.innerHTML
+            link.getAttribute('href')
+            console.log(link)
+        })
+    })
+}
+
 
 slideBanners();
 modal();
 drop();
 test();
+test1();
