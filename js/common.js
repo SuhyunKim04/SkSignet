@@ -3,7 +3,7 @@ const modal = () => {
     const close = document.querySelector('.close');
     const openvideo = document.querySelector('.openVideo');
 
-    // apple.innerHTML = 'hello'
+    
     openvideo.addEventListener('click', (e) => {
         console.log('hello');
         modalWrap.classList.add('open');
