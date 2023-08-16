@@ -41,8 +41,6 @@ function slideBanners() {
         slidesToShow: 1,
         fade: true,
         cssEase: 'linear',
-        // prevArrow: $('.view-prev'),
-        // nextArrow: $('.view-next')
       });
 }
 
