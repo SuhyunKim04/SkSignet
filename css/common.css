@@ -1015,17 +1015,48 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.pageHeader .pageHeaderItems ul {
+.pageHeader .pageHeaderItems .depth_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
-.pageHeader .pageHeaderItems ul li {
+.pageHeader .pageHeaderItems .depth_container .depth_list {
   font-weight: 500;
   font-size: 15px;
 }
-.pageHeader .pageHeaderItems ul li a {
+.pageHeader .pageHeaderItems .depth_container .depth_list a {
   padding: 0 12.8px;
+}
+.pageHeader .pageHeaderItems .depth_container .depth_list .modal_box {
+  position: absolute;
+  top: 60px;
+  right: -250px;
+  background-color: #fff;
+  z-index: 55555;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 745px;
+  height: 300px;
+}
+.pageHeader .pageHeaderItems .depth_container .depth_list .modal_box img {
+  width: 90px;
+  background-color: #f0f0f0;
+}
+.pageHeader .pageHeaderItems .depth_container .depth_list .modal_box .modal_list {
+  margin-top: 40px;
+}
+.pageHeader .pageHeaderItems .depth_container .depth_list .modal_box .modal_list li {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.pageHeader .pageHeaderItems .depth_container .depth_list .modal_box .modal_list li span {
+  color: #939393;
+  font-weight: 300;
+  font-size: 14px;
 }
 
 .visualSlide {
