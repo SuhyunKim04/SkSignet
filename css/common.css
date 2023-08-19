@@ -1024,9 +1024,10 @@ body {
 .pageHeader .pageHeaderItems .depth_container .depth_list {
   font-weight: 500;
   font-size: 15px;
+  padding: 0 12.5px;
 }
-.pageHeader .pageHeaderItems .depth_container .depth_list a {
-  padding: 0 12.8px;
+.pageHeader .pageHeaderItems .depth_container .depth_list.on .modal_box {
+  display: flex;
 }
 .pageHeader .pageHeaderItems .depth_container .depth_list .modal_box {
   position: absolute;
@@ -1035,10 +1036,25 @@ body {
   background-color: #fff;
   z-index: 55555;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 745px;
-  height: 300px;
+  max-width: 900px;
+  width: 100vw;
+  display: none;
+}
+.pageHeader .pageHeaderItems .depth_container .depth_list .modal_box > li {
+  flex-basis: 50%;
+  padding: 40px;
+}
+.pageHeader .pageHeaderItems .depth_container .depth_list .modal_box > li:last-child {
+  background-color: rgba(225, 225, 225, 0.2);
+}
+.pageHeader .pageHeaderItems .depth_container .depth_list .modal_box .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e7eb;
 }
 .pageHeader .pageHeaderItems .depth_container .depth_list .modal_box img {
   width: 90px;
@@ -1049,9 +1065,12 @@ body {
 }
 .pageHeader .pageHeaderItems .depth_container .depth_list .modal_box .modal_list li {
   margin-bottom: 20px;
+}
+.pageHeader .pageHeaderItems .depth_container .depth_list .modal_box .modal_list li a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  column-gap: 12px;
 }
 .pageHeader .pageHeaderItems .depth_container .depth_list .modal_box .modal_list li span {
   color: #939393;
@@ -1304,9 +1323,9 @@ body {
 
 .visualSlide .slick-slider .slick-prev, .visualSlide .slick-slider .slick-next {
   background-color: #F47725;
-  position: static;
   color: #000;
 }
+
 .logoSlide {
   display: flex;
   justify-content: space-between;

@@ -92,6 +92,27 @@ const test1 = () =>{
     })
 }
 
+const modal_menu = () => {
+    const depth_list = document.querySelectorAll('.depth_list');
+    const modal_box = document.querySelectorAll('.modal_box');
+
+    
+    depth_list.forEach((list,i) => {
+        list.addEventListener('mouseenter',(event) => {
+            const target = event.target;
+            target.classList.add('on');
+            // console.log(target.childNodes[3])
+        })
+    })
+
+    modal_box.forEach((box,event)=>{
+        box.addEventListener('mouseleave',(event)=>{
+            console.log()
+            depth_list.classList.remove('on');
+        })
+    })
+}
+
 
 
 slideBanners();
@@ -99,3 +120,4 @@ modal();
 drop();
 test();
 test1();
+modal_menu();
