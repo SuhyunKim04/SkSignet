@@ -94,23 +94,32 @@ const test1 = () =>{
 
 const modal_menu = () => {
     const depth_list = document.querySelectorAll('.depth_list');
-    const modal_box = document.querySelectorAll('.modal_box');
-
+    const modal_box = document.querySelectorAll('.modal_box > li');
+    const item = document.querySelector('.pageHeaderItems');
     
+
+    const hideMenu = (list) => {
+        modal_box.forEach((list) => list.classList.remove('on'));
+    }
     depth_list.forEach((list,i) => {
         list.addEventListener('mouseenter',(event) => {
             const target = event.target;
             target.classList.add('on');
             // console.log(target.childNodes[3])
+            console.log('text')
         })
-    })
+    });
 
-    modal_box.forEach((box,event)=>{
-        box.addEventListener('mouseleave',(event)=>{
-            console.log()
-            depth_list.classList.remove('on');
-        })
+
+    item.addEventListener('mouseleave', () => {
+        hideMenu();
     })
+    // modal_box.forEach((box,event)=>{
+    //     box.addEventListener('mouseleave',(event)=>{
+    //         console.log()
+    //         depth_list.classList.remove('on');
+    //     })
+    // })
 }
 
 

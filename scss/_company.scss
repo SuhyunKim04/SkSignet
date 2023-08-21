@@ -6,19 +6,29 @@
         .inner{
             @extend %mainInner;
         }
-        h1{
-            font-weight: 600;
-            line-height: 1.5;
-            font-size: 33px;
-            @include clip;
-        }
-        p{
-            font-weight: 400;
-            line-height: 1.75;
-            margin-top: 12px;
-        }
-        img{
-            width: 148px;
+        .com_main{
+            @include flex($j:space-around);
+            column-gap: 40px;
+            
+            h1{
+                font-weight: 600;
+                line-height: 1.5;
+                font-size: 33px;
+                @include clip;
+            }
+            p{
+                font-weight: 400;
+                line-height: 1.75;
+                margin-top: 12px;
+            }
+
+            .com_pic{
+                   
+                img{
+                    width: 148px;
+                    
+                }
+            }
         }
     }
     
@@ -74,6 +84,31 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+.com_market{
+    padding: 100px 0;
+    .box{
+        @include flex($c:40px);
+        img{
+            width: 500px;
+        }
+
+        .box_content{
+            h3{
+                font-size:27px;
+                font-weight: 600;
+                line-height: 1.5;
+                margin-bottom: 12px;
+            }
+            p{
+                line-height: 1.75;
+            }
+            .red{
+                margin-top: 42px;
             }
         }
     }
