@@ -97,7 +97,7 @@
             width: 500px;
         }
 
-        .box_content{
+        .moduleHeader{
             h3{
                 font-size:27px;
                 font-weight: 600;
@@ -109,6 +109,175 @@
             }
             .red{
                 margin-top: 42px;
+            }
+        }
+    }
+}
+
+.network{
+    padding: 100px 0;
+    background-color: rgba(225, 225, 225, 0.2);
+    .moduleHeader{
+        text-align: center;
+        h3{
+            font-size:27px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        p{
+            line-height: 1.75;
+        }
+        .red{
+            margin-top: 42px;
+        }
+        .icon{
+            background-image: url($imgUrl + 'arrow_double_globe.svg');
+        }
+    }
+
+}
+
+.think{
+    padding: 100px 0;
+
+    .moduleHeader{
+        text-align: center;
+        h3{
+            font-size:27px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+    }
+
+    .cards{
+        @include flex($a:stretch ,$c:20px);
+        margin-top: 62px;
+        min-height: 288px;
+        color: $whText;
+
+        .items{
+            flex-basis: calc(100% / 3);
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            display:flex;
+            flex-direction:column;
+            justify-content:flex-end;
+            padding: 0 24px 36px;
+
+            $bgbar: $gradientYellow, $gradientGreen, $gradientBlue;
+
+            @for $i from 1 through 3{
+                &:nth-child(#{$i}) {
+
+                    background: url($imgUrl + 'companyStdContainerPics_#{$i}.webp') center center/cover;
+                    &:after{
+                        background-image: nth($bgbar, $i);
+                    }
+                }
+            }
+            &:after{
+                content:'';
+                height: 12px;
+                position: absolute;
+                bottom:0;left:0;right:0;
+                background-image: $gradientYellow;
+            }
+
+            h4{
+                font-weight: 600;
+                line-height: 1.7;
+                font-size: 19px;
+                margin-bottom:12px;
+                position: relative;
+                
+            }
+            p{
+                font-weight: 400;
+                line-height: 1.4;
+                font-size: 14px;
+                position: relative;
+                
+            }
+
+            &::before{
+                content:'';
+                @include gd( rgba(black,0.7), rgba(black, 0), -180);
+                position: absolute;
+                top:0;bottom:0;right:0;left:0;
+                display: block;
+                opacity:1;
+            }
+        }
+    }
+}
+
+.advantage{
+    padding: 100px 0;
+    background-color: rgba(225, 225, 225, 0.2);
+    .moduleHeader{
+        text-align: center;
+        h3{
+            font-size:27px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        p{
+            line-height: 1.75;
+        }
+    }    
+
+    .coreStrengths{
+        .subtitle3{
+            @include flex;
+            margin-top: 80px;
+        }
+    }
+
+    .cards{
+        @include flex($a:stretch ,$c:20px);
+        margin-top: 62px;
+        min-height: 288px;
+
+        .items{
+            flex-basis: calc(100% / 3);
+            border-radius: 4px;
+            display:flex;
+            flex-direction:column;
+            justify-content:flex-end;
+            padding: 0 24px 36px;
+            text-align: center;
+
+            $bgbar: $gradientYellow, $gradientGreen, $gradientBlue;
+            @for $i from 1 through 3{
+                &:nth-child(#{$i}) {
+                    background-color: #fff;
+                    
+                    &:after{
+                        background-image: nth($bgbar, $i);
+                    }
+                }
+            }
+            h4{
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 1.5;
+
+                &::before{
+                    content:'';
+                    display: block;
+                    background: url($imgUrl + 'greencheck.svg') center center/cover;
+                    width: 50px;
+                    height: 50px;
+                    margin: 28px auto;
+                }
+            }
+
+            p{
+                line-height: 1.7;
+                font-size: 14px;
             }
         }
     }
