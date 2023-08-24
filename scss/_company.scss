@@ -230,56 +230,168 @@
     }    
 
     .coreStrengths{
+        padding-bottom: 100px;
         .subtitle3{
             @include flex;
             margin-top: 80px;
         }
-    }
-
-    .cards{
-        @include flex($a:stretch ,$c:20px);
-        margin-top: 62px;
-        min-height: 288px;
-
-        .items{
-            flex-basis: calc(100% / 3);
-            border-radius: 4px;
-            display:flex;
-            flex-direction:column;
-            justify-content:flex-end;
-            padding: 0 24px 36px;
-            text-align: center;
-
-            $bgbar: $gradientYellow, $gradientGreen, $gradientBlue;
-            @for $i from 1 through 3{
-                &:nth-child(#{$i}) {
-                    background-color: #fff;
-                    
-                    &:after{
-                        background-image: nth($bgbar, $i);
+        .cards{
+            @include flex($a:stretch ,$c:20px);
+            margin-top: 62px;
+            min-height: 288px;
+    
+            .items{
+                flex-basis: calc(100% / 3);
+                position: relative;
+                border-radius: 4px;
+                overflow: hidden;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                padding: 0 24px 36px;
+                text-align: center;
+                background-color: #fff;
+    
+                $bgbar: $gradientYellow, $gradientGreen, $gradientBlue;
+                @for $i from 1 through 3{
+                    &:nth-child(#{$i}) {
+                        &:after{
+                            background-image: nth($bgbar, $i);
+                        }
                     }
                 }
-            }
-            h4{
-                font-weight: 600;
-                font-size: 22px;
-                line-height: 1.5;
-
-                &::before{
+    
+                &:after{
                     content:'';
-                    display: block;
-                    background: url($imgUrl + 'greencheck.svg') center center/cover;
-                    width: 50px;
-                    height: 50px;
-                    margin: 28px auto;
+                    height: 12px;
+                    position: absolute;
+                    bottom:0;left:0;right:0;
+                    background-image: $gradientYellow;
+                }
+                h4{
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 1.5;
+    
+                    &::before{
+                        content:'';
+                        display: block;
+                        background: url($imgUrl + 'greencheck.svg') center center/cover;
+                        width: 40px;
+                        height: 40px;
+                        margin: 28px auto;
+                    }
+                }
+    
+                p{
+                    line-height: 1.7;
+                    font-size: 14px;
                 }
             }
+        }
 
-            p{
-                line-height: 1.7;
-                font-size: 14px;
+    }
+
+    .fourCards{
+        .subtitle3{
+            @include flex;
+            margin-bottom: 40px;
+        }
+
+        .cards{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 34px;
+
+            .items{
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                background-color: #fff;
+                padding: 40px 24px;
+                border-radius: 4px;
+                
+                &:before{
+                    content:'';
+                    height: 100%;
+                    width: 13px;
+                    position: absolute;
+                    bottom:0;left:0;
+                    background-image: $gradientGreen;
+                }
+
+                $bgbar: $gradientRed, $gradientYellow, $gradientGreen, $gradientBlue;
+                @for $i from 1 through 4{
+                    &:nth-child(#{$i}) {
+                        &:after{
+                            background-image: nth($bgbar, $i);
+                        }
+                    }
+                }
+
+                h4{
+                    font-weight: 600;
+                    font-size: 21px;
+                    line-height: 1.5;
+                }
+                p{
+                    line-height: 1.7;
+                    font-size: 14px;
+                }
             }
         }
     }
 }
+
+.patents{
+    padding: 100px 0;
+    background-color: rgba(225, 225, 225, 0.2);
+    .moduleHeader{
+        text-align: center;
+        max-width: 780px;
+        margin: 0 auto;
+        div{
+            h3{
+                font-size:27px;
+                font-weight: 600;
+                line-height: 1.5;
+                margin-bottom: 12px;
+            }
+            p{
+                line-height: 1.75;
+            }
+        }
+    }    
+
+    .collaborative{
+        .subtitle3{
+            margin: 100px 0 48px;
+        }
+    }
+
+    .collaboDivide{
+        @include flex($j: stretch);
+        .certificate{
+            @include flex;
+            column-gap: 22px;
+            img{
+                width: 230px;
+            }
+        }
+
+        .info{
+           background-color: #fff;
+           @include flex($a: flex-start);
+           flex-direction: column;
+           column-gap: 8px;
+           margin-left: 40px;
+           li{
+            padding: 8px 8px 0 40px;
+           }
+        }
+    }
+}
+
+
 

@@ -1563,13 +1563,16 @@ body {
 .advantage .moduleHeader p {
   line-height: 1.75;
 }
+.advantage .coreStrengths {
+  padding-bottom: 100px;
+}
 .advantage .coreStrengths .subtitle3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 80px;
 }
-.advantage .cards {
+.advantage .coreStrengths .cards {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -1577,49 +1580,150 @@ body {
   margin-top: 62px;
   min-height: 288px;
 }
-.advantage .cards .items {
+.advantage .coreStrengths .cards .items {
   flex-basis: 33.3333333333%;
+  position: relative;
   border-radius: 4px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 0 24px 36px;
   text-align: center;
-}
-.advantage .cards .items:nth-child(1) {
   background-color: #fff;
 }
-.advantage .cards .items:nth-child(1):after {
+.advantage .coreStrengths .cards .items:nth-child(1):after {
   background-image: linear-gradient(90deg, #fbbc05, #f47725 99.96%);
 }
-.advantage .cards .items:nth-child(2) {
-  background-color: #fff;
-}
-.advantage .cards .items:nth-child(2):after {
+.advantage .coreStrengths .cards .items:nth-child(2):after {
   background-image: linear-gradient(90deg, #97c54d, #3b79b4);
 }
-.advantage .cards .items:nth-child(3) {
-  background-color: #fff;
-}
-.advantage .cards .items:nth-child(3):after {
+.advantage .coreStrengths .cards .items:nth-child(3):after {
   background-image: linear-gradient(90deg, #0072c6, #68127a);
 }
-.advantage .cards .items h4 {
+.advantage .coreStrengths .cards .items:after {
+  content: "";
+  height: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(90deg, #fbbc05, #f47725 99.96%);
+}
+.advantage .coreStrengths .cards .items h4 {
   font-weight: 600;
   font-size: 22px;
   line-height: 1.5;
 }
-.advantage .cards .items h4::before {
+.advantage .coreStrengths .cards .items h4::before {
   content: "";
   display: block;
   background: url("../images/greencheck.svg") center center/cover;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin: 28px auto;
 }
-.advantage .cards .items p {
+.advantage .coreStrengths .cards .items p {
   line-height: 1.7;
   font-size: 14px;
+}
+.advantage .fourCards .subtitle3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.advantage .fourCards .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 34px;
+}
+.advantage .fourCards .cards .items {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 40px 24px;
+  border-radius: 4px;
+}
+.advantage .fourCards .cards .items:before {
+  content: "";
+  height: 100%;
+  width: 13px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(90deg, #97c54d, #3b79b4);
+}
+.advantage .fourCards .cards .items:nth-child(1):after {
+  background-image: linear-gradient(90deg, #f47725, #EA002C);
+}
+.advantage .fourCards .cards .items:nth-child(2):after {
+  background-image: linear-gradient(90deg, #fbbc05, #f47725 99.96%);
+}
+.advantage .fourCards .cards .items:nth-child(3):after {
+  background-image: linear-gradient(90deg, #97c54d, #3b79b4);
+}
+.advantage .fourCards .cards .items:nth-child(4):after {
+  background-image: linear-gradient(90deg, #0072c6, #68127a);
+}
+.advantage .fourCards .cards .items h4 {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1.5;
+}
+.advantage .fourCards .cards .items p {
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.patents {
+  padding: 100px 0;
+  background-color: rgba(225, 225, 225, 0.2);
+}
+.patents .moduleHeader {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.patents .moduleHeader div h3 {
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.patents .moduleHeader div p {
+  line-height: 1.75;
+}
+.patents .collaborative .subtitle3 {
+  margin: 100px 0 48px;
+}
+.patents .collaboDivide {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+.patents .collaboDivide .certificate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 22px;
+}
+.patents .collaboDivide .certificate img {
+  width: 230px;
+}
+.patents .collaboDivide .info {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  column-gap: 8px;
+  margin-left: 40px;
+}
+.patents .collaboDivide .info li {
+  padding: 8px 8px 0 40px;
 }
 
 .pageFooter {
