@@ -395,7 +395,7 @@
                     &:nth-child(#{$i}) { 
                         &:before{
                             // background-image: nth($bgbar, $i);
-                            @include grMix(nth($c1, $c2) $d:130deg)
+                            // @include grMix(nth($c1, 1), nth($c1, 2), $d:130deg)
                         }
                     }
                 }
