@@ -391,14 +391,14 @@
                 $c1 : red, blue;
                 $c2 : pink, olive;
                 
-                @for $i from 1 through 4{
-                    &:nth-child(#{$i}) { 
-                        &:before{
-                            // background-image: nth($bgbar, $i);
-                            // @include grMix(nth($c1, 1), nth($c1, 2), $d:130deg)
-                        }
-                    }
-                }
+                // @for $i from 1 through 4{
+                //     &:nth-child(#{$i}) { 
+                //         &:before{
+                //             background-image: nth($bgbar, $i);
+                //             @include grMix(nth($c1, 1), nth($c1, 2), $d:130deg)
+                //         }
+                //     }
+                // }
 
                 h4{
                     font-weight: 600;
