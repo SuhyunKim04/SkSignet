@@ -11,10 +11,13 @@ $active: #f23322;
 $placeholder: #808080;
 $bg: rgba(225, 225, 225, 0.2);
 
-$gradientRed: linear-gradient(90deg, #f47725, #EA002C);
+$gradientRed: linear-gradient(90deg, #f47725, #EA002C 50%);
 $gradientBlue: linear-gradient(90deg, #0072c6, #68127a);
 $gradientGreen: linear-gradient(90deg, #97c54d, #3b79b4);
 $gradientYellow: linear-gradient(90deg,#fbbc05,#f47725 99.96%);
 
 
 
+@mixin grMix($c1:#f47725, $c2:#ea002c, $d:90deg) {
+    background-image:linear-gradient( #{$d}, #{$c1}, #{$c2} );
+}
