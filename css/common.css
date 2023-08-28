@@ -710,7 +710,7 @@ body {
   background: url("../images/colorTilesPics_2.webp") center center/cover;
 }
 .tech .cards .items:nth-child(2):after {
-  background-image: linear-gradient(90deg, #97c54d, #3b79b4);
+  background-image: linear-gradient(90deg, #97c54d, #3b79b4 80%);
 }
 .tech .cards .items:nth-child(3) {
   background: url("../images/colorTilesPics_3.webp") center center/cover;
@@ -1563,7 +1563,7 @@ body {
   background: url("../images/companyStdContainerPics_2.webp") center center/cover;
 }
 .think .cards .items:nth-child(2):after {
-  background-image: linear-gradient(90deg, #97c54d, #3b79b4);
+  background-image: linear-gradient(90deg, #97c54d, #3b79b4 80%);
 }
 .think .cards .items:nth-child(3) {
   background: url("../images/companyStdContainerPics_3.webp") center center/cover;
@@ -1654,7 +1654,7 @@ body {
   background-image: linear-gradient(90deg, #fbbc05, #f47725 99.96%);
 }
 .advantage .coreStrengths .cards .items:nth-child(2):after {
-  background-image: linear-gradient(90deg, #97c54d, #3b79b4);
+  background-image: linear-gradient(90deg, #97c54d, #3b79b4 80%);
 }
 .advantage .coreStrengths .cards .items:nth-child(3):after {
   background-image: linear-gradient(90deg, #0072c6, #68127a);
@@ -1715,7 +1715,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(90deg, #97c54d, #3b79b4);
+  background-image: linear-gradient(90deg, #97c54d, #3b79b4 80%);
 }
 .advantage .fourCards .cards .items h4 {
   font-weight: 600;
@@ -1832,7 +1832,36 @@ body {
 }
 
 .susPart .title {
-  background: url("../images/sustainability_main.webp") no-repeat center center/cover;
+  text-align: center;
+}
+.susPart .title h2 {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #97c54d, #3b79b4 80%);
+  font-size: 33px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.mission {
+  padding: 100px 0;
+}
+.mission .missionFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mission .missionFlex .missionInner .moduleHeader h3 {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 27px;
+}
+.mission .missionFlex .pics {
+  width: 524px;
+  height: 524px;
 }
 
 .pageFooter {

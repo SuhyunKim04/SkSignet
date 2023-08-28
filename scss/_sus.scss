@@ -1,0 +1,38 @@
+.susPart{
+    .title{
+        text-align: center;
+        h2{
+            @include green;
+            font-size: 33px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+    }
+}
+
+.mission{
+    padding: 100px 0;
+   
+    .missionFlex{
+        @include flex;
+        
+        .missionInner{
+            .moduleHeader{
+                h3{
+                    font-weight: 600;
+                    line-height: 1.5;
+                    font-size: 27px;
+                }
+                
+            }
+        }
+
+        .pics{
+            width: 524px;
+            height: 524px;
+        }
+    }
+    
+}
