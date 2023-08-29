@@ -45,6 +45,28 @@
             max-width: 640px;
         }
      }
+
+     .videoSection{
+        .videoFlex{
+            @include flex;
+            flex-direction: column;
+
+            .a{
+                order:1
+            }
+
+            .b{
+                order:4;
+            }
+
+            .c{
+                order:2;
+            }
+            .d{
+                order:3;
+            }
+        }
+     }
  }
 
  
@@ -55,6 +77,7 @@
 //         }
 //     }
 //  }
+
 
  
  

@@ -55,6 +55,13 @@
     background-image: $gradientGreen;
 }
 
+@mixin blue {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: $gradientBlue;
+}
+
 @mixin border($p:bottom,$alpha:0.15) { 
     border:0px solid rgba(0,0,0, $alpha); 
     border-#{$p}-width:1px;

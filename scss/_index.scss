@@ -19,12 +19,34 @@
     padding: 100px 0;
    
     .videoFlex{
-        @include flex;
+        display: grid;
+        column-gap: 60px;
+    }
+    .a{
+        grid-column: 2/3;
+        grid-row:1/2;
+    }
+    .b{
+        grid-column: 2/3;
+        grid-row:2/3;
+    }
+    .c{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .d{
+        grid-column: 1/2;
+        grid-row: 1/4;
+        width: 524px;
+        height: 524px;
+
+        .videoTitle{
+            position: absolute;
+            bottom:0;
+            right:0;left:0;
+        }
     }
     .moduleHeader{
-        order:2;
-        margin-left: 62px;
-
         h3{
             font-size: 27px;
             font-weight: 600;
@@ -38,23 +60,25 @@
             margin-bottom: 30px;
         }
 
-        ul{
-            li{
-                b{
-                    margin-right: 5px;
-                }
-                &::before{
-                    content:'';
-                    display: block;
-                    background: url($imgUrl + 'greencheck.svg') center center/cover;
-                    width: 20px;
-                    height: 20px;
-                    margin-right:14px;
-                }
-                @include flex($j:flex-start);
-                    font-size: 16px;
-                    margin-bottom: 21px;
+        
+    }
+
+    .checkList{
+        li{
+            b{
+                margin-right: 5px;
             }
+            &::before{
+                content:'';
+                display: block;
+                background: url($imgUrl + 'greencheck.svg') center center/cover;
+                width: 20px;
+                height: 20px;
+                margin-right:14px;
+            }
+            @include flex($j:flex-start);
+                font-size: 16px;
+                margin-bottom: 21px;
         }
     }
 }

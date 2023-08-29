@@ -30,20 +30,18 @@ $gradientYellow: linear-gradient(90deg,#fbbc05,#f47725 99.96%);
 // @include grMix(red), 180deg);
 
 
-// @mixin color($type: null,$d: 180eg ){
-//     $c1:#f47725;
-//     $c2:#EA002C;
-//     @if ($type == "red"){
-//         $c1:#f47725;
-//         $c2:#EA002C;
-//     } @else if ($type == "yellow"){
-//         $c1:#fbbc05;
-//         $c2:#f47725;
-//     } @else if ($type == "green"){
-//         $c1:#97c54d;
-//         $c2:#3b79b4;
-//     } @else if ($type == "blue"){
-//         $c1:#0072c6;
-//         $c2:#68127a;
-//     }
-// }
+@mixin color($type: null,$d: 90deg ){
+    $c1:#f47725;
+    $c2:#EA002C;
+    @if ($type == "yellow"){
+        $c1:#fbbc05;
+        $c2:#f47725;
+    } @else if ($type == "green"){
+        $c1:#97c54d;
+        $c2:#3b79b4;
+    } @else if ($type == "blue"){
+        $c1:#0072c6;
+        $c2:#68127a;
+    }
+    background-image: linear-gradient($d, $c1, $c2);
+}
