@@ -134,9 +134,6 @@
 }
 
 .product {
-    .bgInner{
-        @extend %mainInner;
-    }
     padding: 100px 0;
     background-color: rgba(225, 225, 225, 0.2);
     .moduleHeader{

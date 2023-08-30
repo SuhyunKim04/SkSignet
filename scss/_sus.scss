@@ -122,20 +122,7 @@
         }
     }
 }
-.line-header{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    strong {
-        flex-shrink:0;
-    }
-    &::after{
-        content:'';
-        height: 1px;
-        width: 100%;
-        background-color: rgba(black,0.2);
-    }
-}
+
 .valuePart{
     padding: 100px 0;
 

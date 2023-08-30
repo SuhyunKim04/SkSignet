@@ -328,7 +328,7 @@ fieldset {
   margin: 0 auto;
 }
 
-.inner, .table, .companyPart .inner, .visualSlide .common, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom .inner, .product .bgInner {
+.inner, .careersPart .inner, .table, .companyPart .inner, .visualSlide .common, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom .inner {
   width: 100%;
   max-width: 1416px;
   padding: 0 60px;
@@ -369,6 +369,21 @@ body {
 
 .slick-next {
   right: 25px;
+}
+
+.line-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.line-header strong {
+  flex-shrink: 0;
+}
+.line-header::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .subtitle {
@@ -1986,21 +2001,6 @@ body {
   margin-right: 14px;
 }
 
-.line-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.line-header strong {
-  flex-shrink: 0;
-}
-.line-header::after {
-  content: "";
-  height: 1px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
 .valuePart {
   padding: 100px 0;
 }
@@ -2154,6 +2154,111 @@ body {
   opacity: 1;
 }
 
+.slide {
+  background: rgb(245, 245, 245) url("../images/texture.webp") no-repeat center center/cover;
+  padding: 45px 0;
+}
+
+.careersPart .careersMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.careersPart .careersMain div:first-child {
+  max-width: 680px;
+}
+.careersPart .careersMain h1 {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 33px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #f47725, #EA002C 50%);
+}
+.careersPart .careersMain p {
+  font-weight: 400;
+  line-height: 1.75;
+  margin-top: 12px;
+}
+.careersPart .careersMain .careersPics {
+  flex-shrink: 0;
+  flex-basis: 148px;
+}
+
+.culture {
+  padding: 100px 0;
+}
+.culture .moduleHeader {
+  text-align: center;
+}
+.culture .moduleHeader h2 {
+  font-size: 12.5px;
+  line-height: 15px;
+  font-weight: 600;
+  margin-bottom: 7.5px;
+}
+.culture .moduleHeader h3 {
+  margin-bottom: 12px;
+  font-size: 27px;
+  font-weight: 600;
+}
+.culture .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 6px;
+}
+.culture .list .items {
+  flex-basis: 25%;
+  transition: 0.4s;
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+  padding: 24px;
+  height: 400px;
+  position: relative;
+}
+.culture .list .items dl {
+  font-weight: 600;
+  line-height: 1.7;
+  position: relative;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: 0.6s;
+}
+.culture .list .items dl dt {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #f47725, #EA002C 50%);
+  font-size: 15px;
+}
+.culture .list .items dl dd {
+  color: rgb(255, 255, 255);
+  font-size: 19px;
+}
+.culture .list .items:hover {
+  flex-basis: 40%;
+}
+.culture .list .items:hover dl {
+  opacity: 1;
+}
+.culture .list .a {
+  background: url("../images/culturePics_1.webp") center center/cover;
+}
+.culture .list .b {
+  background: url("../images/culturePics_2.webp") center center/cover;
+  margin-top: 160px;
+}
+.culture .list .c {
+  background: url("../images/culturePics_3.webp") center center/cover;
+}
+.culture .list .d {
+  background: url("../images/culturePics_4.webp") center center/cover;
+  margin-top: 160px;
+}
+
 .pageFooter {
   background-color: rgba(245, 245, 245, 0.8);
   padding-top: 180px;
@@ -2263,7 +2368,7 @@ body {
     max-width: none;
     width: auto;
   }
-  .product .bgInner, .highCustom .inner, .tech .bgInner, .homeNews .inner, .ad, .modalWrap .contents, .visualSlide .contents, .visualSlide .visualContent, .visualSlide .common, .companyPart .inner, .table, .inner {
+  .highCustom .inner, .tech .bgInner, .homeNews .inner, .ad, .modalWrap .contents, .visualSlide .contents, .visualSlide .visualContent, .visualSlide .common, .companyPart .inner, .table, .careersPart .inner, .inner {
     max-width: 1224px;
   }
   .modalWrap .contents {
