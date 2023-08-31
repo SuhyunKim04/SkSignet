@@ -121,3 +121,149 @@
         }
     }
 }
+
+.cultureThree{
+    padding: 100px 0;
+    .side{
+        &:before{
+            content:'';
+            height: 1px;
+            width: 100%;
+            background-color: rgba(black,0.2);
+        }
+        
+    }
+    .threeBox{
+        @include flex;
+        margin-top: 60px;
+        column-gap: 40px;
+        li{
+            h4{
+                display: inline;
+                font-size: 21px;
+                line-height: 1.5;
+                font-weight: 600;
+                @include blue;
+            }
+            p{
+                font-size: 14px;
+                color: rgba(0,0,0,0.8);
+                line-height: 1.7;
+            }
+        }
+    }
+}
+
+.careersPeople{
+    padding: 100px 0;
+    background: rgb(245,245,245) url($imgUrl + 'texture.webp') no-repeat 
+    center center/cover;
+
+    .people{
+        @include flex(space-around, stretch);
+
+        .moduleHeader{
+            flex-basis: 504px;
+
+            h3{
+                font-size: 27px;
+                font-weight: 600;
+                line-height: 1.5;
+            }
+            p{
+                margin-top:12px;
+                line-height: 1.75;
+            }
+        }
+
+        .peopleCards{
+            flex-basis: 524px;
+            
+
+            .items{
+                margin-bottom: 20px;
+                @include flex;
+                background-color: #fff;
+                padding: 20px 30px 20px 36px;
+
+                h4{
+                    font-size: 17px;
+                    font-weight: 600;
+                    line-height: 1.7;
+                }
+
+                p{
+                    line-height: 1.75;
+                }
+            }
+        }
+    }
+}
+
+.careersInnovation{
+    padding: 100px 0;
+
+    .moduleHeader{
+        text-align: center;
+
+        h3{
+            font-size: 27px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+    }
+
+    .cards{
+        @include flex;
+        margin-top: 62px;
+        column-gap: 40px;
+
+        .items{
+            position: relative;
+            color: $whText;
+            $bgbar: $gradientYellow, $gradientGreen, $gradientBlue;
+
+            @for $i from 1 through 3{
+                &:nth-child(#{$i}) {
+
+                    background: url($imgUrl + 'innovationPics_#{$i}.webp') center center/cover;
+                    &:after{
+                        background-image: nth($bgbar, $i);
+                    }
+                }
+            }
+            &:after{
+                content:'';
+                height: 12px;
+                position: absolute;
+                bottom:0;left:0;right:0;
+                background-image: $gradientYellow;
+            }
+            h4{
+                font-weight: 600;
+                line-height: 1.7;
+                font-size: 19px;
+                margin-bottom:12px;
+                position: relative;
+                
+            }
+            p{
+                font-weight: 400;
+                line-height: 1.4;
+                font-size: 14px;
+                position: relative;
+                
+            }
+
+            &::before{
+                content:'';
+                @include gd( rgba(black,0.7), rgba(black, 0), -180);
+                position: absolute;
+                top:0;bottom:0;right:0;left:0;
+                display: block;
+                opacity:1;
+            }
+        }
+    }
+}

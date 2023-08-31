@@ -2259,6 +2259,154 @@ body {
   margin-top: 160px;
 }
 
+.cultureThree {
+  padding: 100px 0;
+}
+.cultureThree .side:before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.cultureThree .threeBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  column-gap: 40px;
+}
+.cultureThree .threeBox li h4 {
+  display: inline;
+  font-size: 21px;
+  line-height: 1.5;
+  font-weight: 600;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #0072c6, #68127a);
+}
+.cultureThree .threeBox li p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.7;
+}
+
+.careersPeople {
+  padding: 100px 0;
+  background: rgb(245, 245, 245) url("../images/texture.webp") no-repeat center center/cover;
+}
+.careersPeople .people {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.careersPeople .people .moduleHeader {
+  flex-basis: 504px;
+}
+.careersPeople .people .moduleHeader h3 {
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.careersPeople .people .moduleHeader p {
+  margin-top: 12px;
+  line-height: 1.75;
+}
+.careersPeople .people .peopleCards {
+  flex-basis: 524px;
+}
+.careersPeople .people .peopleCards .items {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px 30px 20px 36px;
+}
+.careersPeople .people .peopleCards .items h4 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.careersPeople .people .peopleCards .items p {
+  line-height: 1.75;
+}
+
+.careersInnovation {
+  padding: 100px 0;
+}
+.careersInnovation .moduleHeader {
+  text-align: center;
+}
+.careersInnovation .moduleHeader h3 {
+  font-size: 27px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.careersInnovation .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 62px;
+  column-gap: 40px;
+}
+.careersInnovation .cards .items {
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+.careersInnovation .cards .items:nth-child(1) {
+  background: url("../images/innovationPics_1.webp") center center/cover;
+}
+.careersInnovation .cards .items:nth-child(1):after {
+  background-image: linear-gradient(90deg, #fbbc05, #f47725 99.96%);
+}
+.careersInnovation .cards .items:nth-child(2) {
+  background: url("../images/innovationPics_2.webp") center center/cover;
+}
+.careersInnovation .cards .items:nth-child(2):after {
+  background-image: linear-gradient(90deg, #97c54d, #3b79b4 80%);
+}
+.careersInnovation .cards .items:nth-child(3) {
+  background: url("../images/innovationPics_3.webp") center center/cover;
+}
+.careersInnovation .cards .items:nth-child(3):after {
+  background-image: linear-gradient(90deg, #0072c6, #68127a);
+}
+.careersInnovation .cards .items:after {
+  content: "";
+  height: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(90deg, #fbbc05, #f47725 99.96%);
+}
+.careersInnovation .cards .items h4 {
+  font-weight: 600;
+  line-height: 1.7;
+  font-size: 19px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.careersInnovation .cards .items p {
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 14px;
+  position: relative;
+}
+.careersInnovation .cards .items::before {
+  content: "";
+  background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.7) 7.21%, rgba(0, 0, 0, 0) 92.82%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  opacity: 1;
+}
+
 .pageFooter {
   background-color: rgba(245, 245, 245, 0.8);
   padding-top: 180px;
