@@ -7,7 +7,7 @@
     margin-top: -120px;
 }
 .coreSummary{
-    @include flex($j:center,$c: 80px);
+    @include flex($j:space-between,$c: 80px);
     font-weight: 600;
     line-height: 1.7;
     padding: 80px 0 60px;

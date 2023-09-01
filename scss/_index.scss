@@ -3,6 +3,13 @@
     margin-bottom: 12.5px;
 }
 
+.subscribe{
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
 .subtitle2{
     @include pul;
     font-size: 15px;
@@ -47,13 +54,6 @@
         }
     }
     .moduleHeader{
-        h3{
-            font-size: 27px;
-            font-weight: 600;
-            line-height: 150%;
-            margin-bottom: 12.5px;
-        }
-
         p{
             font-size: 15.5px;
             line-height: 175%;
@@ -138,20 +138,6 @@
     background-color: rgba(225, 225, 225, 0.2);
     .moduleHeader{
         text-align: center;
-
-        h2{
-            font-size: 12.5px;
-            line-height: 15px;
-            font-weight: 600;
-            margin-bottom: 7.5px;
-        }
-
-        h3{
-            margin-bottom: 12px;
-            font-size: 27px;
-            font-weight: 600;
-        }
-
         p{
             font-size: 15.5px;
             line-height: 175%;
@@ -258,13 +244,6 @@
     .content{
         @include flex($a:flex-start);
         column-gap: 30px;
-        
-        h3{
-            font-size: 27px;
-            font-weight: 600;
-            line-height: 150%;
-            margin-bottom: 12.5px;
-        }
     
         p{
             font-size:15.5px;
@@ -319,12 +298,6 @@
     background-color: rgba(225, 225, 225, 0.2);
     .content{
         @include flex($d:column);
-        h3{
-            font-size: 27px;
-            font-weight: 600;
-            line-height: 150%;
-            margin-bottom: 12.5px;
-        }
 
         p{
             font-size:15.5px;
@@ -407,12 +380,6 @@
 
     .content{
         text-align: center;
-        h3{
-            font-size: 27px;
-            font-weight: 600;
-            line-height: 150%;
-            margin-bottom: 12.5px;
-        }
     
         p{
             font-size:15.5px;
