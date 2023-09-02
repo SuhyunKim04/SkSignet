@@ -2,6 +2,20 @@
     @extend %grText;
     margin-bottom: 12.5px;
 }
+.readNews{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $line;
+    padding-top: 24px;
+
+    span{
+        @include clip;
+        font-size: 11.5px;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+}   
 
 .subscribe{
     font-size: 27px;
@@ -451,21 +465,7 @@
                 font-weight: 600;
                 line-height: 1.7;
                 margin: 12.5px 0;
-            }
-            .readNews{
-                display: flex;
-                justify-content: space-between;
-                border-top: 1px solid $line;
-                padding-top: 24px;
-
-                span{
-                    @include clip;
-                    font-size: 11.5px;
-                    line-height: 1.5;
-                    letter-spacing: 1px;
-                    font-weight: 600;
-                }
-            }   
+            } 
         }
         .onlyPics{
             display: flex;

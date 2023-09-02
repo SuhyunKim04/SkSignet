@@ -328,7 +328,7 @@ fieldset {
   margin: 0 auto;
 }
 
-.inner, #careers .careersPart .inner, .table, .companyPart .inner, .visualSlide .common, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom .inner {
+.inner, .newsPart .inner, #careers .careersPart .inner, .table, .companyPart .inner, .visualSlide .common, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom .inner {
   width: 100%;
   max-width: 1416px;
   padding: 0 60px;
@@ -388,6 +388,23 @@ body {
 
 .subtitle {
   margin-bottom: 12.5px;
+}
+
+.readNews {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 24px;
+}
+.readNews span {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #f47725, #EA002C 50%);
+  font-size: 11.5px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .subscribe {
@@ -826,22 +843,6 @@ body {
   font-weight: 600;
   line-height: 1.7;
   margin: 12.5px 0;
-}
-.homeNews .newsCards .contents .readNews {
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid #e5e7eb;
-  padding-top: 24px;
-}
-.homeNews .newsCards .contents .readNews span {
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(90deg, #f47725, #EA002C 50%);
-  font-size: 11.5px;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  font-weight: 600;
 }
 .homeNews .newsCards .onlyPics {
   display: flex;
@@ -2155,6 +2156,20 @@ body {
 #careers .culture .list .items:hover dl {
   opacity: 1;
 }
+#careers .culture .list .items:hover::before {
+  opacity: 1;
+}
+#careers .culture .list .items::before {
+  content: "";
+  background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.7) 7.21%, rgba(0, 0, 0, 0) 92.82%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  opacity: 0;
+}
 #careers .culture .list .a {
   background: url("../images/culturePics_1.webp") center center/cover;
 }
@@ -2227,17 +2242,24 @@ body {
   background-color: #fff;
   padding: 20px 30px 20px 36px;
   border-radius: 4px;
+  transition: height 0.5s;
 }
-#careers .careersPeople .people .peopleCards .items .itemsFlex {
-  text-align: start;
-}
-#careers .careersPeople .people .peopleCards .items h4 {
+#careers .careersPeople .people .peopleCards .items dt {
   font-size: 17px;
   font-weight: 600;
   line-height: 1.7;
 }
-#careers .careersPeople .people .peopleCards .items p {
+#careers .careersPeople .people .peopleCards .items dd {
   line-height: 1.75;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s;
+}
+#careers .careersPeople .people .peopleCards .items img {
+  transition: 0.4s;
+}
+#careers .careersPeople .people .peopleCards .items.on img {
+  transform: rotate(45deg);
 }
 #careers .careersInnovation {
   padding: 100px 0;
@@ -2336,6 +2358,82 @@ body {
 #careers .pageFooter {
   padding-top: 0;
   margin-top: 0;
+}
+
+.newsPart .news_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newsPart .news_main div:first-child {
+  max-width: 715px;
+}
+.newsPart .news_main h1 {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 33px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #f47725, #EA002C 50%);
+}
+.newsPart .news_main p {
+  font-weight: 400;
+  line-height: 1.75;
+  margin-top: 12px;
+}
+.newsPart .news_main .news_pic {
+  flex-shrink: 0;
+  flex-basis: 148px;
+}
+
+.news {
+  padding: 100px 0;
+}
+.news .newsCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+.news .newsCard li:nth-child(1) {
+  background: url("../images/newsPics_1.webp") center center/cover;
+}
+.news .newsCard li:nth-child(2) {
+  background: url("../images/newsPics_2.webp") center center/cover;
+}
+.news .newsCard li:nth-child(3) {
+  background: url("../images/newsPics_3.webp") center center/cover;
+}
+.news .newsCard li:nth-child(4) {
+  background: url("../images/newsPics_4.webp") center center/cover;
+}
+.news .newsCard li:nth-child(5) {
+  background: url("../images/newsPics_5.webp") center center/cover;
+}
+.news .newsCard li:nth-child(6) {
+  background: url("../images/newsPics_6.webp") center center/cover;
+}
+.news .newsCard li:nth-child(7) {
+  background: url("../images/newsPics_7.webp") center center/cover;
+}
+.news .newsCard li:nth-child(8) {
+  background: url("../images/newsPics_8.webp") center center/cover;
+}
+.news .newsCard li:nth-child(9) {
+  background: url("../images/newsPics_9.webp") center center/cover;
+}
+.news .newsCard li .contents {
+  background-color: #fff;
+}
+.news .newsCard li .contents time {
+  background-image: linear-gradient(90deg, #0072c6, #68127a);
+  font-size: 10.5px;
+  color: rgb(255, 255, 255);
+  padding: 6px 12px;
+  border-radius: 2px;
+  display: block;
+  align-self: flex-start;
 }
 
 .pageFooter {
@@ -2447,7 +2545,7 @@ body {
     max-width: none;
     width: auto;
   }
-  .highCustom .inner, .tech .bgInner, .homeNews .inner, .ad, .modalWrap .contents, .visualSlide .contents, .visualSlide .visualContent, .visualSlide .common, .companyPart .inner, .table, #careers .careersPart .inner, .inner {
+  .highCustom .inner, .tech .bgInner, .homeNews .inner, .ad, .modalWrap .contents, .visualSlide .contents, .visualSlide .visualContent, .visualSlide .common, .companyPart .inner, .table, #careers .careersPart .inner, .newsPart .inner, .inner {
     max-width: 1224px;
   }
   .modalWrap .contents {
