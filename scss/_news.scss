@@ -41,22 +41,37 @@
 
         
         li{
+            border-radius: 4px;
+            position: relative;
             @for $i from 1 through 9{
                 &:nth-child(#{$i}) {
-                    background: url($imgUrl + 'newsPics_#{$i}.webp') center center/cover;
+                    background: url($imgUrl + 'newsPics_#{$i}.webp') no-repeat center center/cover;
+
+                    height: 350px;
                 }
             }
 
+
+          
+
             .contents{
                 background-color: #fff;
+                padding: 24px;
+                position: absolute;
+                bottom: 0;
+                h4{
+                    margin: 20px 0;
+                    font-size: 17px;
+                    font-weight: 600;
+                    line-height: 1.7;
+                }
                 time{
                     background-image: $gradientBlue;
                     font-size: 10.5px;
                     color: $whText;
                     padding: 6px 12px;
                     border-radius: 2px;
-                    display:block;
-                    align-self:flex-start;
+                    display:inline-block;
                 }
             }
         }

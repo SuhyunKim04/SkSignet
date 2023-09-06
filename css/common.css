@@ -2372,35 +2372,57 @@ body {
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 40px;
 }
+.news .newsCard li {
+  border-radius: 4px;
+  position: relative;
+}
 .news .newsCard li:nth-child(1) {
-  background: url("../images/newsPics_1.webp") center center/cover;
+  background: url("../images/newsPics_1.webp") no-repeat center center/cover;
+  height: 350px;
 }
 .news .newsCard li:nth-child(2) {
-  background: url("../images/newsPics_2.webp") center center/cover;
+  background: url("../images/newsPics_2.webp") no-repeat center center/cover;
+  height: 350px;
 }
 .news .newsCard li:nth-child(3) {
-  background: url("../images/newsPics_3.webp") center center/cover;
+  background: url("../images/newsPics_3.webp") no-repeat center center/cover;
+  height: 350px;
 }
 .news .newsCard li:nth-child(4) {
-  background: url("../images/newsPics_4.webp") center center/cover;
+  background: url("../images/newsPics_4.webp") no-repeat center center/cover;
+  height: 350px;
 }
 .news .newsCard li:nth-child(5) {
-  background: url("../images/newsPics_5.webp") center center/cover;
+  background: url("../images/newsPics_5.webp") no-repeat center center/cover;
+  height: 350px;
 }
 .news .newsCard li:nth-child(6) {
-  background: url("../images/newsPics_6.webp") center center/cover;
+  background: url("../images/newsPics_6.webp") no-repeat center center/cover;
+  height: 350px;
 }
 .news .newsCard li:nth-child(7) {
-  background: url("../images/newsPics_7.webp") center center/cover;
+  background: url("../images/newsPics_7.webp") no-repeat center center/cover;
+  height: 350px;
 }
 .news .newsCard li:nth-child(8) {
-  background: url("../images/newsPics_8.webp") center center/cover;
+  background: url("../images/newsPics_8.webp") no-repeat center center/cover;
+  height: 350px;
 }
 .news .newsCard li:nth-child(9) {
-  background: url("../images/newsPics_9.webp") center center/cover;
+  background: url("../images/newsPics_9.webp") no-repeat center center/cover;
+  height: 350px;
 }
 .news .newsCard li .contents {
   background-color: #fff;
+  padding: 24px;
+  position: absolute;
+  bottom: 0;
+}
+.news .newsCard li .contents h4 {
+  margin: 20px 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.7;
 }
 .news .newsCard li .contents time {
   background-image: linear-gradient(90deg, #0072c6, #68127a);
@@ -2408,8 +2430,7 @@ body {
   color: rgb(255, 255, 255);
   padding: 6px 12px;
   border-radius: 2px;
-  display: block;
-  align-self: flex-start;
+  display: inline-block;
 }
 
 .pageFooter {
