@@ -4,38 +4,6 @@
     padding: 45px 0;
 
 }
-.companyPart{
-        .inner{
-            @extend %mainInner;
-        }
-        .com_main{
-            @include flex;
-
-            div{
-                &:first-child{
-                    max-width: 715px;
-                }
-            }
-            
-            h1{
-                font-weight: 600;
-                line-height: 1.5;
-                font-size: 33px;
-                @include clip;
-            }
-            p{
-                font-weight: 400;
-                line-height: 1.75;
-                margin-top: 12px;
-            }
-
-            .com_pic{
-                   flex-shrink: 0;
-                   flex-basis: 148px;
-            }
-        }
-    
-}
 
 .table{
     @extend %mainInner;

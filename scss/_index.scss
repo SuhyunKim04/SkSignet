@@ -23,6 +23,38 @@
     line-height: 1.5;
     margin-bottom: 12px;
 }
+.primary{
+    .inner{
+        @extend %mainInner;
+    }
+    .primary_main{
+        @include flex($j:space-around);
+
+        div{
+            &:first-child{
+                max-width: 715px;
+            }
+        }
+        
+        h1{
+            font-weight: 600;
+            line-height: 1.5;
+            font-size: 33px;
+            @include clip;
+        }
+        p{
+            font-weight: 400;
+            line-height: 1.75;
+            margin-top: 12px;
+        }
+
+        .primary_pic{
+               flex-shrink: 0;
+               flex-basis: 148px;
+        }
+    }
+
+}
 
 .subtitle2{
     @include pul;

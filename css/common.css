@@ -328,7 +328,7 @@ fieldset {
   margin: 0 auto;
 }
 
-.inner, .newsPart .inner, #careers .careersPart .inner, .table, .companyPart .inner, .visualSlide .common, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom .inner {
+.inner, .table, .visualSlide .common, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom .inner, .primary .inner {
   width: 100%;
   max-width: 1416px;
   padding: 0 60px;
@@ -412,6 +412,33 @@ body {
   font-weight: 600;
   line-height: 1.5;
   margin-bottom: 12px;
+}
+
+.primary .primary_main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.primary .primary_main div:first-child {
+  max-width: 715px;
+}
+.primary .primary_main h1 {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 33px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #f47725, #EA002C 50%);
+}
+.primary .primary_main p {
+  font-weight: 400;
+  line-height: 1.75;
+  margin-top: 12px;
+}
+.primary .primary_main .primary_pic {
+  flex-shrink: 0;
+  flex-basis: 148px;
 }
 
 .subtitle2 {
@@ -1353,33 +1380,6 @@ body {
   padding: 45px 0;
 }
 
-.companyPart .com_main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.companyPart .com_main div:first-child {
-  max-width: 715px;
-}
-.companyPart .com_main h1 {
-  font-weight: 600;
-  line-height: 1.5;
-  font-size: 33px;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(90deg, #f47725, #EA002C 50%);
-}
-.companyPart .com_main p {
-  font-weight: 400;
-  line-height: 1.75;
-  margin-top: 12px;
-}
-.companyPart .com_main .com_pic {
-  flex-shrink: 0;
-  flex-basis: 148px;
-}
-
 .table ul li dl {
   display: flex;
   justify-content: space-between;
@@ -2059,32 +2059,6 @@ body {
   padding: 45px 0;
 }
 
-#careers .careersPart .careersMain {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#careers .careersPart .careersMain div:first-child {
-  max-width: 680px;
-}
-#careers .careersPart .careersMain h1 {
-  font-weight: 600;
-  line-height: 1.5;
-  font-size: 33px;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(90deg, #f47725, #EA002C 50%);
-}
-#careers .careersPart .careersMain p {
-  font-weight: 400;
-  line-height: 1.75;
-  margin-top: 12px;
-}
-#careers .careersPart .careersMain .careersPics {
-  flex-shrink: 0;
-  flex-basis: 148px;
-}
 #careers .culture {
   padding: 100px 0;
 }
@@ -2336,33 +2310,6 @@ body {
   margin-top: 0;
 }
 
-.newsPart .news_main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.newsPart .news_main div:first-child {
-  max-width: 715px;
-}
-.newsPart .news_main h1 {
-  font-weight: 600;
-  line-height: 1.5;
-  font-size: 33px;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(90deg, #f47725, #EA002C 50%);
-}
-.newsPart .news_main p {
-  font-weight: 400;
-  line-height: 1.75;
-  margin-top: 12px;
-}
-.newsPart .news_main .news_pic {
-  flex-shrink: 0;
-  flex-basis: 148px;
-}
-
 .news {
   padding: 100px 0;
 }
@@ -2543,7 +2490,7 @@ body {
     max-width: none;
     width: auto;
   }
-  .highCustom .inner, .tech .bgInner, .homeNews .inner, .ad, .modalWrap .contents, .visualSlide .contents, .visualSlide .visualContent, .visualSlide .common, .companyPart .inner, .table, #careers .careersPart .inner, .newsPart .inner, .inner {
+  .primary .inner, .highCustom .inner, .tech .bgInner, .homeNews .inner, .ad, .modalWrap .contents, .visualSlide .contents, .visualSlide .visualContent, .visualSlide .common, .table, .inner {
     max-width: 1224px;
   }
   .modalWrap .contents {
