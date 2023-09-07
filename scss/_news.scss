@@ -43,6 +43,7 @@
         li{
             border-radius: 4px;
             position: relative;
+            @include shadow;
             @for $i from 1 through 9{
                 &:nth-child(#{$i}) {
                     background: url($imgUrl + 'newsPics_#{$i}.webp') no-repeat center center/cover;

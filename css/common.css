@@ -2375,6 +2375,7 @@ body {
 .news .newsCard li {
   border-radius: 4px;
   position: relative;
+  filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.1));
 }
 .news .newsCard li:nth-child(1) {
   background: url("../images/newsPics_1.webp") no-repeat center center/cover;
