@@ -450,6 +450,7 @@ body {
   font-weight: 600;
   line-height: 170%;
   margin: 40px 0 14px 0;
+  display: inline-block;
 }
 
 .subtext {
@@ -1028,6 +1029,31 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.inquiryForm .formTitle .subtitle2 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.inquiryForm .formTitle p {
+  font-size: 14px;
+}
+.inquiryForm .formTitle:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 40px 0;
+}
+.inquiryForm form .names {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inquiryForm form .names input {
+  width: 100%;
 }
 
 .pageHeader {
