@@ -1047,6 +1047,9 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   margin: 40px 0;
 }
+.inquiryForm form {
+  flex-grow: 1;
+}
 .inquiryForm form .names {
   display: flex;
   justify-content: space-between;
@@ -1054,6 +1057,33 @@ body {
 }
 .inquiryForm form .names input {
   width: 100%;
+}
+.inquiryForm form .nums {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inquiryForm form .nums input {
+  width: 100%;
+}
+
+.inquiryDivide {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  height: 350px;
+}
+.inquiryDivide .side {
+  background: url("../images/contact.webp") no-repeat center center/cover;
+  flex-basis: 336px;
+  height: 200px;
+  position: sticky;
+}
+.inquiryDivide .side .white {
+  background-color: #fff;
+}
+.inquiryDivide .side .email {
+  background-image: url("../images/email.svg");
 }
 
 .pageHeader {

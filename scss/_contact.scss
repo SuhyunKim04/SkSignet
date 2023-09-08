@@ -19,6 +19,7 @@
     }
 
     form{
+        flex-grow: 1;
         .names{
             @include flex;
 
@@ -26,5 +27,32 @@
                 width: 100%;
             }
         }
+        .nums{
+            @include flex;
+
+            input{
+                width: 100%;
+            }
+        }
     }
+}
+
+.inquiryDivide{
+    @include flex($j:stretch);
+    height: 350px;
+    .side{
+        background: url($imgUrl + 'contact.webp') no-repeat center center/cover;
+        flex-basis: 336px;
+        height: 200px;
+        position: sticky;
+
+
+        .white{
+            background-color: #fff;
+        }
+        .email{
+            background-image: url($imgUrl + 'email.svg');
+        }
+    }
+
 }
