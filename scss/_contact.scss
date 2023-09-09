@@ -20,19 +20,36 @@
 
     form{
         flex-grow: 1;
-        .names{
-            @include flex;
-
-            input{
-                width: 100%;
-            }
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        
+        input{
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(0,0,0,0.2);
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 1.5;
         }
-        .nums{
-            @include flex;
 
-            input{
-                width: 100%;
-            }
+        label{
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            line-height: 1.7;
+        }
+        .names{
+            display: flex;
+           
+        }
+
+        .nums{
+            display: flex;
+        }
+
+        .field{
+            display: flex;
         }
     }
 }
@@ -45,8 +62,7 @@
         flex-basis: 336px;
         height: 200px;
         position: sticky;
-
-
+    
         .white{
             background-color: #fff;
         }
