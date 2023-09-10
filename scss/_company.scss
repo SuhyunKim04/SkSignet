@@ -91,6 +91,7 @@
     }
 
     .cover{
+        margin: 106px 0 0;
         position: relative;
         filter: drop-shadow(0px 8px 20px rgba(238,118,35,.4));
     }
@@ -228,6 +229,7 @@
     background-color: rgba(225, 225, 225, 0.2);
     .moduleHeader{
         text-align: center;
+        margin-bottom: 100px;
     }    
 
     .coreStrengths{
@@ -299,6 +301,7 @@
             grid-template-columns: 1fr 1fr;
             column-gap: 20px;
             row-gap: 34px;
+            margin-top: 40px;
 
             .items{
                 text-align: center;
@@ -359,29 +362,31 @@
             p{
                 line-height: 1.75;
             }
-        
+        margin-bottom: 100px;
     }    
 
     .collaboDivide{
-        @include flex($j: null, $a:stretch);
+        @include flex($j:space-between, $a:stretch);
+        margin-top: 48px;
+        column-gap: 40px;
         .certificate{
             @include flex;
             column-gap: 22px;
+            flex-grow:1;
             img{
-                width: 230px;
+                max-width: 230px;
+                width: calc((100% - 44px) / 3);
             }
         }
 
         .info{
            @include flex($a: stretch);
            flex-direction: column;
-           margin-left: 40px;
-
+            flex-basis: 34.5%;
            li{
-            margin: auto 0;
             background-color: #fff;
             outline: 1px solid red;
-            padding: 8px 8px 8px    40px;
+            padding: 8px 8px 8px 40px;
             display: flex;
             align-items: center;
             position: relative;
@@ -415,6 +420,7 @@
 
     .listHeader{
         @include gd($c1:#0072c6, $c2:#68127a);
+        margin-top: 48px;
         color: #fff;
         font-size: 14px;
         font-weight: 600;

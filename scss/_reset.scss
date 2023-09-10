@@ -7,9 +7,10 @@
 }
  
 
-body, h1,h2,h3,h4,h5,h6,p,blockquote,dl,dt,dd,ol,ul,li,fieldset{
+body, h1,h2,h3,h4,h5,h6,p,blockquote,dl,dt,dd,ol,ul,li,fieldset,figure,figcaption{
 	margin: 0;
 	padding: 0;
+
 }
 
 html, body{
@@ -71,4 +72,24 @@ fieldset{
     height: 1px;
     margin: -1px;
     overflow: hidden;
+}
+
+input[type=text]:focus {
+	background-color:#eef3f5;
+}
+
+
+input[type=checkbox]{
+	-webkit-appearance: none;
+	appearance: none;
+	border:2px solid #bbb;
+	background-color:#ebebeb;
+	width:17px;height:17px;
+	border-radius:50%;
+	padding:2px;
+	background-clip: content-box;
+	position: absolute;
+	&:checked{
+		background-color: red;
+	}
 }

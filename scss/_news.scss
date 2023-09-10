@@ -3,7 +3,6 @@
     .newsCard{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(3,1fr);
         grid-gap: 40px;
 
         
@@ -11,24 +10,24 @@
             border-radius: 4px;
             position: relative;
             @include shadow;
+            overflow: hidden;
             @for $i from 1 through 9{
-                &:nth-child(#{$i}) {
+                &:nth-child(#{$i}) .thumb{
                     background: url($imgUrl + 'newsPics_#{$i}.webp') no-repeat center center/cover;
-
-                    height: 350px;
                 }
             }
 
 
-          
-
+          .thumb{
+          height:180px;
+          }
             .contents{
                 background-color: #fff;
                 padding: 24px;
-                position: absolute;
-                bottom: 0;
+                @include flex($a:stretch);
+                height: 250px;
+                flex-direction: column;
                 h4{
-                    margin: 20px 0;
                     font-size: 17px;
                     font-weight: 600;
                     line-height: 1.7;
@@ -40,6 +39,7 @@
                     padding: 6px 12px;
                     border-radius: 2px;
                     display:inline-block;
+                    align-self: flex-start;
                 }
             }
         }
