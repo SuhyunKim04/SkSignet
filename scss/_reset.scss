@@ -89,6 +89,7 @@ input[type=checkbox]{
 	padding:2px;
 	background-clip: content-box;
 	position: absolute;
+	right:10px;top:10px;
 	&:checked{
 		background-color: red;
 	}
