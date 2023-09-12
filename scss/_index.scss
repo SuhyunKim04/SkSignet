@@ -68,12 +68,8 @@
     font-size: 15.5px;
     line-height: 1.75;
 }
+
 .videoSection{
-
-    // .inner{
-    //     @extend %mainInner;
-
-    // }
     padding: 100px 0;
    
     .videoFlex{
@@ -280,8 +276,8 @@
     }
     padding: 100px 0;
     .content{
-        @include flex($a:flex-start);
-        column-gap: 30px;
+        display: grid;
+        column-gap: 40px;
 
         .light{
             color: rgba(0,0,0,0.5);

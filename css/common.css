@@ -692,10 +692,8 @@ body {
   padding: 100px 0;
 }
 .highCustom .content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  column-gap: 30px;
+  display: grid;
+  column-gap: 40px;
 }
 .highCustom .content .light {
   color: rgba(0, 0, 0, 0.5);
