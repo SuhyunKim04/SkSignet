@@ -270,30 +270,20 @@
 }
 
 .highCustom{
-    .inner{
-        @extend %mainInner;
-
-    }
+    @extend %mainInner;
     padding: 100px 0;
+
     .content{
         display: grid;
         column-gap: 40px;
-
-        .light{
-            color: rgba(0,0,0,0.5);
-            font-size: 14px;
-        }
-
-    }
-    .details{
-        @include flex($a: flex-start, $d:column);
-        flex-basis: 50%;
+        
         .plug{
             width: 135px;
         }
         .star{
-            @include flex($d:row);
+            display: flex;
             margin-top: 40px;
+
             span{
                 font-weight: 600;
                 font-size: 15px;
@@ -301,21 +291,44 @@
             }
         }
 
-    }
-
-
-    .map{
-        background: url($imgUrl + 'us_map.svg') no-repeat center 40px/contain; 
-        height: 350px;
-        order: 2;
-        position:relative;
-        flex-basis: 50%;
-
-        img {
-            position:absolute;
-            width:24px;
+        .map{
+            background: url($imgUrl + 'us_map.svg') no-repeat center 40px/contain; 
+            height: 350px;
+            width: 350px;
+            order: 2;
+            position:relative;
+    
+            img {
+                position:absolute;
+                width:24px;
+            }
         }
+
+        .light{
+            color: rgba(0,0,0,0.5);
+            font-size: 14px;
+        }
+        .a{
+            grid-column: 2/3;
+            grid-row:1/4;
+        }
+
+        .b{
+            grid-column: 1/2;
+            grid-row:1/2;
+        }
+        .c{
+            grid-column: 1/2;
+            grid-row:2/3;
+        }
+
+        .d{
+            grid-column: 1/2;
+            grid-row:3/4;
+        }
+
     }
+
 }
 
 .tech{

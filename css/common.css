@@ -350,7 +350,7 @@ input[type=checkbox]:checked {
   margin: 0 auto;
 }
 
-.inner, .table, .visualSlide .common, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom .inner, .primary .inner {
+.inner, .table, .visualSlide .common, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom, .primary .inner {
   width: 100%;
   max-width: 1416px;
   padding: 0 60px;
@@ -695,42 +695,48 @@ body {
   display: grid;
   column-gap: 40px;
 }
-.highCustom .content .light {
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 14px;
-}
-.highCustom .details {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  flex-basis: 50%;
-}
-.highCustom .details .plug {
+.highCustom .content .plug {
   width: 135px;
 }
-.highCustom .details .star {
+.highCustom .content .star {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
   margin-top: 40px;
 }
-.highCustom .details .star span {
+.highCustom .content .star span {
   font-weight: 600;
   font-size: 15px;
   margin-left: 5px;
 }
-.highCustom .map {
+.highCustom .content .map {
   background: url("../images/us_map.svg") no-repeat center 40px/contain;
   height: 350px;
+  width: 350px;
   order: 2;
   position: relative;
-  flex-basis: 50%;
 }
-.highCustom .map img {
+.highCustom .content .map img {
   position: absolute;
   width: 24px;
+}
+.highCustom .content .light {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+.highCustom .content .a {
+  grid-column: 2/3;
+  grid-row: 1/4;
+}
+.highCustom .content .b {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.highCustom .content .c {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.highCustom .content .d {
+  grid-column: 1/2;
+  grid-row: 3/4;
 }
 
 .tech {
@@ -2747,7 +2753,7 @@ body {
     max-width: none;
     width: auto;
   }
-  .primary .inner, .highCustom .inner, .tech .bgInner, .homeNews .inner, .ad, .modalWrap .contents, .visualSlide .contents, .visualSlide .visualContent, .visualSlide .common, .table, .inner {
+  .primary .inner, .highCustom, .tech .bgInner, .homeNews .inner, .ad, .modalWrap .contents, .visualSlide .contents, .visualSlide .visualContent, .visualSlide .common, .table, .inner {
     max-width: 1224px;
   }
   .modalWrap .contents {
