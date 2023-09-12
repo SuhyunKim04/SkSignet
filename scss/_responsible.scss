@@ -39,14 +39,14 @@
  }
 
  
- @include media($tablet) { 
-     .modalWrap {
+@include media($tablet) { 
+    .modalWrap {
         .contents{
             max-width: 640px;
         }
-     }
+    }
 
-     .videoSection{
+    .videoSection{
         .videoFlex{
             @include flex;
             flex-direction: column;
@@ -66,8 +66,34 @@
                 order:3;
             }
         }
-     }
- }
+    }
+
+    .customSection{
+        .content{
+            @include flex;
+            flex-direction: column;
+
+            .a{
+                order:2;
+            }
+
+            .b{
+                order:1;
+            }
+
+            .c{
+                order:3;
+            }
+
+            .d{
+                order:4;
+                // img{
+                //     width: 135px;
+                // }
+            }
+        }
+    }
+}
 
  
 //  @include media($mobile) { 

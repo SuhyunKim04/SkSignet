@@ -269,7 +269,7 @@
     }
 }
 
-.highCustom{
+.customSection{
     @extend %mainInner;
     padding: 100px 0;
 
@@ -277,8 +277,11 @@
         display: grid;
         column-gap: 40px;
         
-        .plug{
-            width: 135px;
+        .plugs{
+            img{
+                width: 135px;
+            }
+           
         }
         .star{
             display: flex;
@@ -293,11 +296,11 @@
 
         .map{
             background: url($imgUrl + 'us_map.svg') no-repeat center 40px/contain; 
-            height: 350px;
-            width: 350px;
+            height: 400px;
+            max-width: 100%;
             order: 2;
             position:relative;
-    
+            width: 400px;
             img {
                 position:absolute;
                 width:24px;

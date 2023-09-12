@@ -350,7 +350,7 @@ input[type=checkbox]:checked {
   margin: 0 auto;
 }
 
-.inner, .table, .visualSlide .common, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .highCustom, .primary .inner {
+.inner, .table, .visualSlide .common, .visualSlide .visualContent, .visualSlide .contents, .modalWrap .contents, .ad, .homeNews .inner, .tech .bgInner, .customSection, .primary .inner {
   width: 100%;
   max-width: 1416px;
   padding: 0 60px;
@@ -688,53 +688,54 @@ body {
   margin-top: 160px;
 }
 
-.highCustom {
+.customSection {
   padding: 100px 0;
 }
-.highCustom .content {
+.customSection .content {
   display: grid;
   column-gap: 40px;
 }
-.highCustom .content .plug {
+.customSection .content .plugs img {
   width: 135px;
 }
-.highCustom .content .star {
+.customSection .content .star {
   display: flex;
   margin-top: 40px;
 }
-.highCustom .content .star span {
+.customSection .content .star span {
   font-weight: 600;
   font-size: 15px;
   margin-left: 5px;
 }
-.highCustom .content .map {
+.customSection .content .map {
   background: url("../images/us_map.svg") no-repeat center 40px/contain;
-  height: 350px;
-  width: 350px;
+  height: 400px;
+  max-width: 100%;
   order: 2;
   position: relative;
+  width: 400px;
 }
-.highCustom .content .map img {
+.customSection .content .map img {
   position: absolute;
   width: 24px;
 }
-.highCustom .content .light {
+.customSection .content .light {
   color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
 }
-.highCustom .content .a {
+.customSection .content .a {
   grid-column: 2/3;
   grid-row: 1/4;
 }
-.highCustom .content .b {
+.customSection .content .b {
   grid-column: 1/2;
   grid-row: 1/2;
 }
-.highCustom .content .c {
+.customSection .content .c {
   grid-column: 1/2;
   grid-row: 2/3;
 }
-.highCustom .content .d {
+.customSection .content .d {
   grid-column: 1/2;
   grid-row: 3/4;
 }
@@ -2753,7 +2754,7 @@ body {
     max-width: none;
     width: auto;
   }
-  .primary .inner, .highCustom, .tech .bgInner, .homeNews .inner, .ad, .modalWrap .contents, .visualSlide .contents, .visualSlide .visualContent, .visualSlide .common, .table, .inner {
+  .primary .inner, .customSection, .tech .bgInner, .homeNews .inner, .ad, .modalWrap .contents, .visualSlide .contents, .visualSlide .visualContent, .visualSlide .common, .table, .inner {
     max-width: 1224px;
   }
   .modalWrap .contents {
@@ -2781,6 +2782,24 @@ body {
   }
   .videoSection .videoFlex .d {
     order: 3;
+  }
+  .customSection .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .customSection .content .a {
+    order: 2;
+  }
+  .customSection .content .b {
+    order: 1;
+  }
+  .customSection .content .c {
+    order: 3;
+  }
+  .customSection .content .d {
+    order: 4;
   }
 }
 
