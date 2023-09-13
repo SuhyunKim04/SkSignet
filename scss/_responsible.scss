@@ -40,6 +40,12 @@
 
  
 @include media($tablet) { 
+
+    .headerContainer{
+        .pageHeaderItems{
+            display: none;
+        }
+    }
     .modalWrap {
         .contents{
             max-width: 640px;
@@ -95,7 +101,8 @@
     }
 }
 
- 
+
+
 //  @include media($mobile) { 
 //     .modalWrap{
 //         .contents{

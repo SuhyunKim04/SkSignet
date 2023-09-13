@@ -918,10 +918,9 @@ body {
   height: 190px;
 }
 .ad .text h2 {
-  font-size: 700;
   font-size: 37px;
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 700;
 }
 .ad .text h2 span {
   -webkit-background-clip: text;
@@ -2762,6 +2761,9 @@ body {
   }
 }
 @media all and (max-width: 899px) {
+  .headerContainer .pageHeaderItems {
+    display: none;
+  }
   .modalWrap .contents {
     max-width: 640px;
   }
