@@ -12,15 +12,13 @@
             @include shadow;
             overflow: hidden;
             @for $i from 1 through 9{
-                &:nth-child(#{$i}) .thumb{
+                &:nth-child(#{$i}) .inbox{
                     background: url($imgUrl + 'newsPics_#{$i}.webp') no-repeat center center/cover;
                 }
             }
 
+            @include scaleThumb(180px);
 
-          .thumb{
-          height:180px;
-          }
             .contents{
                 background-color: #fff;
                 padding: 24px;

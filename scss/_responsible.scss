@@ -98,6 +98,32 @@
             }
         }
     }
+
+    .tech{
+        .cards{
+            .items{
+                flex-basis: 250px;
+                flex-shrink:0;
+            }
+        }
+    }
+
+    .homeNews{
+        .newsCards{
+            display: flex;
+
+            li{
+                flex-basis: 320px;
+                flex-shrink: 0;
+
+                .thumb{
+                    display: block;
+                    height: 190px;
+                }
+            }
+        }
+
+    }
 }
 
 

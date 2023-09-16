@@ -1,4 +1,7 @@
-
+@keyframes bounceLogo {
+    0% { transform:translateY(0) }
+    100% { transform:translateY(3px)}
+}
 
 .pageHeader{
     .inner{
@@ -6,6 +9,21 @@
     }
     padding: 12px 0;
     @include border;
+
+    h1 {
+        transform:translateX(100px);
+        animation-name:bounceLogo;
+        animation-duration:0.6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        // animation-delay:1s;
+        animation-fill-mode: both;
+
+        /*
+        animation:bounceLogo 0.6s 0.1s infinite linear alternate both;
+        */
+    }
     
     //     h1 {
     //         @include border(right,1)
@@ -15,6 +33,7 @@
         @include flex;
     }
 
+   
     .pageHeaderItems{
         .depth_container{
             @include flex;

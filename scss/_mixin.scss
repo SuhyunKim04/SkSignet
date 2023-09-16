@@ -82,4 +82,29 @@
     background-size: $s;
 }
 
+@mixin scaleThumb($h:null){
+   border-radius: 4px;
+   overflow: hidden;
+    .thumb{
+        height: $h;
+        overflow: hidden;  
+        .inbox, img { 
+            transition: 0.2s;
+            height: 100%;
+        }  
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    &:hover{ 
+        .thumb  {
+            img, .inbox {
+                transform: scale(1.1);
+            }
+               
+        }
+    }  
+}
+
 
