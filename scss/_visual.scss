@@ -1,13 +1,17 @@
-.visualSlide{
+@keyframes rollSlide {
+    0%{transform: translateX(0)}
+    100%{transform: translateX(1390px)}
+}
 
+.visualSlide{
     position:relative;
-    height: calc(100vh - 80px);
     display:flex;
     flex-direction:column;
     justify-content:stretch; 
+
     .slideWrap { 
         position:relative;
-        flex:1;   
+
         .list {
             .item { 
                 width:100%;
@@ -38,10 +42,6 @@
             
         }
         
-    }
-
-    .slideBottom { 
-        flex:0 0 120px;
     }
    
     .contents{
@@ -187,7 +187,7 @@
 }
 
 .slideBottom{
-    @include flex($a:stretch);
+    // @include flex($a:stretch);
     .pageWrap{
         @include flex;
         order:2;
@@ -201,6 +201,11 @@
         .logoList{
             @include flex;
             overflow: hidden;
+            animation-name: rollSlide;
+            animation-duration: 30s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: reverse;
         }
     }
 
@@ -291,10 +296,10 @@
    background-color:tomato;
     outline:1px solid red;
     @include flex($a:center);
-     position:fixed;
+    //  position:fixed;
      z-index:1000000;
 
-     left:50%;top:50%;
+    //  left:50%;top:50%;
 
      button {
         &:hover {

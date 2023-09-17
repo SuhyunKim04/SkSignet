@@ -1404,16 +1404,22 @@ body {
   font-size: 14px;
 }
 
+@keyframes rollSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1390px);
+  }
+}
 .visualSlide {
   position: relative;
-  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   justify-content: stretch;
 }
 .visualSlide .slideWrap {
   position: relative;
-  flex: 1;
 }
 .visualSlide .slideWrap .list .item {
   width: 100%;
@@ -1439,9 +1445,6 @@ body {
 }
 .visualSlide .slideWrap .list .item.c {
   background-image: url("../images/slidePics_2.webp");
-}
-.visualSlide .slideBottom {
-  flex: 0 0 120px;
 }
 .visualSlide .contents {
   position: relative;
@@ -1576,11 +1579,6 @@ body {
   transform: translateX(-50%);
 }
 
-.slideBottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-}
 .slideBottom .pageWrap {
   display: flex;
   justify-content: space-between;
@@ -1597,6 +1595,11 @@ body {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  animation-name: rollSlide;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: reverse;
 }
 
 .testChoose {
@@ -1667,10 +1670,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
   z-index: 1000000;
-  left: 50%;
-  top: 50%;
 }
 .slideBtns button:hover {
   opacity: 0.5;
