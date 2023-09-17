@@ -2826,6 +2826,18 @@ body {
   .headerContainer .pageHeaderItems {
     display: none;
   }
+  .headerContainer .tabletBotton {
+    background-image: linear-gradient(83deg, #f47725 7.21%, #EA002C 92.82%);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 4px;
+  }
+  .headerContainer .tabletBotton .close {
+    display: none;
+  }
   .modalWrap .contents {
     max-width: 640px;
   }
