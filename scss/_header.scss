@@ -28,6 +28,10 @@
     
     .headerContainer{
         @include flex;
+
+        button{
+            display: none;
+        }
     }
 
    

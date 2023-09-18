@@ -1341,6 +1341,9 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.pageHeader .headerContainer button {
+  display: none;
+}
 .pageHeader .pageHeaderItems .depth_container {
   display: flex;
   justify-content: space-between;
