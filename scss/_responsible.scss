@@ -41,21 +41,15 @@
  
 @include media($tablet) { 
     .headerContainer{
-        .pageHeaderItems{
-            display: none;
+        .gnb{
+            
+
+
         }
     
-        .tabletBotton{
-            @include gd;
-            width: 44px;
-            height: 44px;
-            @include flex($j:space-around);
-            border-radius: 4px;
-            .close{
-                display: none;
-            }
+        .mBtn{
+            display: flex;
         }
-
     }
     .modalWrap {
         .contents{

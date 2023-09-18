@@ -1,6 +1,6 @@
 @keyframes rollSlide {
     0%{transform: translateX(0)}
-    100%{transform: translateX(1390px)}
+    100%{transform: translateX(-1100px)}
 }
 
 .visualSlide{
@@ -8,7 +8,7 @@
     display:flex;
     flex-direction:column;
     justify-content:stretch; 
-
+    top:80px;
     .slideWrap { 
         position:relative;
 
@@ -198,15 +198,56 @@
     }
 
     .logoSlide{
+        height: 100px;
+        position: relative;
+        &::after, &:before{
+            content:'';
+            height:100%;
+            position: absolute;
+            z-index: 10000;
+            width: 200px;
+            top:0;
+        }
+
+
+        &:after{
+            right:200px;
+            @include gd(white, transparent, -90)
+        }
+        &:before{
+            left:0;
+            @include gd(white, transparent, 90)
+        }
         .logoList{
             @include flex;
-            overflow: hidden;
             animation-name: rollSlide;
-            animation-duration: 30s;
+            animation-duration: 15s;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
-            animation-direction: reverse;
+            position: absolute;
+            top: calc(50% - 20px);
+            
+
+            li{
+                flex-basis: 110px;
+                flex-shrink: 0;
+                height: 40px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            &.a{
+                left:0;
+            }
+            &.b{
+                left:990px;
+            }
         }
+
     }
 
     
@@ -296,10 +337,10 @@
    background-color:tomato;
     outline:1px solid red;
     @include flex($a:center);
-    //  position:fixed;
+    position: absolute;
      z-index:1000000;
-
-    //  left:50%;top:50%;
+    right: 0;top:0;
+ 
 
      button {
         &:hover {
