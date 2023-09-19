@@ -1338,7 +1338,6 @@ body {
   animation-direction: alternate;
   animation-timing-function: linear;
   animation-fill-mode: both;
-  flex-grow: 1;
   /*
   animation:bounceLogo 0.6s 0.1s infinite linear alternate both;
   */
@@ -1377,6 +1376,9 @@ body {
 .pageHeader .gnb .depth_container .depth_list {
   font-weight: 500;
   font-size: 15px;
+}
+.pageHeader .gnb .depth_container .depth_list a {
+  display: block;
   padding: 0 12.5px;
 }
 .pageHeader .gnb .depth_container .depth_list.on .modal_box {
@@ -2890,6 +2892,29 @@ body {
   }
 }
 @media all and (max-width: 899px) {
+  .pageHeader h1 {
+    flex-grow: 1;
+  }
+  .headerContainer .gnb {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+  }
+  .headerContainer .gnb .depth_container {
+    display: block;
+    padding: 0 40px;
+  }
+  .headerContainer .gnb .depth_container .depth_list {
+    font-size: 19px;
+    border: 0px solid rgba(0, 0, 0, 0.15);
+    border-bottom-width: 1px;
+  }
+  .headerContainer .gnb .depth_container .depth_list a {
+    padding: 28px;
+  }
   .headerContainer .mBtn {
     display: flex;
   }

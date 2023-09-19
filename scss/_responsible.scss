@@ -38,13 +38,36 @@
     }
  }
 
- 
+
 @include media($tablet) { 
+
+    .pageHeader{
+        h1{
+            flex-grow:1;
+        }
+    }
     .headerContainer{
         .gnb{
-            
+            display: none;
+            position: fixed;
+            top:80px;
+            right:0;
+            left:0;
+            background-color:#fff;
 
-
+            .depth_container{
+                display: block;
+                padding: 0 40px;
+                .depth_list{
+                    font-size: 19px;
+                    @include border;
+                    a{
+                        padding: 28px;
+                    }
+                    
+                   
+                }
+            }
         }
     
         .mBtn{

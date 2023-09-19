@@ -155,6 +155,23 @@ const cards = () =>{
 
 }
 
+const mobileMenu = () => {
+    const vento = document.querySelector('.mBtn');
+    const gnb = document.querySelector('.gnb');
+
+    vento.addEventListener('click', (e) => {
+        e.currentTarget.classList.toggle('open');
+        let status = e.currentTarget.classList.contains('open')
+        console.log(status)
+        if(status){
+            gnb.style.display = 'block';
+        }else{
+            gnb.style.display = 'none';
+        }
+    })
+}
+
+
 const cards2 = () => {
     const items = document.querySelectorAll('.peopleCards .items')
  
@@ -201,6 +218,7 @@ const cards2 = () => {
 }
 
 
+
 // if(li){
 //     target.classList.remove('on') 
 //     child.style.height = `0px`; 
@@ -217,8 +235,22 @@ slideBanners();
 modal();
 drop();
 // test();
-modal_menu();
+// modal_menu();
 
-cards2();
+// cards2();
 // cards();
+
+mobileMenu();
+
+let a = 3;
+let b = 5;
+// a가 b보다 크다면 a가 크다 출력하고 b가 크면 b가 크다고 출력
+
+if(a > b){
+    console.log('a가 크다')
+}else {
+    console.log('b가 크다')
+}
+
+
  
