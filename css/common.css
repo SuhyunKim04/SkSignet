@@ -1745,11 +1745,6 @@ body {
   opacity: 0.5;
 }
 
-.slide {
-  background: rgb(245, 245, 245) url("../images/texture.webp") no-repeat center center/cover;
-  padding: 45px 0;
-}
-
 .table ul li dl {
   display: flex;
   justify-content: space-between;
@@ -2436,6 +2431,7 @@ body {
 .slide {
   background: rgb(245, 245, 245) url("../images/texture.webp") no-repeat center center/cover;
   padding: 45px 0;
+  margin-top: 80px;
 }
 
 #careers .culture {
@@ -2889,6 +2885,9 @@ body {
   }
   .modalWrap .contents {
     max-width: 804px;
+  }
+  .headerContainer .gnb {
+    display: flex;
   }
 }
 @media all and (max-width: 899px) {
