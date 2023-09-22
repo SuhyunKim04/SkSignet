@@ -95,6 +95,14 @@
         padding: 28px 0 48px 40px;
         width: calc(100% - 180px);
 
+        &:after{
+            background-image:$gradientGreen;
+            content:'';
+            height: 24px;
+            position: absolute;
+            bottom:0;left:0;right:0;
+        }
+
         li{
             flex-basis: 200px;
             img{
@@ -378,7 +386,6 @@
             flex-basis: 34.5%;
            li{
             background-color: #fff;
-            outline: 1px solid red;
             padding: 8px 8px 8px 40px;
             display: flex;
             align-items: center;
