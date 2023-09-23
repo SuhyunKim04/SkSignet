@@ -265,7 +265,80 @@
             }
         }
     }
-    
+
+    .ceo{
+        .ceoPart{
+            @include flex;
+            flex-direction: column;
+            .a{
+                order:1;
+            }
+
+            .b{
+                order:3;
+                margin-top: 40px;
+
+                p{
+                    text-align: center;
+                }
+            }
+
+            .c{
+                order:2;
+            }
+        }
+    }
+    .news{
+        .newsCard{
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap:20px;
+        }
+    }
+
+    #contact{
+        .inquiryDivide{
+            .side{
+                display: none;
+            }
+        }
+
+        .ourLocation{
+            .locationCard{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    .visualSlide{
+        .slideWrap{
+            .list{
+                .item{
+                    &:before{
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media($laptop){
+    .videoSection{
+        .videoFlex{
+            .d{
+                height: 360px;
+            }
+        }
+    }
+
+    .product{
+        .list{
+            flex-direction: column;
+            .items{
+                width: 100%;
+            }
+        }
+    }
 }
 
  
