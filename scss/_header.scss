@@ -65,7 +65,6 @@
     .gnb{
         .depth_container{
             @include flex;
-            position: relative;
             .depth_list{
                 font-weight: 500;
                 font-size: 15px;
@@ -81,16 +80,21 @@
                     
                 }
                 
-                
-                .modal_box{
-                    position: absolute;
-                    top:60px;right:-250px;
+                .depth2{
+                   @include posCenter;
+                    top:90px;
                     background-color: #fff;
                     z-index:55555;
-                    @include flex;
                     max-width: 900px;
-                    width: 100vw;
+                    width: 100%;
                     display: none;
+                    &.on {
+                        display:block;
+                    }
+                }
+                .modal_box{
+                   
+                    @include flex;
                     & > li{
                         flex-basis: 50%;
                         padding: 40px;

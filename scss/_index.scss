@@ -502,8 +502,7 @@
 }
 
 .ad{
-    @extend %mainInner;
-    height: 240px;
+    @extend %mainInner; 
     .inner{
         background: #fff url($imgUrl + 'texture.webp') center center/cover;
 

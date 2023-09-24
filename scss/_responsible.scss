@@ -37,11 +37,11 @@
         }
     }
 
-    .headerContainer{
-        .gnb{
-            display: flex;
-        }
-    }
+    // .headerContainer{
+    //     .gnb{
+    //         display: flex;
+    //     }
+    // }
  }
 
 
@@ -56,12 +56,14 @@
     }
     .headerContainer{
         .gnb{
-            display: none;
             position: fixed;
             top:80px;
             right:0;
             left:0;
             background-color:#fff;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+            display: none;
 
             .depth_container{
                 display: block;
@@ -69,11 +71,32 @@
                 .depth_list{
                     font-size: 19px;
                     @include border;
-                    a{
-                        padding: 28px;
-                    }
                     
+                    & > a{
+                        padding: 28px 0;
+                    }
+                    .modal_box{
+                        position: static;
+                        display: block;
+                        width: auto;
+
+                        & > li{
+                            padding: 0;
+                            &:last-child{
+                                background-color:transparent;
+                            }
+                        }
+
+                        .title{
+                            padding: 0;
+                        }
+                    }
                    
+                    .depth2{
+                        position: static;
+                        width: auto;
+                        transform: translateX(0);
+                    }
                 }
             }
         }
@@ -250,6 +273,12 @@
     }
 
     .patents{
+        .line-header{
+            display: block;
+            &:after{
+                display: none;
+            }
+        }
         .collaboDivide{
             display: block;
 
@@ -275,6 +304,7 @@
             }
 
             .b{
+                text-align: center;
                 order:3;
                 margin-top: 40px;
 
@@ -314,7 +344,7 @@
             .list{
                 .item{
                     &:before{
-                        width: 70%;
+                        width: 80%;
                     }
                 }
             }
@@ -322,7 +352,7 @@
     }
 }
 
-@include media($laptop){
+@include media($mobile){
     .videoSection{
         .videoFlex{
             .d{
@@ -334,9 +364,36 @@
     .product{
         .list{
             flex-direction: column;
+            row-gap: 62px;
+
+            .b{
+                margin-top: 0;
+            }
+
+            .d{
+                margin-top: 0;
+            }
             .items{
                 width: 100%;
+                flex-basis: 180px;
             }
+        }
+
+        .btnWrap{
+            margin-bottom: 62px;
+        }
+    }
+
+    .tech{
+        .cards{
+            .items{
+                flex-basis: 310px;
+            }
+        }
+    }
+    .ad{
+        .inner{
+            height: 300px;
         }
     }
 }
