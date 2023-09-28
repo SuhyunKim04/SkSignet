@@ -519,7 +519,6 @@
         &::before{
             content:'';
             background: url($imgUrl + 'logoMark.svg') no-repeat center center/contain;
-            // @include bg('logoMark.svg', contain);
             width: 250px;
             position: absolute;
             left:-25px;top:-15px;
