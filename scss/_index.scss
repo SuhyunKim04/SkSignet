@@ -505,8 +505,6 @@
     @extend %mainInner; 
     .inner{
         background: #fff url($imgUrl + 'texture.webp') center center/cover;
-
-        // @include bg('texture.webp');
         display: flex;
         column-gap:40px;
         align-items: center;
