@@ -237,6 +237,10 @@
             flex-direction: column;
             width: 100%;
             padding: 180px 28px 48px 28px;
+
+            &:after{
+                width: 100%;
+            }
         }
     }
 

@@ -1833,6 +1833,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  width: calc(100% - 180px);
 }
 .network .globalNetwork li {
   flex-basis: 200px;
@@ -3083,6 +3084,9 @@ body {
     flex-direction: column;
     width: 100%;
     padding: 180px 28px 48px 28px;
+  }
+  .network .globalNetwork:after {
+    width: 100%;
   }
   .think .cards .items {
     flex-basis: 350px;
