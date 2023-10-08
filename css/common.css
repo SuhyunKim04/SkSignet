@@ -3124,6 +3124,9 @@ body {
   .patents .collaboDivide .certificate {
     margin-bottom: 40px;
   }
+  .table .hide {
+    display: none;
+  }
   .ceo .ceoPart {
     display: flex;
     justify-content: space-between;

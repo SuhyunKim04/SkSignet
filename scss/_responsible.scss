@@ -293,6 +293,12 @@
         }
     }
 
+    .table{
+        .hide{
+            display: none;
+        }
+    }
+
     .ceo{
         .ceoPart{
             @include flex;
