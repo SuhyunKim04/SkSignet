@@ -3124,8 +3124,20 @@ body {
   .patents .collaboDivide .certificate {
     margin-bottom: 40px;
   }
+  .table .line-header {
+    margin-bottom: 48px;
+  }
   .table .hide {
     display: none;
+  }
+  .table .list li:nth-child(odd) {
+    background-color: aliceblue;
+  }
+  .table .list li dl dd {
+    display: none;
+  }
+  .table .list li dl dt {
+    font-size: 13px;
   }
   .table .list li dl dt:before {
     content: "PATENT NAME";

@@ -294,18 +294,32 @@
     }
 
     .table{
+       .line-header{
+        margin-bottom: 48px;
+       }
         .hide{
             display: none;
         }
 
         .list{
             li{
+                &:nth-child(odd){
+                    background-color:aliceblue;
+                }
                 dl{
-                    dt:before{
-                        content:'PATENT NAME';
-                        color: rgba(0,0,0,.4);
-                        font-size: 10.5px;
-                        font-weight: 600;
+                    dd{
+                        display: none;
+                    }
+                    dt{
+                        font-size: 13px;
+                        &:before{
+                            content:'PATENT NAME';
+                            color: rgba(0,0,0,.4);
+                            font-size: 10.5px;
+                            font-weight: 600;
+                        }
+
+                        
                     }
                 }
             }
