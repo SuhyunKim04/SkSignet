@@ -3130,6 +3130,9 @@ body {
   .table .hide {
     display: none;
   }
+  .table .list li {
+    padding: 24px;
+  }
   .table .list li:nth-child(odd) {
     background-color: aliceblue;
   }

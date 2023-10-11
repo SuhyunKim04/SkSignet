@@ -303,6 +303,7 @@
 
         .list{
             li{
+                padding: 24px;
                 &:nth-child(odd){
                     background-color:aliceblue;
                 }
