@@ -1459,11 +1459,24 @@ body {
 }
 .visualSlide .slideWrap {
   position: relative;
+  outline: 1px solid red;
+}
+.visualSlide .slideWrap .list {
+  height: 560px;
 }
 .visualSlide .slideWrap .list .item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: calc(100vh - 200px);
   background: no-repeat center center/cover;
+}
+.visualSlide .slideWrap .list .item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 .visualSlide .slideWrap .list .item:before {
   content: "";
@@ -1476,17 +1489,8 @@ body {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
 }
-.visualSlide .slideWrap .list .item.a {
-  background-image: url("../images/slidePics_0.webp");
-}
-.visualSlide .slideWrap .list .item.b {
-  background-image: url("../images/slidePics_1.webp");
-}
-.visualSlide .slideWrap .list .item.c {
-  background-image: url("../images/slidePics_2.webp");
-}
 .visualSlide .contents {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   padding-top: 60px;
@@ -1723,11 +1727,6 @@ body {
 }
 .testChooseDrop li:hover {
   color: #f23322;
-}
-
-.visualSlide .slick-slider .slick-prev, .visualSlide .slick-slider .slick-next {
-  background-color: #F47725;
-  color: #000;
 }
 
 .logoSlide {

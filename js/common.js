@@ -37,17 +37,17 @@ const drop = () => {
     })
 }
 
-function slideBanners() {
-    const $list = $('.slideWrap .list')
-    $list.slick({
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        fade: true,
-        cssEase: 'linear',
-      });
-}
+// function slideBanners() {
+//     const $list = $('.slideWrap .list')
+//     $list.slick({
+//         dots: false,
+//         infinite: true,
+//         speed: 500,
+//         slidesToShow: 1,
+//         fade: true,
+//         cssEase: 'linear',
+//       });
+// }
 
 
 
