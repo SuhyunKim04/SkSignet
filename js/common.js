@@ -49,6 +49,58 @@ const drop = () => {
 //       });
 // }
 
+function slideFade() {
+    let $slidwrap = $('.slideWrap');
+    let $slideBtn = $('.slideBottom');
+    let $slides = $('.list').find('.item');
+    let $count = $slides.length;
+    let now = 0;
+    const $pager = $slideBtn.find('.pager');
+
+    init(); 
+
+    
+    $pager.click(function(e) {
+        console.dir($(this))
+        $(this).hasClass('view-next') ? nextShow() : prevShow();
+    })
+
+    
+    
+    function init() {
+        $slideBtn.find('.total').text($count);
+        $slides.eq(now).fadeIn();
+        numUpdate(now);
+    }
+    
+    function nextShow() {
+        let next = (now + 1) % $count;
+        console.log('nextNum:', next);
+        update(next);
+    } 
+ 
+    function prevShow() {
+        let prev = (now-1) % $count; 
+        console.log('prevNum:',prev)
+        update(prev);
+    }
+
+    function update(slide) { 
+        $slides.eq(now).fadeOut();
+        $slides.eq(slide).fadeIn();
+        now = slide;  
+        numUpdate(now); 
+    }
+    function numUpdate(index) {
+        let nowNum = Math.abs(index) + 1;
+        console.log('numUpdate', nowNum);
+        $slideBtn.find('.now').text(nowNum)
+    }
+
+}
+
+slideFade();
+
 
 
 
@@ -233,7 +285,7 @@ const cards2 = () => {
 //     now = index; 
 // }  
 
-slideBanners();
+// slideBanners();
 modal();
 drop();
 // test();

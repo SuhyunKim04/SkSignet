@@ -36,6 +36,7 @@
         transition: 0.2s
     }
 
+
     .play{
         background-image: url($imgUrl + 'arrow_double_play.svg');
     }
@@ -54,6 +55,17 @@
 
     &.green {
         @include gd(#97c54d, #3b79b4)
+    }
+}
+.slideBtns{
+    padding: 0 20px;
+    .btn{
+        border-radius: 3px;
+        border: 1px solid #fff;
+    }
+    .reverse{
+        transform: scaleX(-1);
+        
     }
 }
 
