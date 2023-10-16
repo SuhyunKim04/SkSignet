@@ -2186,12 +2186,12 @@ body {
 .table .listHeader dl {
   padding: 20px 12px;
 }
-.table .list {
+.table .tableList {
   font-size: 14px;
   font-weight: 600;
   line-height: 1.7;
 }
-.table .list li {
+.table .tableList li {
   padding: 20px 12px;
 }
 
@@ -3143,24 +3143,25 @@ body {
   .table .hide {
     display: none;
   }
-  .table .list li {
-    padding: 24px;
+  .table .tableList li {
+    padding: 0;
   }
-  .table .list li:nth-child(odd) {
+  .table .tableList li:nth-child(odd) {
     background-color: aliceblue;
   }
-  .table .list li dl {
+  .table .tableList li dl {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  .table .list li dl dt, .table .list li dl dd {
+  .table .tableList li dl dt, .table .tableList li dl dd {
+    padding: 24px;
     outline: 1px solid orange;
   }
-  .table .list li dl dt {
+  .table .tableList li dl dt {
     font-size: 13px;
     grid-column: 1/4;
   }
-  .table .list li dl dt:before {
+  .table .tableList li dl dt:before {
     position: static;
     width: auto;
     height: auto;

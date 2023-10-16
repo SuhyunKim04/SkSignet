@@ -176,6 +176,11 @@ const cards = () =>{
 
 }
 
+const table =() => {
+    const itmes = document.querySelectorAll(".tableList .items");
+    
+}
+
 const mobileMenu = () => {
     const vento = document.querySelector('.mBtn');
     const gnb = document.querySelector('.gnb');

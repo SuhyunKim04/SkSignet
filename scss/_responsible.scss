@@ -301,9 +301,9 @@
             display: none;
         }
 
-        .list{
+        .tableList{
             li{
-                padding: 24px;
+                padding: 0;
                 &:nth-child(odd){
                     background-color:aliceblue;
                 }
@@ -312,6 +312,7 @@
                    grid-template-columns: repeat(3, 1fr);
 
                     dt,dd{
+                        padding: 24px;
                         outline:1px solid orange;
                     }
                     
