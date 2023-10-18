@@ -80,12 +80,6 @@ const modal_menu = () => {
   item.addEventListener("mouseleave", () => {
     hideMenu();
   });
-  // modal_box.forEach((box,event)=>{
-  //     box.addEventListener('mouseleave',(event)=>{
-  //         console.log()
-  //         depth_list.classList.remove('on');
-  //     })
-  // })
 };
 
 const cards = () => {
