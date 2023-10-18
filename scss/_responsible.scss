@@ -304,12 +304,20 @@
         .tableList{
             li{
                 padding: 0;
+
                 &:nth-child(odd){
-                    background-color:aliceblue;
+                    background-color:rgb(247 251 253);
                 }
+
+                &:nth-child(even) {
+                    background-color: rgba(225, 225, 225,0.1);
+                }
+                
                 dl{
                     display: grid;
-                   grid-template-columns: repeat(3, 1fr);
+                    grid-template-columns: repeat(3, 1fr);
+                    position: relative;
+                   
 
                     dt,dd{
                         padding: 24px;
@@ -319,17 +327,31 @@
                     dt{
                         font-size: 13px;
                         grid-column: 1/4;
+                        
+                        &:after{
+                            content: "";
+                            display: block;
+                            background: url($imgUrl + 'orange-gradient-check.svg') center center/cover;
+                            width: 10px;
+                            height: 10px;
+                            top:50%;
+                            transform: translateY(-50%);
+                            position: absolute;
+                            right: 20px;
+                            border-radius: 50%;
+                            background-color: #fff;
+                        }
+
                         &:before{
                             position:static;
                             width:auto;height:auto;margin:auto;
                             overflow:initial;
                             clip:auto;
                         }
-
-                        
                     }
                     dd{
                         display: none;
+
                     }
                 }
             }

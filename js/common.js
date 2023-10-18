@@ -198,53 +198,126 @@ const mobileMenu = () => {
 }
 
 
-const cards2 = () => {
-    const items = document.querySelectorAll('.peopleCards .items')
+// const cards2 = () => {
+//     const items = document.querySelectorAll('.peopleCards .items')
  
-    let now = 0;
+//     let now = 0;
    
 
-    const reset = () => {
-        items[now].classList.remove('on');
-        items[now].querySelector('dd').style.height = '0px'; 
-    }
+//     const reset = () => {
+//         items[now].classList.remove('on');
+//         items[now].querySelector('dd').style.height = '0px'; 
+//     }
 
-    const update = () => { 
-        items[now].classList.add('on');
-        items[now].querySelector('dd').style.height = 
-        items[now].querySelector('p').offsetHeight + 'px';
-    }
+//     const update = () => { 
+//         items[now].classList.add('on');
+//         items[now].querySelector('dd').style.height = 
+//         items[now].querySelector('p').offsetHeight + 'px';
+//     }
     
 
-    update();
+//     update();
 
-    items.forEach( (item,index) => { 
-        item.addEventListener('click',(event)=>{ 
-            // console.time('check')
-            const target = event.currentTarget;    
-            const child = target.querySelector('dd');
-            const size = child.querySelector('p').offsetHeight;
-            // const li = (now === index); 
+//     items.forEach( (item,index) => { 
+//         item.addEventListener('click',(event)=>{ 
+//             // console.time('check')
+//             const target = event.currentTarget;    
+//             const child = target.querySelector('dd');
+//             const size = child.querySelector('p').offsetHeight;
+//             // const li = (now === index); 
 
      
-           if(now !== index) {  
-                reset(); 
-                target.classList.add('on');   
-                child.style.height = `${size}px`;
-                now = index;  
-            }   else {
-                reset(); 
+//            if(now !== index) {  
+//                 reset(); 
+//                 target.classList.add('on');   
+//                 child.style.height = `${size}px`;
+//                 now = index;  
+//             }   else {
+//                 reset(); 
              
-            }
-            // console.timeEnd('check')
-        })
+//             }
+//             // console.timeEnd('check')
+//         })
         
-    })
+//     })
     
-}
+// }
+
+const cardsOpen = () => {
+    const items = document.querySelectorAll(".peopleCards .items");
+    let openIdx = 0;
+  
+    const reset = (index) => {
+      let item = items[index];
+      item.classList.remove("on");
+      item.querySelector("dd").style.height = "0px";
+    };
+  
+    const openItem = (index) => {
+      let item = items[index];
+      // 연재 클릭한 li
+  
+      let dd = item.querySelector("dd");
+      // let dd = item.children[0].children[1]; 위와 동일
+  
+      let p = dd.querySelector("p");
+      // let p = dd.children[0]; 위와 동일
+  
+      item.classList.add("on");
+      // li에 클래스 추가
+  
+      dd.style.height = p.offsetHeight + "px";
+      // dd에 높이값 전달
+    };
+  
+    openItem(openIdx);
+  
+    items.forEach((item, index) => {
+      item.addEventListener("click", (event) => {
+        if (openIdx !== index) {
+          reset(openIdx); // 이떄는 이전에 on붙었던 li의 인덱스값이 now인 상태
+          openItem(index); // 현재클릭한 li의 인덱스 번호를 매개변수로 보내서 on상태 만들어주기
+          openIdx = index; // 업데이트 후, 클릭한 li의 인덱스값을 now에 업데이트 해준다.
+        } else {
+          reset(openIdx); // 현재 열려있는 now번째 li를 닫음
+        }
+      });
+    });
+};
 
 
+const tableOpen = () => {
+    const lists = document.querySelectorAll(".tableList li")
+    let openIdx = 0;
 
+    const reset = (index) => {
+        let list = lists(index);
+        list.querySelector("dd").style.height = "0px";
+    };
+
+    const openList = (index) => {
+        let list = lists(index);
+
+        let dd = list.querySelector("dd");
+
+        dd.style.height = p.offsetHeight + "px";
+    };
+
+    openList(openIdx);
+
+    lists.forEach((list, index) => {
+        list.addEventListener("click", (event) => {
+            if (openIdx !== index) {
+                reset(openIdx);
+                openList(index);
+                openIdx = index;
+            }else {
+                reset(openIdx)
+            }
+        });
+    });
+
+};
 // if(li){
 //     target.classList.remove('on') 
 //     child.style.height = `0px`; 
@@ -267,7 +340,7 @@ drop();
 // cards();
 
 mobileMenu();
-
+cardsOpen();
 let a = 3;
 let b = 5;
 // a가 b보다 크다면 a가 크다 출력하고 b가 크면 b가 크다고 출력

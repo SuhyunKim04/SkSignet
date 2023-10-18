@@ -3147,11 +3147,15 @@ body {
     padding: 0;
   }
   .table .tableList li:nth-child(odd) {
-    background-color: aliceblue;
+    background-color: rgb(247, 251, 253);
+  }
+  .table .tableList li:nth-child(even) {
+    background-color: rgba(225, 225, 225, 0.1);
   }
   .table .tableList li dl {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    position: relative;
   }
   .table .tableList li dl dt, .table .tableList li dl dd {
     padding: 24px;
@@ -3160,6 +3164,19 @@ body {
   .table .tableList li dl dt {
     font-size: 13px;
     grid-column: 1/4;
+  }
+  .table .tableList li dl dt:after {
+    content: "";
+    display: block;
+    background: url("../images/orange-gradient-check.svg") center center/cover;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    right: 20px;
+    border-radius: 50%;
+    background-color: #fff;
   }
   .table .tableList li dl dt:before {
     position: static;
