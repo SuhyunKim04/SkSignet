@@ -3145,6 +3145,11 @@ body {
   }
   .table .tableList li {
     padding: 0;
+    overflow: hidden;
+    transition: 0.4s;
+  }
+  .table .tableList li.active dt::after {
+    transform: rotate(45deg);
   }
   .table .tableList li:nth-child(odd) {
     background-color: rgb(247, 251, 253);
@@ -3155,7 +3160,6 @@ body {
   .table .tableList li dl {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    position: relative;
   }
   .table .tableList li dl dt, .table .tableList li dl dd {
     padding: 24px;
@@ -3164,19 +3168,21 @@ body {
   .table .tableList li dl dt {
     font-size: 13px;
     grid-column: 1/4;
+    position: relative;
   }
   .table .tableList li dl dt:after {
     content: "";
     display: block;
-    background: url("../images/orange-gradient-check.svg") center center/cover;
-    width: 10px;
-    height: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    background: no-repeat url("../images/orange-gradient-check.svg") center center/10px 10px;
+    width: 24px;
+    height: 24px;
+    top: calc(50% - 10px);
     position: absolute;
     right: 20px;
     border-radius: 50%;
     background-color: #fff;
+    transition: 0.4s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
   .table .tableList li dl dt:before {
     position: static;
@@ -3185,9 +3191,6 @@ body {
     margin: auto;
     overflow: initial;
     clip: auto;
-  }
-  .table .tableList li dl dd {
-    display: none;
   }
   .ceo .ceoPart {
     display: flex;

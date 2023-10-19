@@ -304,6 +304,16 @@
         .tableList{
             li{
                 padding: 0;
+                overflow: hidden;
+                transition:0.4s;
+
+                &.active{
+                    dt{
+                        &::after{
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
 
                 &:nth-child(odd){
                     background-color:rgb(247 251 253);
@@ -316,7 +326,6 @@
                 dl{
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
-                    position: relative;
                    
 
                     dt,dd{
@@ -327,19 +336,21 @@
                     dt{
                         font-size: 13px;
                         grid-column: 1/4;
-                        
+                        position: relative;
+
                         &:after{
                             content: "";
                             display: block;
-                            background: url($imgUrl + 'orange-gradient-check.svg') center center/cover;
-                            width: 10px;
-                            height: 10px;
-                            top:50%;
-                            transform: translateY(-50%);
+                            background: no-repeat url($imgUrl + 'orange-gradient-check.svg') center center/10px 10px;
+                            width: 24px;
+                            height: 24px;
+                            top:calc(50% - 10px); 
                             position: absolute;
                             right: 20px;
                             border-radius: 50%;
                             background-color: #fff;
+                            transition: 0.4s;
+                            box-shadow:0 0 5px rgba(#000,0.1);
                         }
 
                         &:before{
@@ -349,10 +360,10 @@
                             clip:auto;
                         }
                     }
-                    dd{
-                        display: none;
+                    // dd{
+                    //     display: none;
 
-                    }
+                    // }
                 }
             }
         }

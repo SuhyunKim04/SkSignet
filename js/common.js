@@ -184,7 +184,7 @@ const table =() => {
 const mobileMenu = () => {
     const vento = document.querySelector('.mBtn');
     const gnb = document.querySelector('.gnb');
-
+    console.log(vento)
     vento.addEventListener('click', (e) => {
         e.currentTarget.classList.toggle('open');
         let status = e.currentTarget.classList.contains('open')
@@ -244,7 +244,14 @@ const mobileMenu = () => {
 // }
 
 const cardsOpen = () => {
-    const items = document.querySelectorAll(".peopleCards .items");
+    const items = document.querySelectorAll(".peopleCards .items"); 
+    console.log(items, items.length, typeof items)
+    // let arr = []
+    // let arr = [a,2,3,4,5] -> array object,
+    // let aaa = [li,li,li,li,li] -> node list object
+    if(items.length == 0){
+        return false
+    };
     let openIdx = 0;
   
     const reset = (index) => {
@@ -288,31 +295,43 @@ const cardsOpen = () => {
 
 const tableOpen = () => {
     const lists = document.querySelectorAll(".tableList li")
-    let openIdx = 0;
+    let openIdx = 0; 
 
-    const reset = (index) => {
-        let list = lists(index);
-        list.querySelector("dd").style.height = "0px";
+    const init = () => { 
+        lists.forEach( (list, i) => { 
+            list.style.height =  list.querySelector("dt").offsetHeight + 'px'; 
+        })
+       
+    }
+
+    const update = (index) => {
+        let list = lists[index];  
     };
 
-    const openList = (index) => {
-        let list = lists(index);
+    init(); 
 
-        let dd = list.querySelector("dd");
-
-        dd.style.height = p.offsetHeight + "px";
+   function openList(index)  {
+        lists[index].classList.add('active') 
+        // li의 높이가 dl높이로 바꿔줘야함
+        lists[index].style.height = lists[index].querySelector("dl").offsetHeight + 'px';
     };
 
-    openList(openIdx);
+   function closeList(index) {
+    lists[index].classList.remove('active') 
+        lists[index].style.height = lists[index].querySelector("dt").offsetHeight + 'px'
+       // li의 높이를 dt의 높이로 바꿔줘야함
+    } 
 
-    lists.forEach((list, index) => {
+    lists.forEach((list, index) => { 
         list.addEventListener("click", (event) => {
-            if (openIdx !== index) {
-                reset(openIdx);
-                openList(index);
-                openIdx = index;
-            }else {
-                reset(openIdx)
+            let li =  event.currentTarget;
+            init();
+            li.classList.toggle('active');
+
+            if(li.classList.contains('active')) {
+                openList(index)
+            } else {
+                closeList(index);
             }
         });
     });
@@ -333,6 +352,7 @@ const tableOpen = () => {
 // slideBanners();
 modal();
 drop();
+tableOpen();
 // test();
 // modal_menu();
 
