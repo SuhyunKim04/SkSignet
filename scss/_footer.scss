@@ -46,7 +46,7 @@
     }
 
     .fnb{
-        @include flex($a:stretch,$c:70px);
+        @include flex($a:stretch,$c:45px);
 
         dl{
             dt{

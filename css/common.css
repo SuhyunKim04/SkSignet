@@ -2891,7 +2891,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  column-gap: 70px;
+  column-gap: 45px;
 }
 .footerItems .fnb dl dt {
   font-weight: 600;
@@ -3076,8 +3076,8 @@ body {
   }
   .ad .inner::before {
     left: 589px;
-    top: 93px;
-    bottom: -49px;
+    top: 130px;
+    left: 630px;
     width: 150px;
   }
   .ad .text {
@@ -3224,6 +3224,36 @@ body {
   }
   .visualSlide .slideWrap .list .item:before {
     width: 80%;
+  }
+  .pageFooter .footerItems .fnb {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 40px;
+  }
+  .pageFooter .footerItems .fnb .footer_logo {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+  .pageFooter .footerItems .fnb .fnb_grid_1 {
+    grid-column: 1/2;
+    grid-row: 1/1;
+  }
+  .pageFooter .footerItems .fnb .fnb_grid_2 {
+    grid-column: 2/3;
+    grid-row: 1/1;
+  }
+  .pageFooter .footerItems .fnb .fnb_grid_3 {
+    grid-column: 3/4;
+    grid-row: 1/1;
+  }
+  .pageFooter .footerItems .fnb .fnb_grid_4 {
+    grid-column: 4/5;
+    grid-row: 1/1;
+  }
+  .pageFooter .footerItems .fnb .fnb_grid_5 {
+    grid-column: 1/1;
+    grid-row: 2/2;
   }
 }
 @media all and (max-width: 720px) {
