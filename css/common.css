@@ -3225,6 +3225,9 @@ body {
   .visualSlide .slideWrap .list .item:before {
     width: 80%;
   }
+  .pageFooter .footerItems p {
+    white-space: nowrap;
+  }
   .pageFooter .footerItems .fnb {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

@@ -427,8 +427,9 @@
 
     .pageFooter{
         .footerItems{
-            // display: grid;
-            // 
+            p{
+                white-space: nowrap;
+            }
 
             .fnb{
                 display: grid;
