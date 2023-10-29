@@ -29,7 +29,7 @@
 }
 
 .footerItems{
-    @include flex;
+    @include flex($j:space-around);
     padding: 60px 0;
     img{
         width: 150px;
