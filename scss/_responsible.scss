@@ -198,8 +198,8 @@
             &::before{
                 left:589px;
                 top: 130px;
-                left:630px;
-                width: 150px;
+                left:575px;
+                width: 170px;
             }
         }
 
@@ -217,6 +217,7 @@
         li{
             &:before{
                 width: 30px;
+                height: 30px;
             }
         }
     }
@@ -542,7 +543,7 @@
     }
     .ad{
         .inner{
-            height: 300px;
+            height: 400px;
         }
     }
     .patents{
@@ -555,6 +556,19 @@
                 li{
                     margin-bottom: 20px;
                 }
+            }
+        }
+    }
+
+    .ad{
+        .text{
+            margin-bottom: 70px;
+        }
+        .inner{
+            &:before{
+                width: 174px;
+                left:420px;
+                top:250px;
             }
         }
     }
@@ -577,6 +591,50 @@
             }
             .a{
                 text-align: center;
+            }
+        }
+    }
+
+    .ad{
+        .inner{
+            &:before{
+                width: 60px;
+                top: -50px;
+                left: 24px;
+            }
+            padding-top: 60px;
+        }
+        .text{
+            margin-bottom: 30px;
+            h2{
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .coreSummary{
+        flex-direction: column;
+        align-items: start;
+        li{
+            margin-bottom: 16px;
+            &::before{
+                width: 20px;
+                height:20px;
+
+            }
+        }
+    }
+
+    .videoSection{
+        .videoFlex{
+            .b{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .d{
+                height: 320px;
             }
         }
     }

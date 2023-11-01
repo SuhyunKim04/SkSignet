@@ -3077,8 +3077,8 @@ body {
   .ad .inner::before {
     left: 589px;
     top: 130px;
-    left: 630px;
-    width: 150px;
+    left: 575px;
+    width: 170px;
   }
   .ad .text {
     margin-bottom: 26px;
@@ -3091,6 +3091,7 @@ body {
   }
   .coreSummary li:before {
     width: 30px;
+    height: 30px;
   }
   .com_market .box {
     flex-direction: column;
@@ -3314,7 +3315,7 @@ body {
     flex-basis: 310px;
   }
   .ad .inner {
-    height: 300px;
+    height: 400px;
   }
   .patents .line-header {
     white-space: wrap;
@@ -3324,6 +3325,14 @@ body {
   }
   .patents .collaboDivide .info li {
     margin-bottom: 20px;
+  }
+  .ad .text {
+    margin-bottom: 70px;
+  }
+  .ad .inner:before {
+    width: 174px;
+    left: 420px;
+    top: 250px;
   }
 }
 @media all and (max-width: 600px) {
@@ -3336,6 +3345,39 @@ body {
   }
   .ceo .ceoPart .a {
     text-align: center;
+  }
+  .ad .inner {
+    padding-top: 60px;
+  }
+  .ad .inner:before {
+    width: 60px;
+    top: -50px;
+    left: 24px;
+  }
+  .ad .text {
+    margin-bottom: 30px;
+  }
+  .ad .text h2 {
+    margin-top: 20px;
+  }
+  .coreSummary {
+    flex-direction: column;
+    align-items: start;
+  }
+  .coreSummary li {
+    margin-bottom: 16px;
+  }
+  .coreSummary li::before {
+    width: 20px;
+    height: 20px;
+  }
+  .videoSection .videoFlex .b {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .videoSection .videoFlex .d {
+    height: 320px;
   }
 }
 
