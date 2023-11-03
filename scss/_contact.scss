@@ -194,6 +194,9 @@
             }
             .btn{
                 margin-top:30px;
+                &.contact_btn{
+                    width: 100%;
+                }
             }
         }
 
@@ -221,6 +224,7 @@
             .btn{
                 width: 100%;
                 text-align: center;
+                
             }
             .email{
                 background-image: url($imgUrl + 'email.svg');
@@ -269,10 +273,7 @@
             }
         }
     }
-    .pageFooter{
-        margin-top: 0px;
-        padding-top: 0px;
-    }
+    
 
 .test {
     border:1px solid red;

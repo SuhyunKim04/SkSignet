@@ -5,6 +5,10 @@
     background-color: rgba(245, 245, 245, 0.8);
     padding-top: 180px;
     margin-top: -120px;
+    &.contactVer{
+        margin-top:0;
+        padding-top:0;
+    }
 }
 .coreSummary{
     @include flex($j:space-between,$c: 80px);
@@ -18,7 +22,7 @@
         &::before{
             content: '';
             display: inline-block;
-            background: url($imgUrl + 'greencheck.svg') center center/cover;
+            background: url($imgUrl + 'greencheck.svg') no-repeat center center/contain;
             // @include bg('greencheck.svg');
             width: 20px;
             height: 20px;

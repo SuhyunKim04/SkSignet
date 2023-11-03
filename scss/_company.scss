@@ -59,7 +59,7 @@
 .com_market{
     padding: 100px 0;
     .box{
-        @include flex($c:40px);
+            display:grid;
         img{
             width: 500px;
         }

@@ -1267,6 +1267,9 @@ body {
 .inquiryDivide .left .btn {
   margin-top: 30px;
 }
+.inquiryDivide .left .btn.contact_btn {
+  width: 100%;
+}
 .inquiryDivide .side {
   flex-basis: 336px;
   position: sticky;
@@ -1344,11 +1347,6 @@ body {
   color: rgba(0, 0, 0, 0.6);
   line-height: 1.7;
   font-size: 14px;
-}
-
-.pageFooter {
-  margin-top: 0px;
-  padding-top: 0px;
 }
 
 .test {
@@ -1825,10 +1823,7 @@ body {
   padding: 100px 0;
 }
 .com_market .box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 40px;
+  display: grid;
 }
 .com_market .box img {
   width: 500px;
@@ -2866,6 +2861,10 @@ body {
   padding-top: 180px;
   margin-top: -120px;
 }
+.pageFooter.contactVer {
+  margin-top: 0;
+  padding-top: 0;
+}
 
 .coreSummary {
   display: flex;
@@ -2886,7 +2885,7 @@ body {
 .coreSummary li::before {
   content: "";
   display: inline-block;
-  background: url("../images/greencheck.svg") center center/cover;
+  background: url("../images/greencheck.svg") no-repeat center center/contain;
   width: 20px;
   height: 20px;
   margin-right: 14px;
@@ -3331,36 +3330,34 @@ body {
     width: 312px;
     height: 312px;
   }
-  .pageFooter .footerItems p {
+  .footerItems p {
     white-space: nowrap;
   }
-  .pageFooter .footerItems .fnb {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 40px;
+  .footerItems .fnb {
+    display: flex;
+    flex-wrap: wrap;
   }
-  .pageFooter .footerItems .fnb .footer_logo {
+  .footerItems .fnb .footer_logo {
     grid-column: 4/5;
     grid-row: 2/3;
   }
-  .pageFooter .footerItems .fnb .fnb_grid_1 {
+  .footerItems .fnb .fnb_grid_1 {
     grid-column: 1/2;
     grid-row: 1/1;
   }
-  .pageFooter .footerItems .fnb .fnb_grid_2 {
+  .footerItems .fnb .fnb_grid_2 {
     grid-column: 2/3;
     grid-row: 1/1;
   }
-  .pageFooter .footerItems .fnb .fnb_grid_3 {
+  .footerItems .fnb .fnb_grid_3 {
     grid-column: 3/4;
     grid-row: 1/1;
   }
-  .pageFooter .footerItems .fnb .fnb_grid_4 {
+  .footerItems .fnb .fnb_grid_4 {
     grid-column: 4/5;
     grid-row: 1/1;
   }
-  .pageFooter .footerItems .fnb .fnb_grid_5 {
+  .footerItems .fnb .fnb_grid_5 {
     grid-column: 1/1;
     grid-row: 2/2;
   }
@@ -3485,7 +3482,7 @@ body {
   .coreSummary {
     flex-direction: column;
     align-items: start;
-    padding-top: 0;
+    padding-top: 50px;
   }
   .coreSummary li {
     margin-bottom: 16px;
@@ -3549,6 +3546,18 @@ body {
   }
   .inquiryDivide .left .names {
     flex-direction: column;
+  }
+  .inquiryDivide .left li.contactProduct dl {
+    display: block;
+  }
+  .inquiryDivide .left li.contactProduct dl dt {
+    margin: 20px 0;
+  }
+  .inquiryDivide .left li.contactProduct dl dd label strong {
+    font-size: 13px;
+  }
+  .inquiryDivide .left li.contactProduct dl dd label em {
+    font-size: 12.5px;
   }
   .ourLocation .locationCard {
     grid-template-columns: 1fr;

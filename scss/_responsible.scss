@@ -545,17 +545,15 @@
         }
     }
 
-    .pageFooter{
+    // .pageFooter{
         .footerItems{
             p{
                 white-space: nowrap;
             }
 
             .fnb{
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-                grid-row-gap:40px;
+                display: flex;
+                flex-wrap: wrap;
 
                 .footer_logo{
                     grid-column: 4/5;
@@ -584,7 +582,7 @@
                 }
             }
         }
-    }
+    // }
 }
 
 @include media($mobile){
@@ -771,7 +769,7 @@
     .coreSummary{
         flex-direction: column;
         align-items: start;
-        padding-top:0;
+        padding-top:50px;
         li{
             margin-bottom: 16px;
             &::before{
@@ -874,9 +872,24 @@
                 flex-direction: column;
             }
 
-            // li.contactProduct{
-                
-            // }
+            li.contactProduct{
+                dl{
+                    display: block;
+                    dt{
+                        margin:20px 0;
+                    }
+                    dd{
+                        label{
+                            strong{
+                                font-size: 13px;
+                            }
+                            em{
+                                font-size: 12.5px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
