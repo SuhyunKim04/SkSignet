@@ -4,7 +4,7 @@
     padding: 45px 0;
     margin-top: 80px;
 }
-#careers{
+
     .culture{
         padding: 100px 0;
     
@@ -242,7 +242,9 @@
         padding: 100px 0;
     
         .box{
-            @include flex($c:40px);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 500px;
             img{
                 width: 500px;
             }
@@ -254,9 +256,13 @@
                 }
     
             }
+            .btn{
+                grid-column: 2/3;
+            }
         }
     }
 
+.careers{
     .pageFooter{
         padding-top: 0;
         margin-top:0;

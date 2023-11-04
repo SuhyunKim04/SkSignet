@@ -1486,7 +1486,6 @@ body {
 }
 .visualSlide .slideWrap {
   position: relative;
-  outline: 1px solid red;
 }
 .visualSlide .slideWrap .list {
   height: 560px;
@@ -1824,12 +1823,14 @@ body {
 }
 .com_market .box {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .com_market .box img {
   width: 500px;
 }
-.com_market .box .moduleHeader .red {
+.com_market .box .red {
   margin-top: 42px;
+  grid-column: 2/3;
 }
 
 .network {
@@ -2519,19 +2520,19 @@ body {
   margin-top: 80px;
 }
 
-#careers .culture {
+.culture {
   padding: 100px 0;
 }
-#careers .culture .moduleHeader {
+.culture .moduleHeader {
   text-align: center;
 }
-#careers .culture .list {
+.culture .list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   column-gap: 6px;
 }
-#careers .culture .list .items {
+.culture .list .items {
   flex-basis: 25%;
   transition: 0.4s;
   border-radius: 4px;
@@ -2541,7 +2542,7 @@ body {
   height: 400px;
   position: relative;
 }
-#careers .culture .list .items dl {
+.culture .list .items dl {
   font-weight: 600;
   line-height: 1.7;
   position: relative;
@@ -2549,27 +2550,27 @@ body {
   transform: translateY(15px);
   transition: 0.6s;
 }
-#careers .culture .list .items dl dt {
+.culture .list .items dl dt {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   background-image: linear-gradient(90deg, #f47725, #EA002C 50%);
   font-size: 15px;
 }
-#careers .culture .list .items dl dd {
+.culture .list .items dl dd {
   color: rgb(255, 255, 255);
   font-size: 19px;
 }
-#careers .culture .list .items:hover {
+.culture .list .items:hover {
   flex-basis: 40%;
 }
-#careers .culture .list .items:hover dl {
+.culture .list .items:hover dl {
   opacity: 1;
 }
-#careers .culture .list .items:hover::before {
+.culture .list .items:hover::before {
   opacity: 1;
 }
-#careers .culture .list .items::before {
+.culture .list .items::before {
   content: "";
   background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.7) 7.21%, rgba(0, 0, 0, 0) 92.82%);
   position: absolute;
@@ -2580,37 +2581,38 @@ body {
   display: block;
   opacity: 0;
 }
-#careers .culture .list .a {
+.culture .list .a {
   background: url("../images/culturePics_1.webp") center center/cover;
 }
-#careers .culture .list .b {
+.culture .list .b {
   background: url("../images/culturePics_2.webp") center center/cover;
   margin-top: 160px;
 }
-#careers .culture .list .c {
+.culture .list .c {
   background: url("../images/culturePics_3.webp") center center/cover;
 }
-#careers .culture .list .d {
+.culture .list .d {
   background: url("../images/culturePics_4.webp") center center/cover;
   margin-top: 160px;
 }
-#careers .cultureThree {
+
+.cultureThree {
   padding: 100px 0;
 }
-#careers .cultureThree .side:before {
+.cultureThree .side:before {
   content: "";
   height: 1px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-#careers .cultureThree .threeBox {
+.cultureThree .threeBox {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 60px;
   column-gap: 40px;
 }
-#careers .cultureThree .threeBox li h4 {
+.cultureThree .threeBox li h4 {
   display: inline;
   font-size: 21px;
   line-height: 1.5;
@@ -2620,31 +2622,32 @@ body {
   color: transparent;
   background-image: linear-gradient(90deg, #0072c6, #68127a);
 }
-#careers .cultureThree .threeBox li p {
+.cultureThree .threeBox li p {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.8);
   line-height: 1.7;
 }
-#careers .careersPeople {
+
+.careersPeople {
   padding: 100px 0;
   background: rgb(245, 245, 245) url("../images/texture.webp") no-repeat center center/cover;
 }
-#careers .careersPeople .people {
+.careersPeople .people {
   display: flex;
   justify-content: space-around;
   align-items: stretch;
 }
-#careers .careersPeople .people .moduleHeader {
+.careersPeople .people .moduleHeader {
   flex-basis: 504px;
 }
-#careers .careersPeople .people .moduleHeader p {
+.careersPeople .people .moduleHeader p {
   margin-top: 12px;
   line-height: 1.75;
 }
-#careers .careersPeople .people .peopleCards {
+.careersPeople .people .peopleCards {
   flex-basis: 524px;
 }
-#careers .careersPeople .people .peopleCards .items {
+.careersPeople .people .peopleCards .items {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
@@ -2654,38 +2657,39 @@ body {
   border-radius: 4px;
   transition: height 0.5s;
 }
-#careers .careersPeople .people .peopleCards .items dt {
+.careersPeople .people .peopleCards .items dt {
   font-size: 17px;
   font-weight: 600;
   line-height: 1.7;
 }
-#careers .careersPeople .people .peopleCards .items dd {
+.careersPeople .people .peopleCards .items dd {
   line-height: 1.75;
   height: 0;
   overflow: hidden;
   transition: height 0.4s;
 }
-#careers .careersPeople .people .peopleCards .items img {
+.careersPeople .people .peopleCards .items img {
   transition: 0.4s;
 }
-#careers .careersPeople .people .peopleCards .items.on img {
+.careersPeople .people .peopleCards .items.on img {
   transform: rotate(45deg);
 }
-#careers .careersInnovation {
+
+.careersInnovation {
   padding: 100px 0;
   background-color: rgba(225, 225, 225, 0.2);
 }
-#careers .careersInnovation .moduleHeader {
+.careersInnovation .moduleHeader {
   text-align: center;
 }
-#careers .careersInnovation .cards {
+.careersInnovation .cards {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 62px;
   column-gap: 40px;
 }
-#careers .careersInnovation .cards .items {
+.careersInnovation .cards .items {
   position: relative;
   flex-basis: 33.3333333333%;
   display: flex;
@@ -2698,25 +2702,25 @@ body {
   min-height: 320px;
   color: rgb(255, 255, 255);
 }
-#careers .careersInnovation .cards .items:nth-child(1) {
+.careersInnovation .cards .items:nth-child(1) {
   background: url("../images/innovationPics_1.webp") center center/cover;
 }
-#careers .careersInnovation .cards .items:nth-child(1):after {
+.careersInnovation .cards .items:nth-child(1):after {
   background-image: linear-gradient(90deg, #fbbc05, #f47725 99.96%);
 }
-#careers .careersInnovation .cards .items:nth-child(2) {
+.careersInnovation .cards .items:nth-child(2) {
   background: url("../images/innovationPics_2.webp") center center/cover;
 }
-#careers .careersInnovation .cards .items:nth-child(2):after {
+.careersInnovation .cards .items:nth-child(2):after {
   background-image: linear-gradient(90deg, #97c54d, #3b79b4 80%);
 }
-#careers .careersInnovation .cards .items:nth-child(3) {
+.careersInnovation .cards .items:nth-child(3) {
   background: url("../images/innovationPics_3.webp") center center/cover;
 }
-#careers .careersInnovation .cards .items:nth-child(3):after {
+.careersInnovation .cards .items:nth-child(3):after {
   background-image: linear-gradient(90deg, #0072c6, #68127a);
 }
-#careers .careersInnovation .cards .items:after {
+.careersInnovation .cards .items:after {
   content: "";
   height: 12px;
   position: absolute;
@@ -2725,20 +2729,20 @@ body {
   right: 0;
   background-image: linear-gradient(90deg, #fbbc05, #f47725 99.96%);
 }
-#careers .careersInnovation .cards .items h4 {
+.careersInnovation .cards .items h4 {
   font-weight: 600;
   line-height: 1.7;
   font-size: 19px;
   margin-bottom: 12px;
   position: relative;
 }
-#careers .careersInnovation .cards .items p {
+.careersInnovation .cards .items p {
   font-weight: 400;
   line-height: 1.4;
   font-size: 14px;
   position: relative;
 }
-#careers .careersInnovation .cards .items::before {
+.careersInnovation .cards .items::before {
   content: "";
   background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.7) 7.21%, rgba(0, 0, 0, 0) 92.82%);
   position: absolute;
@@ -2749,23 +2753,27 @@ body {
   display: block;
   opacity: 1;
 }
-#careers .careersOpen {
+
+.careersOpen {
   padding: 100px 0;
 }
-#careers .careersOpen .box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 40px;
+.careersOpen .box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 500px;
 }
-#careers .careersOpen .box img {
+.careersOpen .box img {
   width: 500px;
 }
-#careers .careersOpen .box .moduleHeader p {
+.careersOpen .box .moduleHeader p {
   line-height: 1.75;
   margin-bottom: 42px;
 }
-#careers .pageFooter {
+.careersOpen .box .btn {
+  grid-column: 2/3;
+}
+
+.careers .pageFooter {
   padding-top: 0;
   margin-top: 0;
 }
@@ -3330,6 +3338,22 @@ body {
     width: 312px;
     height: 312px;
   }
+  .careersInnovation .cards .items {
+    flex-basis: 350px;
+    flex-shrink: 0;
+  }
+  .careersOpen .box {
+    grid-template-columns: 1fr;
+  }
+  .careersOpen .box .moduleHeader {
+    order: 1;
+  }
+  .careersOpen .box .btn {
+    order: 2;
+  }
+  .careersOpen .box img {
+    order: 3;
+  }
   .footerItems p {
     white-space: nowrap;
   }
@@ -3337,37 +3361,18 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
-  .footerItems .fnb .footer_logo {
-    grid-column: 4/5;
-    grid-row: 2/3;
-  }
-  .footerItems .fnb .fnb_grid_1 {
-    grid-column: 1/2;
-    grid-row: 1/1;
-  }
-  .footerItems .fnb .fnb_grid_2 {
-    grid-column: 2/3;
-    grid-row: 1/1;
-  }
-  .footerItems .fnb .fnb_grid_3 {
-    grid-column: 3/4;
-    grid-row: 1/1;
-  }
-  .footerItems .fnb .fnb_grid_4 {
-    grid-column: 4/5;
-    grid-row: 1/1;
-  }
-  .footerItems .fnb .fnb_grid_5 {
-    grid-column: 1/1;
-    grid-row: 2/2;
-  }
 }
 @media all and (max-width: 720px) {
+  .primary .inner, .customSection, .tech .bgInner, .homeNews .inner, .ad, .modalWrap .contents, .visualSlide .contents, .visualSlide .visualContent, .visualSlide .common, .table, .inner, .modalWrap header .modalAct, .pageHeader .inner {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .videoSection .videoFlex .d {
     height: 360px;
   }
   .product .list {
     flex-direction: column;
+    align-items: stretch;
     row-gap: 62px;
   }
   .product .list .b {
@@ -3377,8 +3382,20 @@ body {
     margin-top: 0;
   }
   .product .list .items {
-    width: 100%;
-    flex-basis: 180px;
+    flex-basis: auto;
+  }
+  .product .list .items a {
+    height: 200px;
+  }
+  .product .list .items a dl {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .product .list .items .green {
+    transform: translateY(0);
+  }
+  .product .list .items a:before {
+    opacity: 1;
   }
   .product .btnWrap {
     margin-bottom: 62px;
@@ -3412,6 +3429,36 @@ body {
   .impactPart .impactFlex .impactList {
     display: block;
     margin-left: 0;
+  }
+  .culture .list {
+    display: block;
+  }
+  .culture .list .items {
+    height: 200px;
+  }
+  .culture .list .items.b {
+    margin-top: 20px;
+  }
+  .culture .list .items.c {
+    margin-top: 20px;
+  }
+  .culture .list .items.d {
+    margin-top: 20px;
+  }
+  .cultureThree .threeBox {
+    display: block;
+  }
+  .cultureThree .threeBox li {
+    margin-top: 40px;
+  }
+  .careersPeople .people {
+    display: block;
+  }
+  .careersPeople .people .moduleHeader {
+    text-align: center;
+  }
+  .careersPeople .people .peopleCards {
+    margin-top: 60px;
   }
 }
 @media all and (max-width: 600px) {
@@ -3561,6 +3608,33 @@ body {
   }
   .ourLocation .locationCard {
     grid-template-columns: 1fr;
+  }
+  .footerItems p {
+    white-space: nowrap;
+  }
+  .footerItems .fnb {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    column-gap: 0;
+  }
+  .footerItems .fnb .fnb_grid_5 {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footerItems .fnb .fnb_grid_5 dt {
+    grid-column: 1/3;
+  }
+  .footerItems .fnb .fnb_grid_5 dd:first-of-type {
+    margin-bottom: 15px;
+  }
+  .footerItems .fnb .fnb_grid_5 .link {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    border-top: none;
+    padding-top: 0;
+    align-self: flex-end;
   }
 }
 

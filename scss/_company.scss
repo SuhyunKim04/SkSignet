@@ -60,15 +60,16 @@
     padding: 100px 0;
     .box{
             display:grid;
+            grid-template-columns: repeat(2,1fr);
         img{
             width: 500px;
         }
 
-        .moduleHeader{
-            .red{
-                margin-top: 42px;
-            }
+        .red{
+            margin-top: 42px;
+            grid-column: 2/3;
         }
+        
     }
 }
 

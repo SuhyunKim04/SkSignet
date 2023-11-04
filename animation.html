@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background:#222;color:#fff;
+            overflow-x:hidden;
+        }
+        .box {
+            border:1px solid rgba(255,255,255,0.1);
+            border-radius:20px;
+            padding:30px;
+            max-width:300px;
+            margin:50px auto;
+            transition: 0.7s;
+        }
+        .box h1 {
+            opacity:0;
+            transform:translateY(10px);
+            transition:0.4s 0.4s;
+        }
+
+        .box.active h1 {
+            opacity:1;
+            transform:translateY(0)
+        }
+        .b{
+            transform:translateX(-150px);
+            opacity: 0;
+        }
+        .b.active{
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .c{
+            transform:translateX(150px);
+            opacity: 0;
+        }
+        .c.active{
+            opacity: 1;
+            transform:translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="box a"> 
+        <h1>HELLO</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, explicabo. Id tempore, repellendus facilis provident magni fugit. Blanditiis aliquam distinctio quia accusantium doloremque numquam voluptate quam ut. Reiciendis, expedita porro?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel placeat ut laudantium eveniet rem suscipit id, saepe sunt error dolores vero quo dicta aperiam nulla est laborum, quisquam, ipsam aliquam?
+            Ex similique, nisi incidunt molestiae nostrum quos laborum ratione odit atque, esse minima assumenda corrupti. Optio omnis quod sint dolore? Debitis ipsam praesentium, necessitatibus impedit laborum cumque officia doloribus modi?
+        </p>
+    </div>
+    <div class="box b"> 
+        <h1>WORLD</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, explicabo. Id tempore, repellendus facilis provident magni fugit. Blanditiis aliquam distinctio quia accusantium doloremque numquam voluptate quam ut. Reiciendis, expedita porro?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel placeat ut laudantium eveniet rem suscipit id, saepe sunt error dolores vero quo dicta aperiam nulla est laborum, quisquam, ipsam aliquam?
+            Ex similique, nisi incidunt molestiae nostrum quos laborum ratione odit atque, esse minima assumenda corrupti. Optio omnis quod sint dolore? Debitis ipsam praesentium, necessitatibus impedit laborum cumque officia doloribus modi?
+        </p>
+    </div>
+    <div class="box c"> 
+        <h1>ANIMATION</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, explicabo. Id tempore, repellendus facilis provident magni fugit. Blanditiis aliquam distinctio quia accusantium doloremque numquam voluptate quam ut. Reiciendis, expedita porro?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel placeat ut laudantium eveniet rem suscipit id, saepe sunt error dolores vero quo dicta aperiam nulla est laborum, quisquam, ipsam aliquam?
+            Ex similique, nisi incidunt molestiae nostrum quos laborum ratione odit atque, esse minima assumenda corrupti. Optio omnis quod sint dolore? Debitis ipsam praesentium, necessitatibus impedit laborum cumque officia doloribus modi?
+        </p>
+    </div>
+
+    <script>
+
+        const a =document.querySelector('.a')
+        const b =document.querySelector('.b')
+        const c =document.querySelector('.c')
+
+ 
+    window.addEventListener('scroll', (e) => {
+        let pos = window.scrollY;
+        console.log(pos);
+
+        // a.style.transform = `translateX(${pos}px)`
+        
+        if(pos > 300){
+            b.classList.add('active')
+        }else{
+            b.classList.remove('active')
+        }
+
+        if(pos > 860){
+            c.classList.add('active');
+        }else{
+            c.classList.remove('active')
+        }
+    });
+ 
+    </script>
+    
+</body>
+</html>
