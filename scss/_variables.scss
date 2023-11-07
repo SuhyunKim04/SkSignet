@@ -18,16 +18,7 @@ $gradientYellow: linear-gradient(90deg,#fbbc05,#f47725 99.96%);
 
 
 
-// @mixin grMix($color:'red', $d:90deg) {
-//     $c1 : #f47725;
-//     $c2 : #EA002C;
-//     @if $color
-//     background-image:linear-gradient( #{$d}, #{$c1}, #{$c2} );
-// }
 
-
-// @include grMix(red), 180deg);
-// @include grMix(red), 180deg);
 
 
 @mixin color($type: null,$d: 90deg ){
