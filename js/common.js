@@ -337,6 +337,42 @@ const tableOpen = () => {
     });
 
 };
+
+const videoSR = () => {
+    const videoF = document.querySelector('.videoFlex');
+    const md = videoF.querySelector('.a');
+    const cl = videoF.querySelector('.b');
+    const btn = videoF.querySelector('.c');
+    const videoT = videoF.querySelector('.d');
+    const aniBox = document.querySelectorAll('.ani-box')
+    // console.log('md:' + md.offsetTop)
+    // console.log('window:'+ window.innerHeight)
+    let triggerPos = window.innerHeight * 0.83;
+
+    console.log('videoF : ', videoF)
+    const videoTree = Array.from(videoF.children);
+    console.log('viedeoTree : ', videoTree, videoF.childElementCount)
+   
+    window.addEventListener('scroll',(e) => {
+        let pos = window.scrollY; 
+        videoTree.forEach( (ch, idx) => {
+            if(ch.getBoundingClientRect().top < triggerPos) {
+                ch.classList.add('active'); 
+            }
+        }) 
+        aniBox.forEach((item,idx) => {
+            if(item.getBoundingClientRect().top < triggerPos) {
+                item.classList.add('active')
+            }
+        })
+    })
+
+    
+    let fruits = ['apple','banana'];
+    let animals = ['monkey','dog'];
+    let nature = fruits.concat(animals);
+    console.log('nature' , nature)
+}
 // if(li){
 //     target.classList.remove('on') 
 //     child.style.height = `0px`; 
@@ -348,6 +384,9 @@ const tableOpen = () => {
 //     child.style.height = `${size}px`;
 //     now = index; 
 // }  
+
+
+
 
 // slideBanners();
 modal();
@@ -361,6 +400,7 @@ tableOpen();
 
 mobileMenu();
 cardsOpen();
+videoSR();
 let a = 3;
 let b = 5;
 // a가 b보다 크다면 a가 크다 출력하고 b가 크면 b가 크다고 출력

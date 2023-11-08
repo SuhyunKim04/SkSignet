@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin:0;padding:0;box-sizing:border-box;}
+        body {
+
+            background:url('./images/bg.jpg') no-repeat fixed center top/cover;
+        }
+        .wrap {
+            position:relative;
+            width:100vw;height:100vh;
+            overflow:hidden;
+        }
+
+        .wrap > * { 
+            position:absolute;
+        }
+
+        .wrap .tree1 {
+            width:40%;
+            bottom:0;left:0;
+        }
+
+
+        .wrap .tree2 {
+            width:50%;
+            bottom:0;right:0;
+        }
+
+        .wrap .tree3 {
+            width: 30%;
+            top:0;right:0;
+        }
+
+        .wrap .title {
+            top:50%;
+            right:0;
+            transform:translateX(200px);
+            font-size:80px;
+            font-weight:bold;
+            color:#fff;
+            font-family:sans-serif;
+            white-space:nowrap;
+        }
+
+        .contents {
+            color:#fff;
+           
+            text-align:justify;
+            background-image:linear-gradient(to bottom, #231103, transparent 200px);
+           
+        }
+
+        .contents .inner {
+            max-width:800px;
+            margin:0 auto;
+            width:100%;
+            padding:150px 0;
+            
+            position:relative;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1 class="title">HELLO MILK!</h1>
+        <img class="tree1" src="./images/tree1.svg" alt="tree">
+        <img class="tree2" src="./images/tree2.svg" alt="tree">
+        <img class="tree3" src="./images/tree3.svg" alt="tree">
+    </div>
+    <section class="contents">
+       <div class="inner">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas minima veritatis aliquam nihil commodi, exercitationem officia! Labore sequi aspernatur ut et tempora voluptatibus, dolorem quam asperiores natus? Corrupti, hic sunt.
+        </p>
+        <p> 
+            Cumque laboriosam nisi ipsam nihil qui ad, perferendis porro atque tempore eum magni totam quibusdam enim, modi culpa nulla dolor illum fuga repudiandae reiciendis sapiente odio! Assumenda quibusdam ipsum sint!<br>
+            Molestiae veritatis sed quod deserunt! Quibusdam veritatis similique expedita qui eligendi inventore consequuntur pariatur! Natus sit voluptatem quis sequi cupiditate, sint exercitationem asperiores eos, sed enim impedit ipsum deleniti necessitatibus!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas minima veritatis aliquam nihil commodi, exercitationem officia! Labore sequi aspernatur ut et tempora voluptatibus, dolorem quam asperiores natus? Corrupti, hic sunt.
+        </p>
+        <p> 
+            Cumque laboriosam nisi ipsam nihil qui ad, perferendis porro atque tempore eum magni totam quibusdam enim, modi culpa nulla dolor illum fuga repudiandae reiciendis sapiente odio! Assumenda quibusdam ipsum sint!<br>
+            Molestiae veritatis sed quod deserunt! Quibusdam veritatis similique expedita qui eligendi inventore consequuntur pariatur! Natus sit voluptatem quis sequi cupiditate, sint exercitationem asperiores eos, sed enim impedit ipsum deleniti necessitatibus!
+        </p>
+       </div>
+    </section>
+
+    <script>
+        const title = document.querySelector('.title');
+        console.log(title)
+        const tree1 = document.querySelector('.tree1')
+        const tree2 = document.querySelector('.tree2')
+        const tree3 = document.querySelector('.tree3');
+        const textbox = document.querySelector('.contents .inner')
+        window.addEventListener('scroll',(e) => {
+            let scroll = window.scrollY;
+              
+            tree1.style.left = `-${scroll * 0.5}px`;
+            tree2.style.right = `-${scroll * 0.25}px`;
+            tree3.style.top = `-${scroll * 0.8}px`
+            title.style.transform = `translateX(-${scroll}px) rotate(${scroll * 0.05}deg)`;
+           
+
+            textbox.style.transform = `translateX(${scroll}px)`;
+            if(scroll > 200) {
+
+                // textbox.style.transform = 'rotate(45deg) translateX(-300px)'
+            }
+
+        })
+
+        
+    </script>
+
+</body>
+</html>

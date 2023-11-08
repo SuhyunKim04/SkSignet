@@ -481,6 +481,16 @@ body {
   line-height: 1.75;
 }
 
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .videoSection {
   padding: 100px 0;
 }
@@ -491,6 +501,13 @@ body {
 .videoSection .a {
   grid-column: 2/3;
   grid-row: 1/2;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s;
+}
+.videoSection .a.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 .videoSection .b {
   grid-column: 2/3;
@@ -947,6 +964,67 @@ body {
 }
 .ad a {
   flex-shrink: 0;
+}
+
+@keyframes up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.ani-box.active .up {
+  animation-name: up;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.ani-box.active .left {
+  animation-name: left;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.ani-box.active .right {
+  animation-name: right;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.ani-box .d2 {
+  animation-delay: 0.4s;
+}
+.ani-box .d3 {
+  animation-delay: 0.7s;
+}
+.ani-box .d4 {
+  animation-delay: 0.9s;
+}
+.ani-box .d5 {
+  animation-delay: 1.1s;
+}
+.ani-box .d6 {
+  animation-delay: 1.3s;
 }
 
 .btn {
