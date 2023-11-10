@@ -1026,6 +1026,9 @@ body {
 .ani-box .d6 {
   animation-delay: 1.3s;
 }
+.ani-box .d7 {
+  animation-delay: 1.7s;
+}
 
 .btn {
   display: inline-flex;
