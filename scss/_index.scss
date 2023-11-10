@@ -518,10 +518,10 @@
     .inner{
         background: #fff url($imgUrl + 'texture.webp') center center/cover;
         display: flex;
-        column-gap:40px;
+        column-gap:25px;
         align-items: center;
         @include shadow(40, 0.5);
-        padding: 24px 68px 24px 280px;
+        padding: 40px 68px 40px 280px;
         border-radius: 4px;
         position: relative;
         overflow: hidden;
@@ -567,9 +567,12 @@
     100%{opacity: 1; transform: translateY(0);}
 }
 
+@keyframes fadeIn {
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
 .ani-box {
-     
-    
     &.active {
         .up {
             
