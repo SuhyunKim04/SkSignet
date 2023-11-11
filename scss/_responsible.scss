@@ -729,6 +729,13 @@
             }
         }
     }
+
+    .footerItems{
+        .footer_logo{
+            bottom:70px;
+            right:0;
+        }
+    }
 }
 
 @include media($android){
@@ -962,15 +969,35 @@
     }
 
     .footerItems{
+        justify-content: stretch;
         p{
             white-space: nowrap;
         }
 
+        .footer_logo{
+            bottom:0;
+            left:50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.05);
+            width:80px;
+            text-align: center;
+            padding:20px 0;
+            width:100%;
+
+            img{
+                width:auto;
+            }
+            p{
+                font-size: 13.5px;
+                color: rgba(0,0,0,0.5);
+            }
+        }
         .fnb{
             display: grid;
             grid-template-columns: repeat(2,1fr);
             row-gap: 30px;
             column-gap: 0;
+            margin-bottom: 90px;
 
             .fnb_grid_5{
                 grid-column: 1/3;

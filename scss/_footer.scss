@@ -33,25 +33,29 @@
 }
 
 .footerItems{
-    @include flex($j:space-around);
+    @include flex($j:right, $a: stretch);
     padding: 60px 0;
-    img{
-        width: 150px;
+    position: relative;
+    .footer_logo{
+        position: absolute;
+        left:0;
+        img{
+            width: 150px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+    
+        span{
+            @include clip($gradientRed);
+        }
     }
 
-    p{
-        font-size: 14px;
-        line-height: 1.7;
-        font-weight: 400;
-    }
-
-    span{
-        @include clip($gradientRed);
-    }
 
     .fnb{
         @include flex($a:stretch,$c:45px);
-
         dl{
             dt{
                 font-weight: 600;

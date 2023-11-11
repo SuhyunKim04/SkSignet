@@ -2991,19 +2991,24 @@ body {
 
 .footerItems {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: right;
+  align-items: stretch;
   padding: 60px 0;
+  position: relative;
 }
-.footerItems img {
+.footerItems .footer_logo {
+  position: absolute;
+  left: 0;
+}
+.footerItems .footer_logo img {
   width: 150px;
 }
-.footerItems p {
+.footerItems .footer_logo p {
   font-size: 14px;
   line-height: 1.7;
   font-weight: 400;
 }
-.footerItems span {
+.footerItems .footer_logo span {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -3549,6 +3554,10 @@ body {
   .careersPeople .people .peopleCards {
     margin-top: 60px;
   }
+  .footerItems .footer_logo {
+    bottom: 70px;
+    right: 0;
+  }
 }
 @media all and (max-width: 600px) {
   .pageHeader .btn.red {
@@ -3698,14 +3707,35 @@ body {
   .ourLocation .locationCard {
     grid-template-columns: 1fr;
   }
+  .footerItems {
+    justify-content: stretch;
+  }
   .footerItems p {
     white-space: nowrap;
+  }
+  .footerItems .footer_logo {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 80px;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+  }
+  .footerItems .footer_logo img {
+    width: auto;
+  }
+  .footerItems .footer_logo p {
+    font-size: 13.5px;
+    color: rgba(0, 0, 0, 0.5);
   }
   .footerItems .fnb {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 30px;
     column-gap: 0;
+    margin-bottom: 90px;
   }
   .footerItems .fnb .fnb_grid_5 {
     grid-column: 1/3;
