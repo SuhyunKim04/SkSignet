@@ -501,13 +501,6 @@ body {
 .videoSection .a {
   grid-column: 2/3;
   grid-row: 1/2;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.4s;
-}
-.videoSection .a.active {
-  opacity: 1;
-  transform: translateY(0);
 }
 .videoSection .b {
   grid-column: 2/3;
@@ -767,6 +760,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 .tech .cards {
   display: flex;
@@ -1867,6 +1861,10 @@ body {
 }
 .slideBtns button:hover {
   opacity: 0.5;
+}
+.slideBtns .num {
+  color: #fff;
+  font-size: 14px;
 }
 
 .table ul li dl {
@@ -3145,6 +3143,7 @@ body {
   }
   .videoSection .videoFlex .a {
     order: 1;
+    text-align: center;
   }
   .videoSection .videoFlex .b {
     order: 4;
@@ -3153,6 +3152,7 @@ body {
     grid-template-rows: repeat(2, 1fr);
     padding: 0 20px;
     margin-top: 60px;
+    grid-gap: 10px;
   }
   .videoSection .videoFlex .c {
     order: 2;
@@ -3178,6 +3178,7 @@ body {
   }
   .customSection .content .b {
     order: 1;
+    text-align: center;
   }
   .customSection .content .c {
     order: 3;

@@ -84,14 +84,8 @@
     .a{
         grid-column: 2/3;
         grid-row:1/2;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: 0.4s
     }
-    .a.active{
-        opacity:1;
-        transform: translateY(0);
-    }
+
     .b{
         grid-column: 2/3;
         grid-row:2/3;
@@ -354,6 +348,7 @@
     background-color: rgba(225, 225, 225, 0.2);
     .content{
         @include flex($d:column);
+        text-align: center;
     }
 
     .cards{
