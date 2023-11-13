@@ -508,3 +508,51 @@
 }
 
 
+// @keyframes up{
+//     0%{opacity: 0;transform:translateY(20px)}
+//     100%{opacity: 1; transform: translateY(0);}
+//  }
+//  @keyframes left{
+//      0%{opacity: 0;transform:translateX(-50px)}
+//      100%{opacity: 1; transform: translateY(0);}
+//  }
+//   @keyframes right{
+//      0%{opacity: 0;transform:translateX(50px)}
+//      100%{opacity: 1; transform: translateY(0);}
+//  }
+ 
+//  @keyframes fadeIn {
+//      0%{opacity:0;}
+//      100%{opacity:1;}
+//  }
+ 
+//  .ani-box {
+//      &.active {
+//          .up {
+             
+//              animation-name:up;
+//              animation-duration:1s;
+//              animation-fill-mode: both;
+//          }
+ 
+//          .left {
+//              animation-name:left;
+//              animation-duration:1s;
+//              animation-fill-mode: both;
+//          }
+ 
+//          .right {
+//              animation-name:right;
+//              animation-duration:1s;
+//              animation-fill-mode: both;
+//          }
+//      }
+ 
+//      .d2 { animation-delay: 0.4s;}
+//      .d3 { animation-delay: 0.7s;}
+//      .d4 { animation-delay: 0.9s;}
+//      .d5 { animation-delay: 1.1s;}
+//      .d6 { animation-delay: 1.3s;}
+//      .d7 { animation-delay: 1.7s;}
+    
+//  }
