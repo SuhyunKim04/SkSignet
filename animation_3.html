@@ -102,7 +102,7 @@
         const textbox = document.querySelector('.contents .inner')
         window.addEventListener('scroll',(e) => {
             let scroll = window.scrollY;
-              
+              console.log(scrollY);
             tree1.style.left = `-${scroll * 0.5}px`;
             tree2.style.right = `-${scroll * 0.25}px`;
             tree3.style.top = `-${scroll * 0.8}px`

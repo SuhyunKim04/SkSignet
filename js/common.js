@@ -37,17 +37,6 @@ const drop = () => {
     })
 }
 
-// function slideBanners() {
-//     const $list = $('.slideWrap .list')
-//     $list.slick({
-//         dots: false,
-//         infinite: true,
-//         speed: 500,
-//         slidesToShow: 1,
-//         fade: true,
-//         cssEase: 'linear',
-//       });
-// }
 
 function slideFade() {
     let $slidwrap = $('.slideWrap');
@@ -133,7 +122,7 @@ const modal_menu = () => {
         modal_box.forEach((list) => list.classList.remove('on'));
     }
     depth_list.forEach((list,i) => {
-        list.addEventListener('mouseenter',(event) => {
+        list.addEventListener('click',(event) => {
             const target = event.target;
             target.classList.add('on');
             // console.log(target.childNodes[3])

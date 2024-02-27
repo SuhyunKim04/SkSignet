@@ -2845,9 +2845,7 @@ body {
   padding: 100px 0;
 }
 .careersOpen .box {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 500px;
+  display: flex;
 }
 .careersOpen .box img {
   width: 500px;
@@ -2855,9 +2853,6 @@ body {
 .careersOpen .box .moduleHeader p {
   line-height: 1.75;
   margin-bottom: 42px;
-}
-.careersOpen .box .btn {
-  grid-column: 2/3;
 }
 
 .careers .pageFooter {
@@ -3317,7 +3312,6 @@ body {
   }
   .table .tableList li dl dt, .table .tableList li dl dd {
     padding: 24px;
-    outline: 1px solid orange;
   }
   .table .tableList li dl dt {
     font-size: 13px;
@@ -3437,17 +3431,11 @@ body {
     flex-basis: 350px;
     flex-shrink: 0;
   }
-  .careersOpen .box {
-    grid-template-columns: 1fr;
-  }
-  .careersOpen .box .moduleHeader {
+  .careersOpen .box img {
     order: 1;
   }
-  .careersOpen .box .btn {
+  .careersOpen .box .careerBox {
     order: 2;
-  }
-  .careersOpen .box img {
-    order: 3;
   }
   .footerItems p {
     white-space: nowrap;

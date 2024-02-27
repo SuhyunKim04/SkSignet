@@ -372,7 +372,6 @@
 
                     dt,dd{
                         padding: 24px;
-                        outline:1px solid orange;
                     }
                     
                     dt{
@@ -559,15 +558,11 @@
 
     .careersOpen{
         .box{
-            grid-template-columns: 1fr;
-            .moduleHeader{
+            img{
                 order:1;
             }
-            .btn{
+            .careerBox{
                 order:2;
-            }
-            img{
-                order:3;
             }
         }
     }

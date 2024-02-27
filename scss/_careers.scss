@@ -242,9 +242,9 @@
         padding: 100px 0;
     
         .box{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: 500px;
+            display: flex;
+            // grid-template-columns: repeat(2, 1fr);
+            // grid-template-rows: 500px;
             img{
                 width: 500px;
             }
@@ -256,9 +256,9 @@
                 }
     
             }
-            .btn{
-                grid-column: 2/3;
-            }
+            // .btn{
+            //     grid-column: 2/3;
+            // }
         }
     }
 
