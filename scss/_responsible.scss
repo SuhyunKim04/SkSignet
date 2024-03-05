@@ -50,9 +50,6 @@
 
 
 @include media($tablet) { 
-    // .moduleHeader{
-    //     text-align: center;
-    // }
     .pageHeader{
         h1{
             flex-grow:1;
@@ -253,9 +250,6 @@
             margin-top: 240px;
         }
         .globalNetwork{
-            // display: grid;
-            // grid-template-columns: repeat(2,1fr);
-            // grid-template-rows: repeat(3,1fr);
             width: auto;
             display: block;
             padding: 180px 28px 48px 28px;
@@ -401,10 +395,6 @@
                             clip:auto;
                         }
                     }
-                    // dd{
-                    //     display: none;
-
-                    // }
                 }
             }
         }

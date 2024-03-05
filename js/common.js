@@ -8,12 +8,10 @@ const modal = () => {
 
     
     openvideo.addEventListener('click', (e) => {
-        console.log('hello');
         modalWrap.classList.add('open');
-        console.log('end')
         
     })
-console.log(close)
+
     close.addEventListener('click', (e) =>{
         modalWrap.classList.remove('open');
     })
@@ -125,7 +123,6 @@ const modal_menu = () => {
         list.addEventListener('click',(event) => {
             const target = event.target;
             target.classList.add('on');
-            // console.log(target.childNodes[3])
             console.log('text')
         })
     });
@@ -187,57 +184,11 @@ const mobileMenu = () => {
 }
 
 
-// const cards2 = () => {
-//     const items = document.querySelectorAll('.peopleCards .items')
- 
-//     let now = 0;
-   
 
-//     const reset = () => {
-//         items[now].classList.remove('on');
-//         items[now].querySelector('dd').style.height = '0px'; 
-//     }
-
-//     const update = () => { 
-//         items[now].classList.add('on');
-//         items[now].querySelector('dd').style.height = 
-//         items[now].querySelector('p').offsetHeight + 'px';
-//     }
-    
-
-//     update();
-
-//     items.forEach( (item,index) => { 
-//         item.addEventListener('click',(event)=>{ 
-//             // console.time('check')
-//             const target = event.currentTarget;    
-//             const child = target.querySelector('dd');
-//             const size = child.querySelector('p').offsetHeight;
-//             // const li = (now === index); 
-
-     
-//            if(now !== index) {  
-//                 reset(); 
-//                 target.classList.add('on');   
-//                 child.style.height = `${size}px`;
-//                 now = index;  
-//             }   else {
-//                 reset(); 
-             
-//             }
-//             // console.timeEnd('check')
-//         })
-        
-//     })
-    
-// }
 
 const cardsOpen = () => {
     const items = document.querySelectorAll(".peopleCards .items"); 
-    console.log(items, items.length, typeof items)
-    // let arr = []
-    // let arr = [a,2,3,4,5] -> array object,
-    // let aaa = [li,li,li,li,li] -> node list object
+    
     if(items.length == 0){
         return false
     };
@@ -334,8 +285,7 @@ const videoSR = () => {
     const btn = videoF.querySelector('.c');
     const videoT = videoF.querySelector('.d');
     const aniBox = document.querySelectorAll('.ani-box')
-    // console.log('md:' + md.offsetTop)
-    // console.log('window:'+ window.innerHeight)
+   
     let triggerPos = window.innerHeight * 0.83;
 
     console.log('videoF : ', videoF)
@@ -362,18 +312,6 @@ const videoSR = () => {
     let nature = fruits.concat(animals);
     console.log('nature' , nature)
 }
-// if(li){
-//     target.classList.remove('on') 
-//     child.style.height = `0px`; 
-// }else{ 
-  
-
-//     target.classList.add('on');  
-//     console.log('else') 
-//     child.style.height = `${size}px`;
-//     now = index; 
-// }  
-
 
 
 
@@ -382,23 +320,14 @@ modal();
 drop();
 tableOpen();
 // test();
-// modal_menu();
+modal_menu();
 
-// cards2();
-// cards();
+
 
 mobileMenu();
 cardsOpen();
 videoSR();
-let a = 3;
-let b = 5;
-// a가 b보다 크다면 a가 크다 출력하고 b가 크면 b가 크다고 출력
 
-if(a > b){
-    console.log('a가 크다')
-}else {
-    console.log('b가 크다')
-}
 
 
  
