@@ -236,7 +236,9 @@
 
     .com_market{
         .box{
+            display:flex;
             flex-direction: column;
+            align-items: center;
             img{
                 order:2;
                 margin-top: 50px;

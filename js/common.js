@@ -111,7 +111,7 @@ const test = () =>{
 
 
 const modal_menu = () => {
-    const depth_list = document.querySelectorAll('.depth_list');
+    const depth1 = document.querySelectorAll('.depth_list');
     const modal_box = document.querySelectorAll('.modal_box > li');
     const item = document.querySelector('.pageHeaderItems');
     
@@ -119,17 +119,16 @@ const modal_menu = () => {
     const hideMenu = () => {
         modal_box.forEach((list) => list.classList.remove('on'));
     }
-    depth_list.forEach((list,i) => {
-        list.addEventListener('click',(event) => {
-            const target = event.target;
-            target.classList.add('on');
+    depth1.forEach((list,i) => {
+        list.addEventListener('mouseenter',() => {
+            list.classList.add('on');
             console.log('text')
         })
     });
 
-    item.addEventListener('mouseleave', () => {
-        hideMenu();
-    })
+    // item.addEventListener('mouseleave', () => {
+    //     hideMenu();
+    // })
    
 }
 

@@ -1462,6 +1462,10 @@ body {
   align-items: center;
   column-gap: 20px;
 }
+.pageHeader .headerContainer h1 a {
+  display: block;
+  width: 97px;
+}
 .pageHeader .mBtn {
   background-image: linear-gradient(83deg, #f47725 7.21%, #EA002C 92.82%);
   width: 44px;
@@ -1494,8 +1498,8 @@ body {
   display: block;
   padding: 0 12.5px;
 }
-.pageHeader .gnb .depth_container .depth_list.on .modal_box {
-  display: flex;
+.pageHeader .gnb .depth_container .depth_list.on .depth2 {
+  display: block;
 }
 .pageHeader .gnb .depth_container .depth_list .depth2 {
   position: absolute;
@@ -1507,9 +1511,6 @@ body {
   max-width: 900px;
   width: 100%;
   display: none;
-}
-.pageHeader .gnb .depth_container .depth_list .depth2.on {
-  display: block;
 }
 .pageHeader .gnb .depth_container .depth_list .modal_box {
   display: flex;
@@ -1910,12 +1911,13 @@ body {
 }
 .com_market .box {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: minmax(auto, 441px) 1fr;
+  column-gap: 40px;
 }
-.com_market .box img {
-  width: 500px;
+.com_market .box .up {
+  grid-row: 1/3;
 }
-.com_market .box .red {
+.com_market .box .link-wrap {
   margin-top: 42px;
   grid-column: 2/3;
 }
@@ -3220,7 +3222,9 @@ body {
     height: 30px;
   }
   .com_market .box {
+    display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .com_market .box img {
     order: 2;
